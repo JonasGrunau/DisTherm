@@ -1,0 +1,19 @@
+# Samples for ./start.sh's built-in loop. Copy to demo-kit.txt (ignored by
+# git: sample packs aren't ours to share) and point it at your files.
+# Paths are absolute, start with ~, or are relative to this file.
+
+tempo = 140                                  # the bass shots' tempo: one shot = one beat
+pattern = offbeat                            # offbeat: one note on the "and" of every beat, rings until the next
+                                             # rolling: on the three 16ths after the kick (K-B-B-B), gated
+
+kick = ~/Samples/Kicks/Kick F#.wav           # a short kick, tuned to the bass
+
+bass = ~/Samples/Bass Shots/Bass F#.wav      # the root, on every beat
+bass = ~/Samples/Bass Shots/Bass A.wav       # up to three more notes, one patch:
+bass = ~/Samples/Bass Shots/Bass E.wav       # the loop changes to them
+bass = ~/Samples/Bass Shots/Bass D.wav       # at the ends of the bars
+
+# More material, each its own source in the demo host's menu: name | file | its tempo.
+# A distortion wants more than kick and bass: drums, a vocal, a lead, a guitar.
+loop = Drums: top loop   | ~/Samples/Loops/Top Loop 140.wav   | 140
+loop = Vocal: dry phrase | ~/Samples/Loops/Vocal Phrase.wav   | 144
