@@ -18,6 +18,7 @@ DisTittenProcessor::DisTittenProcessor()
     }
     modChannel->publish (*modEdit);
     engine.setModChannel (modChannel.get());
+    setLatencySamples (dt::Engine::kLatency);   // constant at every rate: hosts that ask before prepareToPlay get it too
     startTimerHz (20);
 }
 
