@@ -3,6 +3,7 @@
 #include "fx/Structure.h"
 #include "model/Names.h"
 #include "plugin/PluginProcessor.h"
+#include "plugin/ThermalImport.h"
 
 #include <random>
 
@@ -407,7 +408,7 @@ void ModPanel::stepPreset (int delta)
 {
     juce::Array<juce::File> files;
     for (auto root : { DisTittenProcessor::userPresetFolder().getSiblingFile ("Shapes"),
-                       juce::File ("/Library/Application Support/Output/Thermal/SubPresets/Modulation Presets") })
+                       thermal::modulationPresetFolder() })
         if (root.isDirectory())
         {
             auto f = root.findChildFiles (juce::File::findFiles, true, "*.xml");

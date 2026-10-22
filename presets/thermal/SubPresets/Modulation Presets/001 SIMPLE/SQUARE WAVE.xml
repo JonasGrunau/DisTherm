@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MKUClickableEnvelope NumPoints="4" PointX0="0" PointY0="0" ControlPointX0="-8.33333358168602e-2"
+                      ControlPointY0="-7.5e-1" PointX1="5e-1" PointY1="0" ControlPointX1="2.599999904632568e-1"
+                      ControlPointY1="-9.999999776482582e-3" PointX2="5e-1" PointY2="1"
+                      ControlPointX2="5e-1" ControlPointY2="1.100000023841858" PointX3="1"
+                      PointY3="1" ControlPointX3="7.833333611488342e-1" ControlPointY3="1"/>

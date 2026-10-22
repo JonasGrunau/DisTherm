@@ -45,7 +45,7 @@ A recreation of Output Thermal 1.2.1 (multistage distortion, VST3 / AU, JUCE 8),
 ## Dependencies
 - JUCE 8.0.15 (AGPLv3), Catch2 v3.7.1, C++20, CMake >= 3.24, macOS deployment target 11.0
 - IBM Plex (OFL), bundled in `resources/fonts`
-- Thermal factory presets are read from the user's own installation (`/Library/Application Support/Output/Thermal/Presets`); never copy them, or any Thermal audio, into the repo
+- Thermal's factory presets and modulation shapes are in `presets/thermal` (the XMLs only, not Thermal's images or USER/FAVORITES folders; included at the user's request because the repo is private). CMake packs them into `factory.zip` in the binary; `thermal::presetFolder()` unpacks it to application data / DisTitten / Factory. Thermal audio still never goes into the repo
 
 ## Manual Notes
 

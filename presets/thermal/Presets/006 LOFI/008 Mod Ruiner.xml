@@ -1,0 +1,1277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Thermal>
+  <Meta UUID="63ab1e08-8d37-4014-9f72-d2aa8cf07951"/>
+  <App_State>
+    <Parameters>
+      <MKUClickableEnvelope_Envelope1_Rate unmapped_value="2.39999994635582e-1" mapped_value="6"/>
+      <MKUClickableEnvelope_Envelope1_Humanize unmapped_value="0" mapped_value="0"/>
+      <MKUClickableEnvelope_Envelope2_Rate unmapped_value="2.39999994635582e-1" mapped_value="6"/>
+      <MKUClickableEnvelope_Envelope2_Humanize unmapped_value="0" mapped_value="0"/>
+      <MKUMacroNode_Macro1_Macro unmapped_value="1" mapped_value="1"/>
+      <MKUMacroNode_Macro2_Macro unmapped_value="5.633513331413269e-1" mapped_value="5.633513331413269e-1"/>
+      <MKUInputBus_MainInput_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUThreeBandSplitterNode_Stage_1_Band1Hz unmapped_value="4.315926730632782e-1" mapped_value="7.923007202148438e2"/>
+      <MKUThreeBandSplitterNode_Stage_1_Band2Hz unmapped_value="6.510505080223083e-1" mapped_value="3.977197265625e3"/>
+      <MKUThreeBandSplitterNode_Stage_1_MultiBand unmapped_value="1" mapped_value="1"/>
+      <MKUDustDistoNode_Stage_1_DistortionType unmapped_value="9.090909361839294e-2" mapped_value="3"/>
+      <MKUDustDistoNode_Stage_1_InputGain unmapped_value="5e-1" mapped_value="0"/>
+      <MKUDustDistoNode_Stage_1_OutputGain unmapped_value="3.75e-1" mapped_value="-9"/>
+      <MKUDustDistoNode_Stage_1_InputGainComp unmapped_value="0" mapped_value="0"/>
+      <MKUDustDistoNode_Stage_1_Control1 unmapped_value="0" mapped_value="0"/>
+      <MKUDustDistoNode_Stage_1_Control2 unmapped_value="0" mapped_value="0"/>
+      <MKUDustDistoNode_Stage_1_Control3 unmapped_value="0" mapped_value="0"/>
+      <MKUDustDistoNode_Stage_1_Control4 unmapped_value="0" mapped_value="0"/>
+      <MKUDustDistoNode_Stage_1_Feedback unmapped_value="0" mapped_value="0"/>
+      <MKUDustDistoNode_Stage_1_FeedbackEnvFollow unmapped_value="1" mapped_value="1"/>
+      <MKUDustDistoNode_Stage_1_FeedbackEnvFollowRelease unmapped_value="5.491005182266235e-1" mapped_value="1.000000163912773e-1"/>
+      <MKUDustDistoNode_Stage_1_Time unmapped_value="3.94839733839035e-1" mapped_value="1.37384170666337e-2"/>
+      <MKUBitReducer_Stage_1_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUBitReducer_Stage_1_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUBitReducer_Stage_1_Bits unmapped_value="0" mapped_value="5"/>
+      <MKUBitReducer_Stage_1_SampleReduction unmapped_value="0" mapped_value="1"/>
+      <MKUBitReducer_Stage_1_WetDry unmapped_value="1" mapped_value="1"/>
+      <MKUChorus_Stage_1_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUChorus_Stage_1_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUChorus_Stage_1_Rate unmapped_value="3.615406155586243e-1" mapped_value="1.00000011920929"/>
+      <MKUChorus_Stage_1_Depth unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUChorus_Stage_1_Feedback unmapped_value="0" mapped_value="0"/>
+      <MKUChorus_Stage_1_Width unmapped_value="0" mapped_value="0"/>
+      <MKUChorus_Stage_1_WetDry unmapped_value="1" mapped_value="1"/>
+      <MKUCompressor_Stage_1_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUCompressor_Stage_1_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUCompressor_Stage_1_MakeupGain unmapped_value="0" mapped_value="0"/>
+      <MKUCompressor_Stage_1_Threshold unmapped_value="1" mapped_value="0"/>
+      <MKUCompressor_Stage_1_Ratio unmapped_value="1.111111119389534e-1" mapped_value="4"/>
+      <MKUCompressor_Stage_1_Attack unmapped_value="6.541972756385803e-1" mapped_value="1.20000010356307e-2"/>
+      <MKUCompressor_Stage_1_Release unmapped_value="0" mapped_value="5.000000074505806e-2"/>
+      <MKUCompressor_Stage_1_WetDry unmapped_value="1" mapped_value="1"/>
+      <MKUStereoDelay_Stage_1_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUStereoDelay_Stage_1_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUStereoDelay_Stage_1_Type unmapped_value="1" mapped_value="1"/>
+      <MKUStereoDelay_Stage_1_LowPass unmapped_value="1" mapped_value="2e4"/>
+      <MKUStereoDelay_Stage_1_HighPass unmapped_value="2.115271538496017e-1" mapped_value="5.99999885559082e1"/>
+      <MKUStereoDelay_Stage_1_Feedback unmapped_value="2.5e-1" mapped_value="2.5e-1"/>
+      <MKUStereoDelay_Stage_1_Time unmapped_value="1.666666716337204e-1" mapped_value="3"/>
+      <MKUStereoDelay_Stage_1_DryWet unmapped_value="0" mapped_value="0"/>
+      <MKUFilter_Stage_1_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFilter_Stage_1_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFilter_Stage_1_Cutoff unmapped_value="1" mapped_value="2.2e4"/>
+      <MKUFilter_Stage_1_Resonance unmapped_value="1.11111119389534e-1" mapped_value="1.000000014901161e-1"/>
+      <MKUFilter_Stage_1_Drive unmapped_value="0" mapped_value="1"/>
+      <MKUFilter_Stage_1_Mode unmapped_value="3.333333432674408e-1" mapped_value="1"/>
+      <MKUFilter_Stage_1_FollowAmount unmapped_value="5e-1" mapped_value="0"/>
+      <MKUFilter_Stage_1_WetDry unmapped_value="1" mapped_value="1"/>
+      <MKUFlanger_Stage_1_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFlanger_Stage_1_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFlanger_Stage_1_DryWet unmapped_value="3.300000131130219e-1" mapped_value="3.300000131130219e-1"/>
+      <MKUFlanger_Stage_1_Time unmapped_value="1.000000014901161e-1" mapped_value="1.000000014901161e-1"/>
+      <MKUFlanger_Stage_1_Feedback unmapped_value="0" mapped_value="0"/>
+      <MKUFlanger_Stage_1_Type unmapped_value="0" mapped_value="0"/>
+      <MKUFlanger_Stage_1_ModFreq unmapped_value="1.000000014901161e-1" mapped_value="1.000000014901161e-1"/>
+      <MKUFlanger_Stage_1_ModRange unmapped_value="0" mapped_value="0"/>
+      <MKUFrequencyShifter_Stage_1_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFrequencyShifter_Stage_1_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFrequencyShifter_Stage_1_DryWet unmapped_value="1.500000059604645e-1" mapped_value="1.500000059604645e-1"/>
+      <MKUFrequencyShifter_Stage_1_Frequency unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUFrequencyShifter_Stage_1_FrequencyOffset unmapped_value="5e-1" mapped_value="0"/>
+      <MKUPhaser_Stage_1_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUPhaser_Stage_1_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUPhaser_Stage_1_PhaserType unmapped_value="1" mapped_value="1"/>
+      <MKUPhaser_Stage_1_CenterFrequency unmapped_value="2.083177864551544e-1" mapped_value="1e2"/>
+      <MKUPhaser_Stage_1_Feedback unmapped_value="2.5e-1" mapped_value="2.5e-1"/>
+      <MKUPhaser_Stage_1_Stages unmapped_value="4.838709533214569e-1" mapped_value="1.6e1"/>
+      <MKUPhaser_Stage_1_Rate unmapped_value="3.083369731903076e-1" mapped_value="1"/>
+      <MKUPhaser_Stage_1_ModulationRange unmapped_value="0" mapped_value="0"/>
+      <MKUPhaser_Stage_1_WetDry unmapped_value="1" mapped_value="1"/>
+      <MKUReverb_Stage_1_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUReverb_Stage_1_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUReverb_Stage_1_Size unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUReverb_Stage_1_Damping unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUReverb_Stage_1_DryWet unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUReverb_Stage_1_Width unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUReverb_Stage_1_Freeze unmapped_value="0" mapped_value="0"/>
+      <MKUMidSideGainNode_Stage_1_SideGain unmapped_value="7.5e-1" mapped_value="0"/>
+      <MKUMidSideGainNode_Stage_1_TimeSpreadAmount unmapped_value="0" mapped_value="0"/>
+      <MKUGainBus_Stage_1_Gain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUThreeBandSummerNode_Stage_1_SoloBand unmapped_value="0" mapped_value="0"/>
+      <MKUThreeBandSummerNode_Stage_1_Refilter unmapped_value="0" mapped_value="0"/>
+      <MKUToneControl_Stage_1_LowShelf unmapped_value="5e-1" mapped_value="0"/>
+      <MKUToneControl_Stage_1_HighShelf unmapped_value="5e-1" mapped_value="0"/>
+      <MKUThreeBandSplitterNode_Stage_2_Band1Hz unmapped_value="0" mapped_value="3e1"/>
+      <MKUThreeBandSplitterNode_Stage_2_Band2Hz unmapped_value="1" mapped_value="2.2e4"/>
+      <MKUThreeBandSplitterNode_Stage_2_MultiBand unmapped_value="1" mapped_value="1"/>
+      <MKUDustDistoNode_Stage_2_DistortionType unmapped_value="3.030303120613098e-2" mapped_value="1"/>
+      <MKUDustDistoNode_Stage_2_InputGain unmapped_value="5e-1" mapped_value="0"/>
+      <MKUDustDistoNode_Stage_2_OutputGain unmapped_value="4.583333432674408e-1" mapped_value="-3"/>
+      <MKUDustDistoNode_Stage_2_InputGainComp unmapped_value="0" mapped_value="0"/>
+      <MKUDustDistoNode_Stage_2_Control1 unmapped_value="0" mapped_value="0"/>
+      <MKUDustDistoNode_Stage_2_Control2 unmapped_value="0" mapped_value="0"/>
+      <MKUDustDistoNode_Stage_2_Control3 unmapped_value="0" mapped_value="0"/>
+      <MKUDustDistoNode_Stage_2_Control4 unmapped_value="0" mapped_value="0"/>
+      <MKUDustDistoNode_Stage_2_Feedback unmapped_value="0" mapped_value="0"/>
+      <MKUDustDistoNode_Stage_2_FeedbackEnvFollow unmapped_value="1" mapped_value="1"/>
+      <MKUDustDistoNode_Stage_2_FeedbackEnvFollowRelease unmapped_value="5.491005182266235e-1" mapped_value="1.000000163912773e-1"/>
+      <MKUDustDistoNode_Stage_2_Time unmapped_value="5.596189945936203e-2" mapped_value="2.200973831349984e-4"/>
+      <MKUBitReducer_Stage_2_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUBitReducer_Stage_2_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUBitReducer_Stage_2_Bits unmapped_value="0" mapped_value="5"/>
+      <MKUBitReducer_Stage_2_SampleReduction unmapped_value="0" mapped_value="1"/>
+      <MKUBitReducer_Stage_2_WetDry unmapped_value="1" mapped_value="1"/>
+      <MKUChorus_Stage_2_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUChorus_Stage_2_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUChorus_Stage_2_Rate unmapped_value="3.615406155586243e-1" mapped_value="1.00000011920929"/>
+      <MKUChorus_Stage_2_Depth unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUChorus_Stage_2_Feedback unmapped_value="0" mapped_value="0"/>
+      <MKUChorus_Stage_2_Width unmapped_value="0" mapped_value="0"/>
+      <MKUChorus_Stage_2_WetDry unmapped_value="1" mapped_value="1"/>
+      <MKUCompressor_Stage_2_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUCompressor_Stage_2_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUCompressor_Stage_2_MakeupGain unmapped_value="0" mapped_value="0"/>
+      <MKUCompressor_Stage_2_Threshold unmapped_value="1" mapped_value="0"/>
+      <MKUCompressor_Stage_2_Ratio unmapped_value="1.111111119389534e-1" mapped_value="4"/>
+      <MKUCompressor_Stage_2_Attack unmapped_value="6.541972756385803e-1" mapped_value="1.20000010356307e-2"/>
+      <MKUCompressor_Stage_2_Release unmapped_value="0" mapped_value="5.000000074505806e-2"/>
+      <MKUCompressor_Stage_2_WetDry unmapped_value="1" mapped_value="1"/>
+      <MKUStereoDelay_Stage_2_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUStereoDelay_Stage_2_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUStereoDelay_Stage_2_Type unmapped_value="1" mapped_value="1"/>
+      <MKUStereoDelay_Stage_2_LowPass unmapped_value="1" mapped_value="2e4"/>
+      <MKUStereoDelay_Stage_2_HighPass unmapped_value="2.115271538496017e-1" mapped_value="5.99999885559082e1"/>
+      <MKUStereoDelay_Stage_2_Feedback unmapped_value="2.5e-1" mapped_value="2.5e-1"/>
+      <MKUStereoDelay_Stage_2_Time unmapped_value="5.555555820465088e-1" mapped_value="1e1"/>
+      <MKUStereoDelay_Stage_2_DryWet unmapped_value="3.300000131130219e-1" mapped_value="3.300000131130219e-1"/>
+      <MKUFilter_Stage_2_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFilter_Stage_2_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFilter_Stage_2_Cutoff unmapped_value="1" mapped_value="2.2e4"/>
+      <MKUFilter_Stage_2_Resonance unmapped_value="1.11111119389534e-1" mapped_value="1.000000014901161e-1"/>
+      <MKUFilter_Stage_2_Drive unmapped_value="0" mapped_value="1"/>
+      <MKUFilter_Stage_2_Mode unmapped_value="3.333333432674408e-1" mapped_value="1"/>
+      <MKUFilter_Stage_2_FollowAmount unmapped_value="5e-1" mapped_value="0"/>
+      <MKUFilter_Stage_2_WetDry unmapped_value="1" mapped_value="1"/>
+      <MKUFlanger_Stage_2_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFlanger_Stage_2_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFlanger_Stage_2_DryWet unmapped_value="3.300000131130219e-1" mapped_value="3.300000131130219e-1"/>
+      <MKUFlanger_Stage_2_Time unmapped_value="1.000000014901161e-1" mapped_value="1.000000014901161e-1"/>
+      <MKUFlanger_Stage_2_Feedback unmapped_value="0" mapped_value="0"/>
+      <MKUFlanger_Stage_2_Type unmapped_value="0" mapped_value="0"/>
+      <MKUFlanger_Stage_2_ModFreq unmapped_value="1.000000014901161e-1" mapped_value="1.000000014901161e-1"/>
+      <MKUFlanger_Stage_2_ModRange unmapped_value="0" mapped_value="0"/>
+      <MKUFrequencyShifter_Stage_2_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFrequencyShifter_Stage_2_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFrequencyShifter_Stage_2_DryWet unmapped_value="1.500000059604645e-1" mapped_value="1.500000059604645e-1"/>
+      <MKUFrequencyShifter_Stage_2_Frequency unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUFrequencyShifter_Stage_2_FrequencyOffset unmapped_value="5e-1" mapped_value="0"/>
+      <MKUPhaser_Stage_2_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUPhaser_Stage_2_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUPhaser_Stage_2_PhaserType unmapped_value="1" mapped_value="1"/>
+      <MKUPhaser_Stage_2_CenterFrequency unmapped_value="2.083177864551544e-1" mapped_value="1e2"/>
+      <MKUPhaser_Stage_2_Feedback unmapped_value="2.5e-1" mapped_value="2.5e-1"/>
+      <MKUPhaser_Stage_2_Stages unmapped_value="4.838709533214569e-1" mapped_value="1.6e1"/>
+      <MKUPhaser_Stage_2_Rate unmapped_value="3.083369731903076e-1" mapped_value="1"/>
+      <MKUPhaser_Stage_2_ModulationRange unmapped_value="0" mapped_value="0"/>
+      <MKUPhaser_Stage_2_WetDry unmapped_value="1" mapped_value="1"/>
+      <MKUReverb_Stage_2_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUReverb_Stage_2_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUReverb_Stage_2_Size unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUReverb_Stage_2_Damping unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUReverb_Stage_2_DryWet unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUReverb_Stage_2_Width unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUReverb_Stage_2_Freeze unmapped_value="0" mapped_value="0"/>
+      <MKUMidSideGainNode_Stage_2_SideGain unmapped_value="7.5e-1" mapped_value="0"/>
+      <MKUMidSideGainNode_Stage_2_TimeSpreadAmount unmapped_value="0" mapped_value="0"/>
+      <MKUGainBus_Stage_2_Gain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUThreeBandSummerNode_Stage_2_SoloBand unmapped_value="0" mapped_value="0"/>
+      <MKUThreeBandSummerNode_Stage_2_Refilter unmapped_value="0" mapped_value="0"/>
+      <MKUToneControl_Stage_2_LowShelf unmapped_value="5e-1" mapped_value="0"/>
+      <MKUToneControl_Stage_2_HighShelf unmapped_value="5e-1" mapped_value="0"/>
+      <MKUThreeBandSplitterNode_Stage_3_Band1Hz unmapped_value="3.718388974666595e-1" mapped_value="4.500000305175781e2"/>
+      <MKUThreeBandSplitterNode_Stage_3_Band2Hz unmapped_value="6.89654529094696e-1" mapped_value="5.00000048828125e3"/>
+      <MKUThreeBandSplitterNode_Stage_3_MultiBand unmapped_value="1" mapped_value="1"/>
+      <MKUDustDistoNode_Stage_3_DistortionType unmapped_value="6.060606241226196e-2" mapped_value="2"/>
+      <MKUDustDistoNode_Stage_3_InputGain unmapped_value="5e-1" mapped_value="0"/>
+      <MKUDustDistoNode_Stage_3_OutputGain unmapped_value="3.888888955116272e-1" mapped_value="-8"/>
+      <MKUDustDistoNode_Stage_3_InputGainComp unmapped_value="0" mapped_value="0"/>
+      <MKUDustDistoNode_Stage_3_Control1 unmapped_value="0" mapped_value="0"/>
+      <MKUDustDistoNode_Stage_3_Control2 unmapped_value="0" mapped_value="0"/>
+      <MKUDustDistoNode_Stage_3_Control3 unmapped_value="4.582331478595734e-1" mapped_value="4.582331478595734e-1"/>
+      <MKUDustDistoNode_Stage_3_Control4 unmapped_value="0" mapped_value="0"/>
+      <MKUDustDistoNode_Stage_3_Feedback unmapped_value="0" mapped_value="0"/>
+      <MKUDustDistoNode_Stage_3_FeedbackEnvFollow unmapped_value="1" mapped_value="1"/>
+      <MKUDustDistoNode_Stage_3_FeedbackEnvFollowRelease unmapped_value="5.491005182266235e-1" mapped_value="1.000000163912773e-1"/>
+      <MKUDustDistoNode_Stage_3_Time unmapped_value="5.002825856208801e-1" mapped_value="3.000000491738319e-2"/>
+      <MKUBitReducer_Stage_3_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUBitReducer_Stage_3_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUBitReducer_Stage_3_Bits unmapped_value="0" mapped_value="5"/>
+      <MKUBitReducer_Stage_3_SampleReduction unmapped_value="0" mapped_value="1"/>
+      <MKUBitReducer_Stage_3_WetDry unmapped_value="1" mapped_value="1"/>
+      <MKUChorus_Stage_3_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUChorus_Stage_3_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUChorus_Stage_3_Rate unmapped_value="3.615406155586243e-1" mapped_value="1.00000011920929"/>
+      <MKUChorus_Stage_3_Depth unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUChorus_Stage_3_Feedback unmapped_value="0" mapped_value="0"/>
+      <MKUChorus_Stage_3_Width unmapped_value="0" mapped_value="0"/>
+      <MKUChorus_Stage_3_WetDry unmapped_value="1" mapped_value="1"/>
+      <MKUCompressor_Stage_3_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUCompressor_Stage_3_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUCompressor_Stage_3_MakeupGain unmapped_value="0" mapped_value="0"/>
+      <MKUCompressor_Stage_3_Threshold unmapped_value="1" mapped_value="0"/>
+      <MKUCompressor_Stage_3_Ratio unmapped_value="1.111111119389534e-1" mapped_value="4"/>
+      <MKUCompressor_Stage_3_Attack unmapped_value="6.541972756385803e-1" mapped_value="1.20000010356307e-2"/>
+      <MKUCompressor_Stage_3_Release unmapped_value="0" mapped_value="5.000000074505806e-2"/>
+      <MKUCompressor_Stage_3_WetDry unmapped_value="1" mapped_value="1"/>
+      <MKUStereoDelay_Stage_3_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUStereoDelay_Stage_3_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUStereoDelay_Stage_3_Type unmapped_value="1" mapped_value="1"/>
+      <MKUStereoDelay_Stage_3_LowPass unmapped_value="1" mapped_value="2e4"/>
+      <MKUStereoDelay_Stage_3_HighPass unmapped_value="2.115271538496017e-1" mapped_value="5.99999885559082e1"/>
+      <MKUStereoDelay_Stage_3_Feedback unmapped_value="2.5e-1" mapped_value="2.5e-1"/>
+      <MKUStereoDelay_Stage_3_Time unmapped_value="5.555555820465088e-1" mapped_value="1e1"/>
+      <MKUStereoDelay_Stage_3_DryWet unmapped_value="3.300000131130219e-1" mapped_value="3.300000131130219e-1"/>
+      <MKUFilter_Stage_3_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFilter_Stage_3_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFilter_Stage_3_Cutoff unmapped_value="1" mapped_value="2.2e4"/>
+      <MKUFilter_Stage_3_Resonance unmapped_value="1.11111119389534e-1" mapped_value="1.000000014901161e-1"/>
+      <MKUFilter_Stage_3_Drive unmapped_value="0" mapped_value="1"/>
+      <MKUFilter_Stage_3_Mode unmapped_value="3.333333432674408e-1" mapped_value="1"/>
+      <MKUFilter_Stage_3_FollowAmount unmapped_value="5e-1" mapped_value="0"/>
+      <MKUFilter_Stage_3_WetDry unmapped_value="1" mapped_value="1"/>
+      <MKUFlanger_Stage_3_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFlanger_Stage_3_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFlanger_Stage_3_DryWet unmapped_value="3.300000131130219e-1" mapped_value="3.300000131130219e-1"/>
+      <MKUFlanger_Stage_3_Time unmapped_value="1.000000014901161e-1" mapped_value="1.000000014901161e-1"/>
+      <MKUFlanger_Stage_3_Feedback unmapped_value="0" mapped_value="0"/>
+      <MKUFlanger_Stage_3_Type unmapped_value="0" mapped_value="0"/>
+      <MKUFlanger_Stage_3_ModFreq unmapped_value="1.000000014901161e-1" mapped_value="1.000000014901161e-1"/>
+      <MKUFlanger_Stage_3_ModRange unmapped_value="0" mapped_value="0"/>
+      <MKUFrequencyShifter_Stage_3_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFrequencyShifter_Stage_3_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFrequencyShifter_Stage_3_DryWet unmapped_value="1.500000059604645e-1" mapped_value="1.500000059604645e-1"/>
+      <MKUFrequencyShifter_Stage_3_Frequency unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUFrequencyShifter_Stage_3_FrequencyOffset unmapped_value="5e-1" mapped_value="0"/>
+      <MKUPhaser_Stage_3_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUPhaser_Stage_3_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUPhaser_Stage_3_PhaserType unmapped_value="1" mapped_value="1"/>
+      <MKUPhaser_Stage_3_CenterFrequency unmapped_value="2.083177864551544e-1" mapped_value="1e2"/>
+      <MKUPhaser_Stage_3_Feedback unmapped_value="2.5e-1" mapped_value="2.5e-1"/>
+      <MKUPhaser_Stage_3_Stages unmapped_value="4.838709533214569e-1" mapped_value="1.6e1"/>
+      <MKUPhaser_Stage_3_Rate unmapped_value="3.083369731903076e-1" mapped_value="1"/>
+      <MKUPhaser_Stage_3_ModulationRange unmapped_value="0" mapped_value="0"/>
+      <MKUPhaser_Stage_3_WetDry unmapped_value="1" mapped_value="1"/>
+      <MKUReverb_Stage_3_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUReverb_Stage_3_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUReverb_Stage_3_Size unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUReverb_Stage_3_Damping unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUReverb_Stage_3_DryWet unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUReverb_Stage_3_Width unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUReverb_Stage_3_Freeze unmapped_value="0" mapped_value="0"/>
+      <MKUMidSideGainNode_Stage_3_SideGain unmapped_value="7.5e-1" mapped_value="0"/>
+      <MKUMidSideGainNode_Stage_3_TimeSpreadAmount unmapped_value="0" mapped_value="0"/>
+      <MKUGainBus_Stage_3_Gain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUThreeBandSummerNode_Stage_3_SoloBand unmapped_value="0" mapped_value="0"/>
+      <MKUThreeBandSummerNode_Stage_3_Refilter unmapped_value="0" mapped_value="0"/>
+      <MKUToneControl_Stage_3_LowShelf unmapped_value="5e-1" mapped_value="0"/>
+      <MKUToneControl_Stage_3_HighShelf unmapped_value="5e-1" mapped_value="0"/>
+      <MKUBitReducer_Slot1_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUBitReducer_Slot1_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUBitReducer_Slot1_Bits unmapped_value="0" mapped_value="5"/>
+      <MKUBitReducer_Slot1_SampleReduction unmapped_value="0" mapped_value="1"/>
+      <MKUBitReducer_Slot1_WetDry unmapped_value="0" mapped_value="0"/>
+      <MKUChorus_Slot1_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUChorus_Slot1_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUChorus_Slot1_Rate unmapped_value="3.615406155586243e-1" mapped_value="1.00000011920929"/>
+      <MKUChorus_Slot1_Depth unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUChorus_Slot1_Feedback unmapped_value="0" mapped_value="0"/>
+      <MKUChorus_Slot1_Width unmapped_value="0" mapped_value="0"/>
+      <MKUChorus_Slot1_WetDry unmapped_value="1" mapped_value="1"/>
+      <MKUCompressor_Slot1_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUCompressor_Slot1_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUCompressor_Slot1_MakeupGain unmapped_value="0" mapped_value="0"/>
+      <MKUCompressor_Slot1_Threshold unmapped_value="1" mapped_value="0"/>
+      <MKUCompressor_Slot1_Ratio unmapped_value="1.111111119389534e-1" mapped_value="4"/>
+      <MKUCompressor_Slot1_Attack unmapped_value="6.541972756385803e-1" mapped_value="1.20000010356307e-2"/>
+      <MKUCompressor_Slot1_Release unmapped_value="0" mapped_value="5.000000074505806e-2"/>
+      <MKUCompressor_Slot1_WetDry unmapped_value="1" mapped_value="1"/>
+      <MKUStereoDelay_Slot1_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUStereoDelay_Slot1_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUStereoDelay_Slot1_Type unmapped_value="1" mapped_value="1"/>
+      <MKUStereoDelay_Slot1_LowPass unmapped_value="1" mapped_value="2e4"/>
+      <MKUStereoDelay_Slot1_HighPass unmapped_value="2.115271538496017e-1" mapped_value="5.99999885559082e1"/>
+      <MKUStereoDelay_Slot1_Feedback unmapped_value="2.5e-1" mapped_value="2.5e-1"/>
+      <MKUStereoDelay_Slot1_Time unmapped_value="5.555555820465088e-1" mapped_value="3.532557189464569e-1"/>
+      <MKUStereoDelay_Slot1_DryWet unmapped_value="3.300000131130219e-1" mapped_value="3.300000131130219e-1"/>
+      <MKUFilter_Slot1_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFilter_Slot1_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFilter_Slot1_Cutoff unmapped_value="1" mapped_value="2.2e4"/>
+      <MKUFilter_Slot1_Resonance unmapped_value="1.11111119389534e-1" mapped_value="1.000000014901161e-1"/>
+      <MKUFilter_Slot1_Drive unmapped_value="0" mapped_value="1"/>
+      <MKUFilter_Slot1_Mode unmapped_value="3.333333432674408e-1" mapped_value="1"/>
+      <MKUFilter_Slot1_FollowAmount unmapped_value="5e-1" mapped_value="0"/>
+      <MKUFilter_Slot1_WetDry unmapped_value="1" mapped_value="1"/>
+      <MKUFlanger_Slot1_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFlanger_Slot1_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFlanger_Slot1_DryWet unmapped_value="3.300000131130219e-1" mapped_value="3.300000131130219e-1"/>
+      <MKUFlanger_Slot1_Time unmapped_value="1.000000014901161e-1" mapped_value="1.000000014901161e-1"/>
+      <MKUFlanger_Slot1_Feedback unmapped_value="0" mapped_value="0"/>
+      <MKUFlanger_Slot1_Type unmapped_value="0" mapped_value="0"/>
+      <MKUFlanger_Slot1_ModFreq unmapped_value="1.000000014901161e-1" mapped_value="1.000000014901161e-1"/>
+      <MKUFlanger_Slot1_ModRange unmapped_value="0" mapped_value="0"/>
+      <MKUFrequencyShifter_Slot1_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFrequencyShifter_Slot1_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFrequencyShifter_Slot1_DryWet unmapped_value="1.500000059604645e-1" mapped_value="1.500000059604645e-1"/>
+      <MKUFrequencyShifter_Slot1_Frequency unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUFrequencyShifter_Slot1_FrequencyOffset unmapped_value="5e-1" mapped_value="0"/>
+      <MKUPhaser_Slot1_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUPhaser_Slot1_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUPhaser_Slot1_PhaserType unmapped_value="1" mapped_value="1"/>
+      <MKUPhaser_Slot1_CenterFrequency unmapped_value="2.083177864551544e-1" mapped_value="1e2"/>
+      <MKUPhaser_Slot1_Feedback unmapped_value="2.5e-1" mapped_value="2.5e-1"/>
+      <MKUPhaser_Slot1_Stages unmapped_value="4.838709533214569e-1" mapped_value="1.6e1"/>
+      <MKUPhaser_Slot1_Rate unmapped_value="3.083369731903076e-1" mapped_value="1"/>
+      <MKUPhaser_Slot1_ModulationRange unmapped_value="0" mapped_value="0"/>
+      <MKUPhaser_Slot1_WetDry unmapped_value="1" mapped_value="1"/>
+      <MKUReverb_Slot1_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUReverb_Slot1_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUReverb_Slot1_Size unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUReverb_Slot1_Damping unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUReverb_Slot1_DryWet unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUReverb_Slot1_Width unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUReverb_Slot1_Freeze unmapped_value="0" mapped_value="0"/>
+      <MKUBitReducer_Slot2_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUBitReducer_Slot2_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUBitReducer_Slot2_Bits unmapped_value="0" mapped_value="5"/>
+      <MKUBitReducer_Slot2_SampleReduction unmapped_value="0" mapped_value="1"/>
+      <MKUBitReducer_Slot2_WetDry unmapped_value="1" mapped_value="1"/>
+      <MKUChorus_Slot2_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUChorus_Slot2_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUChorus_Slot2_Rate unmapped_value="3.615406155586243e-1" mapped_value="1.00000011920929"/>
+      <MKUChorus_Slot2_Depth unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUChorus_Slot2_Feedback unmapped_value="0" mapped_value="0"/>
+      <MKUChorus_Slot2_Width unmapped_value="0" mapped_value="0"/>
+      <MKUChorus_Slot2_WetDry unmapped_value="1" mapped_value="1"/>
+      <MKUCompressor_Slot2_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUCompressor_Slot2_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUCompressor_Slot2_MakeupGain unmapped_value="0" mapped_value="0"/>
+      <MKUCompressor_Slot2_Threshold unmapped_value="1" mapped_value="0"/>
+      <MKUCompressor_Slot2_Ratio unmapped_value="1.111111119389534e-1" mapped_value="4"/>
+      <MKUCompressor_Slot2_Attack unmapped_value="6.541972756385803e-1" mapped_value="1.20000010356307e-2"/>
+      <MKUCompressor_Slot2_Release unmapped_value="0" mapped_value="5.000000074505806e-2"/>
+      <MKUCompressor_Slot2_WetDry unmapped_value="1" mapped_value="1"/>
+      <MKUStereoDelay_Slot2_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUStereoDelay_Slot2_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUStereoDelay_Slot2_Type unmapped_value="1" mapped_value="1"/>
+      <MKUStereoDelay_Slot2_LowPass unmapped_value="1" mapped_value="2e4"/>
+      <MKUStereoDelay_Slot2_HighPass unmapped_value="2.115271538496017e-1" mapped_value="5.99999885559082e1"/>
+      <MKUStereoDelay_Slot2_Feedback unmapped_value="2.5e-1" mapped_value="2.5e-1"/>
+      <MKUStereoDelay_Slot2_Time unmapped_value="5.555555820465088e-1" mapped_value="1e1"/>
+      <MKUStereoDelay_Slot2_DryWet unmapped_value="3.300000131130219e-1" mapped_value="3.300000131130219e-1"/>
+      <MKUFilter_Slot2_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFilter_Slot2_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFilter_Slot2_Cutoff unmapped_value="1" mapped_value="2.2e4"/>
+      <MKUFilter_Slot2_Resonance unmapped_value="1.11111119389534e-1" mapped_value="1.000000014901161e-1"/>
+      <MKUFilter_Slot2_Drive unmapped_value="0" mapped_value="1"/>
+      <MKUFilter_Slot2_Mode unmapped_value="3.333333432674408e-1" mapped_value="1"/>
+      <MKUFilter_Slot2_FollowAmount unmapped_value="5e-1" mapped_value="0"/>
+      <MKUFilter_Slot2_WetDry unmapped_value="1" mapped_value="1"/>
+      <MKUFlanger_Slot2_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFlanger_Slot2_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFlanger_Slot2_DryWet unmapped_value="3.300000131130219e-1" mapped_value="3.300000131130219e-1"/>
+      <MKUFlanger_Slot2_Time unmapped_value="1.000000014901161e-1" mapped_value="1.000000014901161e-1"/>
+      <MKUFlanger_Slot2_Feedback unmapped_value="0" mapped_value="0"/>
+      <MKUFlanger_Slot2_Type unmapped_value="0" mapped_value="0"/>
+      <MKUFlanger_Slot2_ModFreq unmapped_value="1.000000014901161e-1" mapped_value="1.000000014901161e-1"/>
+      <MKUFlanger_Slot2_ModRange unmapped_value="0" mapped_value="0"/>
+      <MKUFrequencyShifter_Slot2_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFrequencyShifter_Slot2_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUFrequencyShifter_Slot2_DryWet unmapped_value="1.500000059604645e-1" mapped_value="1.500000059604645e-1"/>
+      <MKUFrequencyShifter_Slot2_Frequency unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUFrequencyShifter_Slot2_FrequencyOffset unmapped_value="5e-1" mapped_value="0"/>
+      <MKUPhaser_Slot2_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUPhaser_Slot2_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUPhaser_Slot2_PhaserType unmapped_value="1" mapped_value="1"/>
+      <MKUPhaser_Slot2_CenterFrequency unmapped_value="2.083177864551544e-1" mapped_value="1e2"/>
+      <MKUPhaser_Slot2_Feedback unmapped_value="1" mapped_value="1"/>
+      <MKUPhaser_Slot2_Stages unmapped_value="4.838709533214569e-1" mapped_value="1.6e1"/>
+      <MKUPhaser_Slot2_Rate unmapped_value="3.294324576854706e-1" mapped_value="1.244348287582397"/>
+      <MKUPhaser_Slot2_ModulationRange unmapped_value="0" mapped_value="0"/>
+      <MKUPhaser_Slot2_WetDry unmapped_value="0" mapped_value="0"/>
+      <MKUReverb_Slot2_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUReverb_Slot2_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUReverb_Slot2_Size unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUReverb_Slot2_Damping unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUReverb_Slot2_DryWet unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUReverb_Slot2_Width unmapped_value="5e-1" mapped_value="5e-1"/>
+      <MKUReverb_Slot2_Freeze unmapped_value="0" mapped_value="0"/>
+      <MKUCompressor_MasterCompressor_InputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUCompressor_MasterCompressor_OutputGain unmapped_value="8.484848737716675e-1" mapped_value="-4"/>
+      <MKUCompressor_MasterCompressor_MakeupGain unmapped_value="0" mapped_value="0"/>
+      <MKUCompressor_MasterCompressor_Threshold unmapped_value="6.886957883834839e-1" mapped_value="-9.339126586914062"/>
+      <MKUCompressor_MasterCompressor_Ratio unmapped_value="1.111111119389534e-1" mapped_value="4"/>
+      <MKUCompressor_MasterCompressor_Attack unmapped_value="6.541972756385803e-1" mapped_value="1.20000010356307e-2"/>
+      <MKUCompressor_MasterCompressor_Release unmapped_value="0" mapped_value="5.000000074505806e-2"/>
+      <MKUCompressor_MasterCompressor_WetDry unmapped_value="5.009729266166687e-1" mapped_value="5.009729266166687e-1"/>
+      <MKUOutputBus_MainOutput_DryWet unmapped_value="8.492524027824402e-1" mapped_value="8.492524027824402e-1"/>
+      <MKUOutputBus_MainOutput_OutputGain unmapped_value="9.090909361839294e-1" mapped_value="0"/>
+      <MKUOutputBus_MainOutput_LowpassCutoff unmapped_value="1" mapped_value="2.2e4"/>
+      <MKUOutputBus_MainOutput_HighpassCutoff unmapped_value="0" mapped_value="3e1"/>
+    </Parameters>
+    <Node_Properties>
+      <MKUClickableEnvelope_Envelope1 Name="MOD 1" NumPoints="33" PointX0="0" PointY0="0" ControlPointX0="-1.939058117568493e-2"
+                                      ControlPointY0="-7.142857313156128e-1" PointX1="1.225626766681671e-1"
+                                      PointY1="0" ControlPointX1="1.246537417173386e-1" ControlPointY1="-7.142857182770967e-3"
+                                      RateCurrentMapping="1" Bypassed="0" PointX2="1.225626766681671e-1"
+                                      PointY2="7.028985619544983e-1" ControlPointX2="1.246537417173386e-1"
+                                      ControlPointY2="8.285714387893677e-1" PointX3="1.532033383846283e-1"
+                                      PointY3="7.028985619544983e-1" ControlPointX3="1.440443247556686e-1"
+                                      ControlPointY3="7.357142567634583e-1" PointX4="1.532033383846283e-1"
+                                      PointY4="2.246376872062683e-1" ControlPointX4="1.551246494054794e-1"
+                                      ControlPointY4="2.785714268684387e-1" PointX5="1.838440150022507e-1"
+                                      PointY5="2.246376872062683e-1" ControlPointX5="1.800553947687149e-1"
+                                      ControlPointY5="2.357142865657806e-1" PointX6="1.838440150022507e-1"
+                                      PointY6="9.130434989929199e-1" ControlPointX6="1.855955719947815e-1"
+                                      ControlPointY6="1" PointX7="2.144846767187119e-1" PointY7="9.130434989929199e-1"
+                                      ControlPointX7="2.132963985204697e-1" ControlPointY7="8.714285492897034e-1"
+                                      PointX8="2.144846767187119e-1" PointY8="3.62318828701973e-2"
+                                      ControlPointX8="2.160664796829224e-1" ControlPointY8="1.785714328289032e-1"
+                                      PointX9="3.091922104358673e-1" PointY9="1" ControlPointX9="3.102492988109589e-1"
+                                      ControlPointY9="1.078571438789368" PointX10="3.091922104358673e-1"
+                                      PointY10="5.072463750839233e-1" ControlPointX10="3.102492988109589e-1"
+                                      ControlPointY10="5.357142686843872e-1" PointX11="3.398328721523285e-1"
+                                      PointY11="5.144927501678467e-1" ControlPointX11="3.351800441741943e-1"
+                                      ControlPointY11="5.357142686843872e-1" PointX12="3.398328721523285e-1"
+                                      PointY12="0" ControlPointX12="3.407202363014221e-1" ControlPointY12="-5.714285746216774e-2"
+                                      PointX13="3.788300752639771e-1" PointY13="0" ControlPointX13="3.767313063144684e-1"
+                                      ControlPointY13="-7.142857182770967e-3" PointX14="3.788300752639771e-1"
+                                      PointY14="8.115941882133484e-1" ControlPointX14="3.795013725757599e-1"
+                                      ControlPointY14="9.571428298950195e-1" PointX15="5.125347971916199e-1"
+                                      PointY15="5.072463676333427e-2" ControlPointX15="5.124653577804565e-1"
+                                      ControlPointY15="2.785714268684387e-1" PointX16="5.125347971916199e-1"
+                                      PointY16="8.840579986572266e-1" ControlPointX16="5.124653577804565e-1"
+                                      ControlPointY16="1.049999952316284" PointX17="5.403899550437927e-1"
+                                      PointY17="8.913043737411499e-1" ControlPointX17="5.290858745574951e-1"
+                                      ControlPointY17="8.642857074737549e-1" PointX18="5.403899550437927e-1"
+                                      PointY18="5.289855003356934e-1" ControlPointX18="5.401661992073059e-1"
+                                      ControlPointY18="4.857142865657806e-1" PointX19="5.626741051673889e-1"
+                                      PointY19="5.362318754196167e-1" ControlPointX19="5.623268485069275e-1"
+                                      ControlPointY19="5.071428418159485e-1" PointX20="5.626741051673889e-1"
+                                      PointY20="2.101449221372604e-1" ControlPointX20="5.623268485069275e-1"
+                                      ControlPointY20="3.285714387893677e-1" PointX21="5.961002707481384e-1"
+                                      PointY21="2.101449221372604e-1" ControlPointX21="5.900276899337769e-1"
+                                      ControlPointY21="1.571428626775742e-1" PointX22="5.961002707481384e-1"
+                                      PointY22="1" ControlPointX22="5.955678820610046e-1" ControlPointY22="1.078571438789368"
+                                      PointX23="6.239554286003113e-1" PointY23="1" ControlPointX23="6.23268723487854e-1"
+                                      ControlPointY23="1" PointX24="6.239554286003113e-1" PointY24="2.173913083970547e-2"
+                                      ControlPointX24="6.23268723487854e-1" ControlPointY24="1.071428582072258e-1"
+                                      PointX25="6.88022255897522e-1" PointY25="1" ControlPointX25="6.869806051254272e-1"
+                                      ControlPointY25="1.078571438789368" PointX26="7.325905561447144e-1"
+                                      PointY26="1.304347813129425e-1" ControlPointX26="7.313019633293152e-1"
+                                      ControlPointY26="3.142857253551483e-1" PointX27="7.77158796787262e-1"
+                                      PointY27="8.188405632972717e-1" ControlPointX27="7.756232619285583e-1"
+                                      ControlPointY27="6.571428775787354e-1" PointX28="8.077994585037231e-1"
+                                      PointY28="6.159420013427734e-1" ControlPointX28="8.060941696166992e-1"
+                                      ControlPointY28="5.571428537368774e-1" PointX29="8.35654616355896e-1"
+                                      PointY29="7.681159377098083e-1" ControlPointX29="8.337950110435486e-1"
+                                      ControlPointY29="6.285714507102966e-1" PointX30="8.384401202201843e-1"
+                                      PointY30="1.521739065647125e-1" ControlPointX30="8.365650773048401e-1"
+                                      ControlPointY30="2.428571432828903e-1" PointX31="8.997214436531067e-1"
+                                      PointY31="9.202898740768433e-1" ControlPointX31="8.975069522857666e-1"
+                                      ControlPointY31="9.642857313156128e-1" PointX32="1" PointY32="7.246376574039459e-2"
+                                      ControlPointX32="9.639889001846313e-1" ControlPointY32="2.571428716182709e-1"/>
+      <MKUClickableEnvelope_Envelope2 Name="MOD 2" NumPoints="6" PointX0="0" PointY0="1" ControlPointX0="1.939058117568493e-2"
+                                      ControlPointY0="6.000000238418579e-1" PointX1="2.479108572006226e-1"
+                                      PointY1="0" ControlPointX1="2.493074834346771e-1" ControlPointY1="1.214285716414452e-1"
+                                      RateCurrentMapping="1" Bypassed="0" PointX2="3.844011127948761e-1"
+                                      PointY2="4.927536249160767e-1" ControlPointX2="3.850415647029877e-1"
+                                      ControlPointY2="4.928571283817291e-1" PointX3="4.735375940799713e-1"
+                                      PointY3="1.086956486105919e-1" ControlPointX3="4.736842215061188e-1"
+                                      ControlPointY3="3.071428537368774e-1" PointX4="6.072423458099365e-1"
+                                      PointY4="8.333333134651184e-1" ControlPointX4="6.066482067108154e-1"
+                                      ControlPointY4="6.642857193946838e-1" PointX5="1" PointY5="0"
+                                      ControlPointX5="8.587257862091064e-1" ControlPointY5="4.857142865657806e-1"/>
+      <MKUMacroNode_Macro1 MacroName="RUINER" Bypassed="0"/>
+      <MKUMacroNode_Macro2 MacroName="FX MOD" Bypassed="0"/>
+      <MKUInputBus_MainInput Bypassed="0"/>
+      <MKUThreeBandSplitterNode_Stage_1 Bypassed="0" Band1HzModBiPolar0="1" Band2HzModBiPolar0="1" Band2HzDepthModRange0="2.155172973871231e-1"
+                                        Band1HzDepthModRange0="1.709026843309402e-1" Band2HzModAmount2="0"
+                                        Band2HzModBiPolar2="0"/>
+      <MKUDustDistoNode_Stage_1 Bypassed="0" TimeCurrentMapping="0" Control1DepthModRange0="8.199073076248169e-1"
+                                FeedbackModAmount2="3.001593351364136e-1" TimeModAmount2="-3.423401415348053e-1"
+                                TimeDepthModRange0="7.627873681485653e-3" OutputGainModAmount2="-8.663020096719265e-3"/>
+      <MKUStereoSend_Stage_1_Effect_Input Bypassed="0"/>
+      <MKUBitReducer_Stage_1 Bypassed="1" WetDryModAmount2="0" SampleReductionDepthModRange0="0"
+                             InputGainDepthModRange0="0" InputGainModAmount0="0" InputGainModBiPolar0="0"
+                             InputGainDepthModRange1="0" InputGainModAmount1="0" InputGainModBiPolar1="0"
+                             InputGainDepthModRange2="0" InputGainModAmount2="0" InputGainModBiPolar2="0"
+                             InputGainDepthModRange3="0" InputGainModAmount3="0" InputGainModBiPolar3="0"
+                             OutputGainDepthModRange0="0" OutputGainModAmount0="0" OutputGainModBiPolar0="0"
+                             OutputGainDepthModRange1="0" OutputGainModAmount1="0" OutputGainModBiPolar1="0"
+                             OutputGainDepthModRange2="0" OutputGainModAmount2="0" OutputGainModBiPolar2="0"
+                             OutputGainDepthModRange3="0" OutputGainModAmount3="0" OutputGainModBiPolar3="0"
+                             BitsDepthModRange0="0" BitsModAmount0="0" BitsModBiPolar0="0"
+                             BitsDepthModRange1="0" BitsModAmount1="0" BitsModBiPolar1="0"
+                             BitsDepthModRange2="0" BitsModAmount2="0" BitsModBiPolar2="0"
+                             BitsDepthModRange3="0" BitsModAmount3="0" BitsModBiPolar3="0"
+                             SampleReductionModAmount0="0" SampleReductionModBiPolar0="0"
+                             SampleReductionDepthModRange1="0" SampleReductionModAmount1="0"
+                             SampleReductionModBiPolar1="0" SampleReductionDepthModRange2="0"
+                             SampleReductionModAmount2="0" SampleReductionModBiPolar2="0"
+                             SampleReductionDepthModRange3="0" SampleReductionModAmount3="0"
+                             SampleReductionModBiPolar3="0" WetDryDepthModRange0="0" WetDryModAmount0="0"
+                             WetDryModBiPolar0="0" WetDryDepthModRange1="0" WetDryModAmount1="0"
+                             WetDryModBiPolar1="0" WetDryDepthModRange2="0" WetDryModBiPolar2="0"
+                             WetDryDepthModRange3="0" WetDryModAmount3="0" WetDryModBiPolar3="0"/>
+      <MKUChorus_Stage_1 Bypassed="1" InputGainDepthModRange0="0" InputGainModAmount0="0"
+                         InputGainModBiPolar0="0" InputGainDepthModRange1="0" InputGainModAmount1="0"
+                         InputGainModBiPolar1="0" InputGainDepthModRange2="0" InputGainModAmount2="0"
+                         InputGainModBiPolar2="0" InputGainDepthModRange3="0" InputGainModAmount3="0"
+                         InputGainModBiPolar3="0" OutputGainDepthModRange0="0" OutputGainModAmount0="0"
+                         OutputGainModBiPolar0="0" OutputGainDepthModRange1="0" OutputGainModAmount1="0"
+                         OutputGainModBiPolar1="0" OutputGainDepthModRange2="0" OutputGainModAmount2="0"
+                         OutputGainModBiPolar2="0" OutputGainDepthModRange3="0" OutputGainModAmount3="0"
+                         OutputGainModBiPolar3="0" RateDepthModRange0="0" RateModAmount0="0"
+                         RateModBiPolar0="0" RateDepthModRange1="0" RateModAmount1="0"
+                         RateModBiPolar1="0" RateDepthModRange2="0" RateModAmount2="0"
+                         RateModBiPolar2="0" RateDepthModRange3="0" RateModAmount3="0"
+                         RateModBiPolar3="0" DepthDepthModRange0="0" DepthModAmount0="0"
+                         DepthModBiPolar0="0" DepthDepthModRange1="0" DepthModAmount1="0"
+                         DepthModBiPolar1="0" DepthDepthModRange2="0" DepthModAmount2="0"
+                         DepthModBiPolar2="0" DepthDepthModRange3="0" DepthModAmount3="0"
+                         DepthModBiPolar3="0" FeedbackDepthModRange0="0" FeedbackModAmount0="0"
+                         FeedbackModBiPolar0="0" FeedbackDepthModRange1="0" FeedbackModAmount1="0"
+                         FeedbackModBiPolar1="0" FeedbackDepthModRange2="0" FeedbackModAmount2="0"
+                         FeedbackModBiPolar2="0" FeedbackDepthModRange3="0" FeedbackModAmount3="0"
+                         FeedbackModBiPolar3="0" WidthDepthModRange0="0" WidthModAmount0="0"
+                         WidthModBiPolar0="0" WidthDepthModRange1="0" WidthModAmount1="0"
+                         WidthModBiPolar1="0" WidthDepthModRange2="0" WidthModAmount2="0"
+                         WidthModBiPolar2="0" WidthDepthModRange3="0" WidthModAmount3="0"
+                         WidthModBiPolar3="0" WetDryDepthModRange0="0" WetDryModAmount0="0"
+                         WetDryModBiPolar0="0" WetDryDepthModRange1="0" WetDryModAmount1="0"
+                         WetDryModBiPolar1="0" WetDryDepthModRange2="0" WetDryModAmount2="0"
+                         WetDryModBiPolar2="0" WetDryDepthModRange3="0" WetDryModAmount3="0"
+                         WetDryModBiPolar3="0"/>
+      <MKUCompressor_Stage_1 Bypassed="1" InputGainDepthModRange0="0" InputGainModAmount0="0"
+                             InputGainModBiPolar0="0" InputGainDepthModRange1="0" InputGainModAmount1="0"
+                             InputGainModBiPolar1="0" InputGainDepthModRange2="0" InputGainModAmount2="0"
+                             InputGainModBiPolar2="0" InputGainDepthModRange3="0" InputGainModAmount3="0"
+                             InputGainModBiPolar3="0" OutputGainDepthModRange0="0" OutputGainModAmount0="0"
+                             OutputGainModBiPolar0="0" OutputGainDepthModRange1="0" OutputGainModAmount1="0"
+                             OutputGainModBiPolar1="0" OutputGainDepthModRange2="0" OutputGainModAmount2="0"
+                             OutputGainModBiPolar2="0" OutputGainDepthModRange3="0" OutputGainModAmount3="0"
+                             OutputGainModBiPolar3="0" WetDryDepthModRange0="0" WetDryModAmount0="0"
+                             WetDryModBiPolar0="0" WetDryDepthModRange1="0" WetDryModAmount1="0"
+                             WetDryModBiPolar1="0" WetDryDepthModRange2="0" WetDryModAmount2="0"
+                             WetDryModBiPolar2="0" WetDryDepthModRange3="0" WetDryModAmount3="0"
+                             WetDryModBiPolar3="0" ThresholdDepthModRange0="0" ThresholdModAmount0="0"
+                             ThresholdModBiPolar0="0" ThresholdDepthModRange1="0" ThresholdModAmount1="0"
+                             ThresholdModBiPolar1="0" ThresholdDepthModRange2="0" ThresholdModAmount2="0"
+                             ThresholdModBiPolar2="0" ThresholdDepthModRange3="0" ThresholdModAmount3="0"
+                             ThresholdModBiPolar3="0" RatioDepthModRange0="0" RatioModAmount0="0"
+                             RatioModBiPolar0="0" RatioDepthModRange1="0" RatioModAmount1="0"
+                             RatioModBiPolar1="0" RatioDepthModRange2="0" RatioModAmount2="0"
+                             RatioModBiPolar2="0" RatioDepthModRange3="0" RatioModAmount3="0"
+                             RatioModBiPolar3="0" AttackDepthModRange0="0" AttackModAmount0="0"
+                             AttackModBiPolar0="0" AttackDepthModRange1="0" AttackModAmount1="0"
+                             AttackModBiPolar1="0" AttackDepthModRange2="0" AttackModAmount2="0"
+                             AttackModBiPolar2="0" AttackDepthModRange3="0" AttackModAmount3="0"
+                             AttackModBiPolar3="0" ReleaseDepthModRange0="0" ReleaseModAmount0="0"
+                             ReleaseModBiPolar0="0" ReleaseDepthModRange1="0" ReleaseModAmount1="0"
+                             ReleaseModBiPolar1="0" ReleaseDepthModRange2="0" ReleaseModAmount2="0"
+                             ReleaseModBiPolar2="0" ReleaseDepthModRange3="0" ReleaseModAmount3="0"
+                             ReleaseModBiPolar3="0" MakeupGainDepthModRange0="0" MakeupGainModAmount0="0"
+                             MakeupGainModBiPolar0="0" MakeupGainDepthModRange1="0" MakeupGainModAmount1="0"
+                             MakeupGainModBiPolar1="0" MakeupGainDepthModRange2="0" MakeupGainModAmount2="0"
+                             MakeupGainModBiPolar2="0" MakeupGainDepthModRange3="0" MakeupGainModAmount3="0"
+                             MakeupGainModBiPolar3="0"/>
+      <MKUStereoDelay_Stage_1 Bypassed="0" TimeCurrentMapping="1" InputGainDepthModRange0="0"
+                              InputGainModAmount0="0" InputGainModBiPolar0="0" InputGainDepthModRange1="0"
+                              InputGainModAmount1="0" InputGainModBiPolar1="0" InputGainDepthModRange2="0"
+                              InputGainModAmount2="0" InputGainModBiPolar2="0" InputGainDepthModRange3="0"
+                              InputGainModAmount3="0" InputGainModBiPolar3="0" OutputGainDepthModRange0="0"
+                              OutputGainModAmount0="0" OutputGainModBiPolar0="0" OutputGainDepthModRange1="0"
+                              OutputGainModAmount1="0" OutputGainModBiPolar1="0" OutputGainDepthModRange2="0"
+                              OutputGainModAmount2="0" OutputGainModBiPolar2="0" OutputGainDepthModRange3="0"
+                              OutputGainModAmount3="0" OutputGainModBiPolar3="0" TypeDepthModRange0="0"
+                              TypeModAmount0="0" TypeModBiPolar0="0" TypeDepthModRange1="0"
+                              TypeModAmount1="0" TypeModBiPolar1="0" TypeDepthModRange2="0"
+                              TypeModAmount2="0" TypeModBiPolar2="0" TypeDepthModRange3="0"
+                              TypeModAmount3="0" TypeModBiPolar3="0" LowPassDepthModRange0="0"
+                              LowPassModAmount0="0" LowPassModBiPolar0="0" LowPassDepthModRange1="0"
+                              LowPassModAmount1="0" LowPassModBiPolar1="0" LowPassDepthModRange2="0"
+                              LowPassModAmount2="0" LowPassModBiPolar2="0" LowPassDepthModRange3="0"
+                              LowPassModAmount3="0" LowPassModBiPolar3="0" HighPassDepthModRange0="0"
+                              HighPassModAmount0="0" HighPassModBiPolar0="0" HighPassDepthModRange1="0"
+                              HighPassModAmount1="0" HighPassModBiPolar1="0" HighPassDepthModRange2="0"
+                              HighPassModAmount2="0" HighPassModBiPolar2="0" HighPassDepthModRange3="0"
+                              HighPassModAmount3="0" HighPassModBiPolar3="0" FeedbackDepthModRange0="0"
+                              FeedbackModAmount0="0" FeedbackModBiPolar0="0" FeedbackDepthModRange1="0"
+                              FeedbackModAmount1="0" FeedbackModBiPolar1="0" FeedbackDepthModRange2="0"
+                              FeedbackModAmount2="0" FeedbackModBiPolar2="0" FeedbackDepthModRange3="0"
+                              FeedbackModAmount3="0" FeedbackModBiPolar3="0" TimeDepthModRange0="0"
+                              TimeModAmount0="0" TimeModBiPolar0="0" TimeDepthModRange1="0"
+                              TimeModAmount1="0" TimeModBiPolar1="0" TimeDepthModRange2="0"
+                              TimeModAmount2="0" TimeModBiPolar2="0" TimeDepthModRange3="0"
+                              TimeModAmount3="0" TimeModBiPolar3="0" DryWetDepthModRange0="0"
+                              DryWetModAmount0="0" DryWetModBiPolar0="0" DryWetDepthModRange1="0"
+                              DryWetModAmount1="0" DryWetModBiPolar1="0" DryWetDepthModRange2="0"
+                              DryWetModAmount2="1.260873079299927e-1" DryWetModBiPolar2="0"
+                              DryWetDepthModRange3="0" DryWetModAmount3="0" DryWetModBiPolar3="0"/>
+      <MKUFilter_Stage_1 Bypassed="1" InputGainDepthModRange0="0" InputGainModAmount0="0"
+                         InputGainModBiPolar0="0" InputGainDepthModRange1="0" InputGainModAmount1="0"
+                         InputGainModBiPolar1="0" InputGainDepthModRange2="0" InputGainModAmount2="0"
+                         InputGainModBiPolar2="0" InputGainDepthModRange3="0" InputGainModAmount3="0"
+                         InputGainModBiPolar3="0" OutputGainDepthModRange0="0" OutputGainModAmount0="0"
+                         OutputGainModBiPolar0="0" OutputGainDepthModRange1="0" OutputGainModAmount1="0"
+                         OutputGainModBiPolar1="0" OutputGainDepthModRange2="0" OutputGainModAmount2="0"
+                         OutputGainModBiPolar2="0" OutputGainDepthModRange3="0" OutputGainModAmount3="0"
+                         OutputGainModBiPolar3="0" CutoffDepthModRange0="0" CutoffModAmount0="0"
+                         CutoffModBiPolar0="0" CutoffDepthModRange1="0" CutoffModAmount1="0"
+                         CutoffModBiPolar1="0" CutoffDepthModRange2="0" CutoffModAmount2="0"
+                         CutoffModBiPolar2="0" CutoffDepthModRange3="0" CutoffModAmount3="0"
+                         CutoffModBiPolar3="0" ResonanceDepthModRange0="0" ResonanceModAmount0="0"
+                         ResonanceModBiPolar0="0" ResonanceDepthModRange1="0" ResonanceModAmount1="0"
+                         ResonanceModBiPolar1="0" ResonanceDepthModRange2="0" ResonanceModAmount2="0"
+                         ResonanceModBiPolar2="0" ResonanceDepthModRange3="0" ResonanceModAmount3="0"
+                         ResonanceModBiPolar3="0" ModeDepthModRange0="0" ModeModAmount0="0"
+                         ModeModBiPolar0="0" ModeDepthModRange1="0" ModeModAmount1="0"
+                         ModeModBiPolar1="0" ModeDepthModRange2="0" ModeModAmount2="0"
+                         ModeModBiPolar2="0" ModeDepthModRange3="0" ModeModAmount3="0"
+                         ModeModBiPolar3="0" DriveDepthModRange0="0" DriveModAmount0="0"
+                         DriveModBiPolar0="0" DriveDepthModRange1="0" DriveModAmount1="0"
+                         DriveModBiPolar1="0" DriveDepthModRange2="0" DriveModAmount2="0"
+                         DriveModBiPolar2="0" DriveDepthModRange3="0" DriveModAmount3="0"
+                         DriveModBiPolar3="0" FollowAmountDepthModRange0="0" FollowAmountModAmount0="0"
+                         FollowAmountModBiPolar0="0" FollowAmountDepthModRange1="0" FollowAmountModAmount1="0"
+                         FollowAmountModBiPolar1="0" FollowAmountDepthModRange2="0" FollowAmountModAmount2="0"
+                         FollowAmountModBiPolar2="0" FollowAmountDepthModRange3="0" FollowAmountModAmount3="0"
+                         FollowAmountModBiPolar3="0" WetDryDepthModRange0="0" WetDryModAmount0="0"
+                         WetDryModBiPolar0="0" WetDryDepthModRange1="0" WetDryModAmount1="0"
+                         WetDryModBiPolar1="0" WetDryDepthModRange2="0" WetDryModAmount2="0"
+                         WetDryModBiPolar2="0" WetDryDepthModRange3="0" WetDryModAmount3="0"
+                         WetDryModBiPolar3="0"/>
+      <MKUFlanger_Stage_1 Bypassed="1"/>
+      <MKUFrequencyShifter_Stage_1 Bypassed="1"/>
+      <MKUPhaser_Stage_1 Bypassed="1" InputGainDepthModRange0="0" InputGainModAmount0="0"
+                         InputGainModBiPolar0="0" InputGainDepthModRange1="0" InputGainModAmount1="0"
+                         InputGainModBiPolar1="0" InputGainDepthModRange2="0" InputGainModAmount2="0"
+                         InputGainModBiPolar2="0" InputGainDepthModRange3="0" InputGainModAmount3="0"
+                         InputGainModBiPolar3="0" OutputGainDepthModRange0="0" OutputGainModAmount0="0"
+                         OutputGainModBiPolar0="0" OutputGainDepthModRange1="0" OutputGainModAmount1="0"
+                         OutputGainModBiPolar1="0" OutputGainDepthModRange2="0" OutputGainModAmount2="0"
+                         OutputGainModBiPolar2="0" OutputGainDepthModRange3="0" OutputGainModAmount3="0"
+                         OutputGainModBiPolar3="0" PhaserTypeDepthModRange0="0" PhaserTypeModAmount0="0"
+                         PhaserTypeModBiPolar0="0" PhaserTypeDepthModRange1="0" PhaserTypeModAmount1="0"
+                         PhaserTypeModBiPolar1="0" PhaserTypeDepthModRange2="0" PhaserTypeModAmount2="0"
+                         PhaserTypeModBiPolar2="0" PhaserTypeDepthModRange3="0" PhaserTypeModAmount3="0"
+                         PhaserTypeModBiPolar3="0" CenterFrequencyDepthModRange0="0" CenterFrequencyModAmount0="0"
+                         CenterFrequencyModBiPolar0="0" CenterFrequencyDepthModRange1="0"
+                         CenterFrequencyModAmount1="0" CenterFrequencyModBiPolar1="0"
+                         CenterFrequencyDepthModRange2="0" CenterFrequencyModAmount2="0"
+                         CenterFrequencyModBiPolar2="0" CenterFrequencyDepthModRange3="0"
+                         CenterFrequencyModAmount3="0" CenterFrequencyModBiPolar3="0"
+                         FeedbackDepthModRange0="0" FeedbackModAmount0="0" FeedbackModBiPolar0="0"
+                         FeedbackDepthModRange1="0" FeedbackModAmount1="0" FeedbackModBiPolar1="0"
+                         FeedbackDepthModRange2="0" FeedbackModAmount2="0" FeedbackModBiPolar2="0"
+                         FeedbackDepthModRange3="0" FeedbackModAmount3="0" FeedbackModBiPolar3="0"
+                         StagesDepthModRange0="0" StagesModAmount0="0" StagesModBiPolar0="0"
+                         StagesDepthModRange1="0" StagesModAmount1="0" StagesModBiPolar1="0"
+                         StagesDepthModRange2="0" StagesModAmount2="0" StagesModBiPolar2="0"
+                         StagesDepthModRange3="0" StagesModAmount3="0" StagesModBiPolar3="0"
+                         RateDepthModRange0="0" RateModAmount0="0" RateModBiPolar0="0"
+                         RateDepthModRange1="0" RateModAmount1="0" RateModBiPolar1="0"
+                         RateDepthModRange2="0" RateModAmount2="0" RateModBiPolar2="0"
+                         RateDepthModRange3="0" RateModAmount3="0" RateModBiPolar3="0"
+                         ModulationRangeDepthModRange0="0" ModulationRangeModAmount0="0"
+                         ModulationRangeModBiPolar0="0" ModulationRangeDepthModRange1="0"
+                         ModulationRangeModAmount1="0" ModulationRangeModBiPolar1="0"
+                         ModulationRangeDepthModRange2="0" ModulationRangeModAmount2="0"
+                         ModulationRangeModBiPolar2="0" ModulationRangeDepthModRange3="0"
+                         ModulationRangeModAmount3="0" ModulationRangeModBiPolar3="0"
+                         WetDryDepthModRange0="0" WetDryModAmount0="0" WetDryModBiPolar0="0"
+                         WetDryDepthModRange1="0" WetDryModAmount1="0" WetDryModBiPolar1="0"
+                         WetDryDepthModRange2="0" WetDryModAmount2="0" WetDryModBiPolar2="0"
+                         WetDryDepthModRange3="0" WetDryModAmount3="0" WetDryModBiPolar3="0"/>
+      <MKUReverb_Stage_1 Bypassed="1" InputGainDepthModRange0="0" InputGainModAmount0="0"
+                         InputGainModBiPolar0="0" InputGainDepthModRange1="0" InputGainModAmount1="0"
+                         InputGainModBiPolar1="0" InputGainDepthModRange2="0" InputGainModAmount2="0"
+                         InputGainModBiPolar2="0" InputGainDepthModRange3="0" InputGainModAmount3="0"
+                         InputGainModBiPolar3="0" OutputGainDepthModRange0="0" OutputGainModAmount0="0"
+                         OutputGainModBiPolar0="0" OutputGainDepthModRange1="0" OutputGainModAmount1="0"
+                         OutputGainModBiPolar1="0" OutputGainDepthModRange2="0" OutputGainModAmount2="0"
+                         OutputGainModBiPolar2="0" OutputGainDepthModRange3="0" OutputGainModAmount3="0"
+                         OutputGainModBiPolar3="0" SizeDepthModRange0="0" SizeModAmount0="0"
+                         SizeModBiPolar0="0" SizeDepthModRange1="0" SizeModAmount1="0"
+                         SizeModBiPolar1="0" SizeDepthModRange2="0" SizeModAmount2="0"
+                         SizeModBiPolar2="0" SizeDepthModRange3="0" SizeModAmount3="0"
+                         SizeModBiPolar3="0" DampingDepthModRange0="0" DampingModAmount0="0"
+                         DampingModBiPolar0="0" DampingDepthModRange1="0" DampingModAmount1="0"
+                         DampingModBiPolar1="0" DampingDepthModRange2="0" DampingModAmount2="0"
+                         DampingModBiPolar2="0" DampingDepthModRange3="0" DampingModAmount3="0"
+                         DampingModBiPolar3="0" DryWetDepthModRange0="0" DryWetModAmount0="0"
+                         DryWetModBiPolar0="0" DryWetDepthModRange1="0" DryWetModAmount1="0"
+                         DryWetModBiPolar1="0" DryWetDepthModRange2="0" DryWetModAmount2="0"
+                         DryWetModBiPolar2="0" DryWetDepthModRange3="0" DryWetModAmount3="0"
+                         DryWetModBiPolar3="0" WidthDepthModRange0="0" WidthModAmount0="0"
+                         WidthModBiPolar0="0" WidthDepthModRange1="0" WidthModAmount1="0"
+                         WidthModBiPolar1="0" WidthDepthModRange2="0" WidthModAmount2="0"
+                         WidthModBiPolar2="0" WidthDepthModRange3="0" WidthModAmount3="0"
+                         WidthModBiPolar3="0" FreezeDepthModRange0="0" FreezeModAmount0="0"
+                         FreezeModBiPolar0="0" FreezeDepthModRange1="0" FreezeModAmount1="0"
+                         FreezeModBiPolar1="0" FreezeDepthModRange2="0" FreezeModAmount2="0"
+                         FreezeModBiPolar2="0" FreezeDepthModRange3="0" FreezeModAmount3="0"
+                         FreezeModBiPolar3="0"/>
+      <MKUStereoSend_Stage_1_Effect_Output Bypassed="0"/>
+      <MKUMidSideGainNode_Stage_1 Bypassed="0" SideGainDepthModRange0="2.052784860134125e-1" TimeSpreadAmountDepthModRange0="1"/>
+      <MKUGainBus_Stage_1 Bypassed="0"/>
+      <MKUThreeBandSummerNode_Stage_1 Bypassed="0" MultiBand="1" Band1Cutoff="2.001613159179688e2"
+                                      Band2Cutoff="1.204954223632812e3"/>
+      <MKUToneControl_Stage_1 Bypassed="1"/>
+      <MKUThreeBandSplitterNode_Stage_2 Bypassed="1" Band2HzDepthModRange1="0" Band1HzDepthModRange1="0"
+                                        Band1HzModAmount2="0" Band1HzModBiPolar2="0" Band2HzDepthModRange0="0"
+                                        Band2HzModAmount0="0" Band2HzModBiPolar0="0" Band2HzModAmount1="0"
+                                        Band2HzModBiPolar1="0" Band2HzDepthModRange2="0" Band2HzModAmount2="0"
+                                        Band2HzModBiPolar2="0" Band2HzDepthModRange3="0" Band2HzModAmount3="0"
+                                        Band2HzModBiPolar3="0" Band1HzDepthModRange0="0" Band1HzModAmount0="0"
+                                        Band1HzModBiPolar0="0" Band1HzModAmount1="0" Band1HzModBiPolar1="0"
+                                        Band1HzDepthModRange2="0" Band1HzDepthModRange3="0" Band1HzModAmount3="0"
+                                        Band1HzModBiPolar3="0"/>
+      <MKUDustDistoNode_Stage_2 Bypassed="1" TimeCurrentMapping="0" Control1DepthModRange0="0"
+                                Control1ModAmount0="0" Control1ModBiPolar0="0" Control1DepthModRange1="0"
+                                Control1ModAmount1="0" Control1ModBiPolar1="0" Control1DepthModRange2="0"
+                                Control1ModAmount2="0" Control1ModBiPolar2="0" Control1DepthModRange3="0"
+                                Control1ModAmount3="0" Control1ModBiPolar3="0"/>
+      <MKUStereoSend_Stage_2_Effect_Input Bypassed="0"/>
+      <MKUBitReducer_Stage_2 Bypassed="1"/>
+      <MKUChorus_Stage_2 Bypassed="1"/>
+      <MKUCompressor_Stage_2 Bypassed="1"/>
+      <MKUStereoDelay_Stage_2 Bypassed="1" TimeCurrentMapping="1"/>
+      <MKUFilter_Stage_2 Bypassed="1"/>
+      <MKUFlanger_Stage_2 Bypassed="1"/>
+      <MKUFrequencyShifter_Stage_2 Bypassed="1"/>
+      <MKUPhaser_Stage_2 Bypassed="1"/>
+      <MKUReverb_Stage_2 Bypassed="1"/>
+      <MKUStereoSend_Stage_2_Effect_Output Bypassed="0"/>
+      <MKUMidSideGainNode_Stage_2 Bypassed="1" SideGainModAmount2="0" TimeSpreadAmountModAmount2="0"
+                                  TimeSpreadAmountModBiPolar2="0" TimeSpreadAmountDepthModRange1="0"
+                                  TimeSpreadAmountDepthModRange0="0" TimeSpreadAmountModAmount0="0"
+                                  TimeSpreadAmountModBiPolar0="0" TimeSpreadAmountModAmount1="0"
+                                  TimeSpreadAmountModBiPolar1="0" TimeSpreadAmountDepthModRange2="0"
+                                  TimeSpreadAmountDepthModRange3="0" TimeSpreadAmountModAmount3="0"
+                                  TimeSpreadAmountModBiPolar3="0" SideGainDepthModRange0="0" SideGainModAmount0="0"
+                                  SideGainModBiPolar0="0" SideGainDepthModRange1="0" SideGainModAmount1="0"
+                                  SideGainModBiPolar1="0" SideGainDepthModRange2="0" SideGainModBiPolar2="0"
+                                  SideGainDepthModRange3="0" SideGainModAmount3="0" SideGainModBiPolar3="0"/>
+      <MKUGainBus_Stage_2 Bypassed="1"/>
+      <MKUThreeBandSummerNode_Stage_2 Bypassed="1" MultiBand="1" Band1Cutoff="3e1" Band2Cutoff="2.2e4"/>
+      <MKUToneControl_Stage_2 Bypassed="1"/>
+      <MKUThreeBandSplitterNode_Stage_3 Bypassed="0"/>
+      <MKUDustDistoNode_Stage_3 Bypassed="0" TimeCurrentMapping="0" Control1ModAmount2="4.352412223815918e-1"
+                                OutputGainModAmount2="-8.750198408961296e-3" Control3DepthModRange1="0"
+                                Control2ModAmount2="2.233431339263916e-1" Control3ModAmount1="-5.219139456748962e-1"
+                                Control3ModBiPolar1="0"/>
+      <MKUStereoSend_Stage_3_Effect_Input Bypassed="0"/>
+      <MKUBitReducer_Stage_3 Bypassed="1"/>
+      <MKUChorus_Stage_3 Bypassed="1"/>
+      <MKUCompressor_Stage_3 Bypassed="1"/>
+      <MKUStereoDelay_Stage_3 Bypassed="1" TimeCurrentMapping="1"/>
+      <MKUFilter_Stage_3 Bypassed="1"/>
+      <MKUFlanger_Stage_3 Bypassed="1"/>
+      <MKUFrequencyShifter_Stage_3 Bypassed="1"/>
+      <MKUPhaser_Stage_3 Bypassed="1"/>
+      <MKUReverb_Stage_3 Bypassed="1"/>
+      <MKUStereoSend_Stage_3_Effect_Output Bypassed="0"/>
+      <MKUMidSideGainNode_Stage_3 Bypassed="1"/>
+      <MKUGainBus_Stage_3 Bypassed="0"/>
+      <MKUThreeBandSummerNode_Stage_3 Bypassed="0" MultiBand="1" Band1Cutoff="4.500000305175781e2"
+                                      Band2Cutoff="5.00000048828125e3"/>
+      <MKUToneControl_Stage_3 Bypassed="0" LowShelfModAmount2="9.051556885242462e-2"/>
+      <MKUStereoSend_Slot1_Input Bypassed="0"/>
+      <MKUBitReducer_Slot1 Bypassed="0" WetDryDepthModRange0="1" SampleReductionModAmount1="0"
+                           BitsModAmount2="9.52650249004364e-1" SampleReductionDepthModRange0="0"
+                           SampleReductionModAmount0="0" SampleReductionModBiPolar0="0"
+                           SampleReductionDepthModRange1="0" SampleReductionModBiPolar1="0"
+                           SampleReductionDepthModRange2="0" SampleReductionModAmount2="0"
+                           SampleReductionModBiPolar2="0" SampleReductionDepthModRange3="0"
+                           SampleReductionModAmount3="0" SampleReductionModBiPolar3="0"/>
+      <MKUChorus_Slot1 Bypassed="1"/>
+      <MKUCompressor_Slot1 Bypassed="1"/>
+      <MKUStereoDelay_Slot1 Bypassed="1" TimeCurrentMapping="1"/>
+      <MKUFilter_Slot1 Bypassed="1"/>
+      <MKUFlanger_Slot1 Bypassed="1"/>
+      <MKUFrequencyShifter_Slot1 Bypassed="1"/>
+      <MKUPhaser_Slot1 Bypassed="1"/>
+      <MKUReverb_Slot1 Bypassed="1"/>
+      <MKUStereoSend_Slot1_Output Bypassed="0"/>
+      <MKUStereoSend_Slot2_Input Bypassed="0"/>
+      <MKUBitReducer_Slot2 Bypassed="1" InputGainDepthModRange0="0" InputGainModAmount0="0"
+                           InputGainModBiPolar0="0" InputGainDepthModRange1="0" InputGainModAmount1="0"
+                           InputGainModBiPolar1="0" InputGainDepthModRange2="0" InputGainModAmount2="0"
+                           InputGainModBiPolar2="0" InputGainDepthModRange3="0" InputGainModAmount3="0"
+                           InputGainModBiPolar3="0" OutputGainDepthModRange0="0" OutputGainModAmount0="0"
+                           OutputGainModBiPolar0="0" OutputGainDepthModRange1="0" OutputGainModAmount1="0"
+                           OutputGainModBiPolar1="0" OutputGainDepthModRange2="0" OutputGainModAmount2="0"
+                           OutputGainModBiPolar2="0" OutputGainDepthModRange3="0" OutputGainModAmount3="0"
+                           OutputGainModBiPolar3="0" BitsDepthModRange0="0" BitsModAmount0="0"
+                           BitsModBiPolar0="0" BitsDepthModRange1="0" BitsModAmount1="0"
+                           BitsModBiPolar1="0" BitsDepthModRange2="0" BitsModAmount2="0"
+                           BitsModBiPolar2="0" BitsDepthModRange3="0" BitsModAmount3="0"
+                           BitsModBiPolar3="0" SampleReductionDepthModRange0="0" SampleReductionModAmount0="0"
+                           SampleReductionModBiPolar0="0" SampleReductionDepthModRange1="0"
+                           SampleReductionModAmount1="0" SampleReductionModBiPolar1="0"
+                           SampleReductionDepthModRange2="0" SampleReductionModAmount2="0"
+                           SampleReductionModBiPolar2="0" SampleReductionDepthModRange3="0"
+                           SampleReductionModAmount3="0" SampleReductionModBiPolar3="0"
+                           WetDryDepthModRange0="0" WetDryModAmount0="0" WetDryModBiPolar0="0"
+                           WetDryDepthModRange1="0" WetDryModAmount1="0" WetDryModBiPolar1="0"
+                           WetDryDepthModRange2="0" WetDryModAmount2="0" WetDryModBiPolar2="0"
+                           WetDryDepthModRange3="0" WetDryModAmount3="0" WetDryModBiPolar3="0"/>
+      <MKUChorus_Slot2 Bypassed="1" InputGainDepthModRange0="0" InputGainModAmount0="0"
+                       InputGainModBiPolar0="0" InputGainDepthModRange1="0" InputGainModAmount1="0"
+                       InputGainModBiPolar1="0" InputGainDepthModRange2="0" InputGainModAmount2="0"
+                       InputGainModBiPolar2="0" InputGainDepthModRange3="0" InputGainModAmount3="0"
+                       InputGainModBiPolar3="0" OutputGainDepthModRange0="0" OutputGainModAmount0="0"
+                       OutputGainModBiPolar0="0" OutputGainDepthModRange1="0" OutputGainModAmount1="0"
+                       OutputGainModBiPolar1="0" OutputGainDepthModRange2="0" OutputGainModAmount2="0"
+                       OutputGainModBiPolar2="0" OutputGainDepthModRange3="0" OutputGainModAmount3="0"
+                       OutputGainModBiPolar3="0" RateDepthModRange0="0" RateModAmount0="0"
+                       RateModBiPolar0="0" RateDepthModRange1="0" RateModAmount1="0"
+                       RateModBiPolar1="0" RateDepthModRange2="0" RateModAmount2="0"
+                       RateModBiPolar2="0" RateDepthModRange3="0" RateModAmount3="0"
+                       RateModBiPolar3="0" DepthDepthModRange0="0" DepthModAmount0="0"
+                       DepthModBiPolar0="0" DepthDepthModRange1="0" DepthModAmount1="0"
+                       DepthModBiPolar1="0" DepthDepthModRange2="0" DepthModAmount2="0"
+                       DepthModBiPolar2="0" DepthDepthModRange3="0" DepthModAmount3="0"
+                       DepthModBiPolar3="0" FeedbackDepthModRange0="0" FeedbackModAmount0="0"
+                       FeedbackModBiPolar0="0" FeedbackDepthModRange1="0" FeedbackModAmount1="0"
+                       FeedbackModBiPolar1="0" FeedbackDepthModRange2="0" FeedbackModAmount2="0"
+                       FeedbackModBiPolar2="0" FeedbackDepthModRange3="0" FeedbackModAmount3="0"
+                       FeedbackModBiPolar3="0" WidthDepthModRange0="0" WidthModAmount0="0"
+                       WidthModBiPolar0="0" WidthDepthModRange1="0" WidthModAmount1="0"
+                       WidthModBiPolar1="0" WidthDepthModRange2="0" WidthModAmount2="0"
+                       WidthModBiPolar2="0" WidthDepthModRange3="0" WidthModAmount3="0"
+                       WidthModBiPolar3="0" WetDryDepthModRange0="0" WetDryModAmount0="0"
+                       WetDryModBiPolar0="0" WetDryDepthModRange1="0" WetDryModAmount1="0"
+                       WetDryModBiPolar1="0" WetDryDepthModRange2="0" WetDryModAmount2="0"
+                       WetDryModBiPolar2="0" WetDryDepthModRange3="0" WetDryModAmount3="0"
+                       WetDryModBiPolar3="0"/>
+      <MKUCompressor_Slot2 Bypassed="1" InputGainDepthModRange0="0" InputGainModAmount0="0"
+                           InputGainModBiPolar0="0" InputGainDepthModRange1="0" InputGainModAmount1="0"
+                           InputGainModBiPolar1="0" InputGainDepthModRange2="0" InputGainModAmount2="0"
+                           InputGainModBiPolar2="0" InputGainDepthModRange3="0" InputGainModAmount3="0"
+                           InputGainModBiPolar3="0" OutputGainDepthModRange0="0" OutputGainModAmount0="0"
+                           OutputGainModBiPolar0="0" OutputGainDepthModRange1="0" OutputGainModAmount1="0"
+                           OutputGainModBiPolar1="0" OutputGainDepthModRange2="0" OutputGainModAmount2="0"
+                           OutputGainModBiPolar2="0" OutputGainDepthModRange3="0" OutputGainModAmount3="0"
+                           OutputGainModBiPolar3="0" WetDryDepthModRange0="0" WetDryModAmount0="0"
+                           WetDryModBiPolar0="0" WetDryDepthModRange1="0" WetDryModAmount1="0"
+                           WetDryModBiPolar1="0" WetDryDepthModRange2="0" WetDryModAmount2="0"
+                           WetDryModBiPolar2="0" WetDryDepthModRange3="0" WetDryModAmount3="0"
+                           WetDryModBiPolar3="0" ThresholdDepthModRange0="0" ThresholdModAmount0="0"
+                           ThresholdModBiPolar0="0" ThresholdDepthModRange1="0" ThresholdModAmount1="0"
+                           ThresholdModBiPolar1="0" ThresholdDepthModRange2="0" ThresholdModAmount2="0"
+                           ThresholdModBiPolar2="0" ThresholdDepthModRange3="0" ThresholdModAmount3="0"
+                           ThresholdModBiPolar3="0" RatioDepthModRange0="0" RatioModAmount0="0"
+                           RatioModBiPolar0="0" RatioDepthModRange1="0" RatioModAmount1="0"
+                           RatioModBiPolar1="0" RatioDepthModRange2="0" RatioModAmount2="0"
+                           RatioModBiPolar2="0" RatioDepthModRange3="0" RatioModAmount3="0"
+                           RatioModBiPolar3="0" AttackDepthModRange0="0" AttackModAmount0="0"
+                           AttackModBiPolar0="0" AttackDepthModRange1="0" AttackModAmount1="0"
+                           AttackModBiPolar1="0" AttackDepthModRange2="0" AttackModAmount2="0"
+                           AttackModBiPolar2="0" AttackDepthModRange3="0" AttackModAmount3="0"
+                           AttackModBiPolar3="0" ReleaseDepthModRange0="0" ReleaseModAmount0="0"
+                           ReleaseModBiPolar0="0" ReleaseDepthModRange1="0" ReleaseModAmount1="0"
+                           ReleaseModBiPolar1="0" ReleaseDepthModRange2="0" ReleaseModAmount2="0"
+                           ReleaseModBiPolar2="0" ReleaseDepthModRange3="0" ReleaseModAmount3="0"
+                           ReleaseModBiPolar3="0" MakeupGainDepthModRange0="0" MakeupGainModAmount0="0"
+                           MakeupGainModBiPolar0="0" MakeupGainDepthModRange1="0" MakeupGainModAmount1="0"
+                           MakeupGainModBiPolar1="0" MakeupGainDepthModRange2="0" MakeupGainModAmount2="0"
+                           MakeupGainModBiPolar2="0" MakeupGainDepthModRange3="0" MakeupGainModAmount3="0"
+                           MakeupGainModBiPolar3="0"/>
+      <MKUStereoDelay_Slot2 Bypassed="1" TimeCurrentMapping="1" InputGainDepthModRange0="0"
+                            InputGainModAmount0="0" InputGainModBiPolar0="0" InputGainDepthModRange1="0"
+                            InputGainModAmount1="0" InputGainModBiPolar1="0" InputGainDepthModRange2="0"
+                            InputGainModAmount2="0" InputGainModBiPolar2="0" InputGainDepthModRange3="0"
+                            InputGainModAmount3="0" InputGainModBiPolar3="0" OutputGainDepthModRange0="0"
+                            OutputGainModAmount0="0" OutputGainModBiPolar0="0" OutputGainDepthModRange1="0"
+                            OutputGainModAmount1="0" OutputGainModBiPolar1="0" OutputGainDepthModRange2="0"
+                            OutputGainModAmount2="0" OutputGainModBiPolar2="0" OutputGainDepthModRange3="0"
+                            OutputGainModAmount3="0" OutputGainModBiPolar3="0" TypeDepthModRange0="0"
+                            TypeModAmount0="0" TypeModBiPolar0="0" TypeDepthModRange1="0"
+                            TypeModAmount1="0" TypeModBiPolar1="0" TypeDepthModRange2="0"
+                            TypeModAmount2="0" TypeModBiPolar2="0" TypeDepthModRange3="0"
+                            TypeModAmount3="0" TypeModBiPolar3="0" LowPassDepthModRange0="0"
+                            LowPassModAmount0="0" LowPassModBiPolar0="0" LowPassDepthModRange1="0"
+                            LowPassModAmount1="0" LowPassModBiPolar1="0" LowPassDepthModRange2="0"
+                            LowPassModAmount2="0" LowPassModBiPolar2="0" LowPassDepthModRange3="0"
+                            LowPassModAmount3="0" LowPassModBiPolar3="0" HighPassDepthModRange0="0"
+                            HighPassModAmount0="0" HighPassModBiPolar0="0" HighPassDepthModRange1="0"
+                            HighPassModAmount1="0" HighPassModBiPolar1="0" HighPassDepthModRange2="0"
+                            HighPassModAmount2="0" HighPassModBiPolar2="0" HighPassDepthModRange3="0"
+                            HighPassModAmount3="0" HighPassModBiPolar3="0" FeedbackDepthModRange0="0"
+                            FeedbackModAmount0="0" FeedbackModBiPolar0="0" FeedbackDepthModRange1="0"
+                            FeedbackModAmount1="0" FeedbackModBiPolar1="0" FeedbackDepthModRange2="0"
+                            FeedbackModAmount2="0" FeedbackModBiPolar2="0" FeedbackDepthModRange3="0"
+                            FeedbackModAmount3="0" FeedbackModBiPolar3="0" TimeDepthModRange0="0"
+                            TimeModAmount0="0" TimeModBiPolar0="0" TimeDepthModRange1="0"
+                            TimeModAmount1="0" TimeModBiPolar1="0" TimeDepthModRange2="0"
+                            TimeModAmount2="0" TimeModBiPolar2="0" TimeDepthModRange3="0"
+                            TimeModAmount3="0" TimeModBiPolar3="0" DryWetDepthModRange0="0"
+                            DryWetModAmount0="0" DryWetModBiPolar0="0" DryWetDepthModRange1="0"
+                            DryWetModAmount1="0" DryWetModBiPolar1="0" DryWetDepthModRange2="0"
+                            DryWetModAmount2="0" DryWetModBiPolar2="0" DryWetDepthModRange3="0"
+                            DryWetModAmount3="0" DryWetModBiPolar3="0"/>
+      <MKUFilter_Slot2 Bypassed="1" InputGainDepthModRange0="0" InputGainModAmount0="0"
+                       InputGainModBiPolar0="0" InputGainDepthModRange1="0" InputGainModAmount1="0"
+                       InputGainModBiPolar1="0" InputGainDepthModRange2="0" InputGainModAmount2="0"
+                       InputGainModBiPolar2="0" InputGainDepthModRange3="0" InputGainModAmount3="0"
+                       InputGainModBiPolar3="0" OutputGainDepthModRange0="0" OutputGainModAmount0="0"
+                       OutputGainModBiPolar0="0" OutputGainDepthModRange1="0" OutputGainModAmount1="0"
+                       OutputGainModBiPolar1="0" OutputGainDepthModRange2="0" OutputGainModAmount2="0"
+                       OutputGainModBiPolar2="0" OutputGainDepthModRange3="0" OutputGainModAmount3="0"
+                       OutputGainModBiPolar3="0" CutoffDepthModRange0="0" CutoffModAmount0="0"
+                       CutoffModBiPolar0="0" CutoffDepthModRange1="0" CutoffModAmount1="0"
+                       CutoffModBiPolar1="0" CutoffDepthModRange2="0" CutoffModAmount2="0"
+                       CutoffModBiPolar2="0" CutoffDepthModRange3="0" CutoffModAmount3="0"
+                       CutoffModBiPolar3="0" ResonanceDepthModRange0="0" ResonanceModAmount0="0"
+                       ResonanceModBiPolar0="0" ResonanceDepthModRange1="0" ResonanceModAmount1="0"
+                       ResonanceModBiPolar1="0" ResonanceDepthModRange2="0" ResonanceModAmount2="0"
+                       ResonanceModBiPolar2="0" ResonanceDepthModRange3="0" ResonanceModAmount3="0"
+                       ResonanceModBiPolar3="0" ModeDepthModRange0="0" ModeModAmount0="0"
+                       ModeModBiPolar0="0" ModeDepthModRange1="0" ModeModAmount1="0"
+                       ModeModBiPolar1="0" ModeDepthModRange2="0" ModeModAmount2="0"
+                       ModeModBiPolar2="0" ModeDepthModRange3="0" ModeModAmount3="0"
+                       ModeModBiPolar3="0" DriveDepthModRange0="0" DriveModAmount0="0"
+                       DriveModBiPolar0="0" DriveDepthModRange1="0" DriveModAmount1="0"
+                       DriveModBiPolar1="0" DriveDepthModRange2="0" DriveModAmount2="0"
+                       DriveModBiPolar2="0" DriveDepthModRange3="0" DriveModAmount3="0"
+                       DriveModBiPolar3="0" FollowAmountDepthModRange0="0" FollowAmountModAmount0="0"
+                       FollowAmountModBiPolar0="0" FollowAmountDepthModRange1="0" FollowAmountModAmount1="0"
+                       FollowAmountModBiPolar1="0" FollowAmountDepthModRange2="0" FollowAmountModAmount2="0"
+                       FollowAmountModBiPolar2="0" FollowAmountDepthModRange3="0" FollowAmountModAmount3="0"
+                       FollowAmountModBiPolar3="0" WetDryDepthModRange0="0" WetDryModAmount0="0"
+                       WetDryModBiPolar0="0" WetDryDepthModRange1="0" WetDryModAmount1="0"
+                       WetDryModBiPolar1="0" WetDryDepthModRange2="0" WetDryModAmount2="0"
+                       WetDryModBiPolar2="0" WetDryDepthModRange3="0" WetDryModAmount3="0"
+                       WetDryModBiPolar3="0"/>
+      <MKUFlanger_Slot2 Bypassed="1"/>
+      <MKUFrequencyShifter_Slot2 Bypassed="1"/>
+      <MKUPhaser_Slot2 Bypassed="0" InputGainDepthModRange0="0" InputGainModAmount0="0"
+                       InputGainModBiPolar0="0" InputGainDepthModRange1="0" InputGainModAmount1="0"
+                       InputGainModBiPolar1="0" InputGainDepthModRange2="0" InputGainModAmount2="0"
+                       InputGainModBiPolar2="0" InputGainDepthModRange3="0" InputGainModAmount3="0"
+                       InputGainModBiPolar3="0" OutputGainDepthModRange0="0" OutputGainModAmount0="0"
+                       OutputGainModBiPolar0="0" OutputGainDepthModRange1="0" OutputGainModAmount1="0"
+                       OutputGainModBiPolar1="0" OutputGainDepthModRange2="0" OutputGainModAmount2="0"
+                       OutputGainModBiPolar2="0" OutputGainDepthModRange3="0" OutputGainModAmount3="0"
+                       OutputGainModBiPolar3="0" PhaserTypeDepthModRange0="0" PhaserTypeModAmount0="0"
+                       PhaserTypeModBiPolar0="0" PhaserTypeDepthModRange1="0" PhaserTypeModAmount1="0"
+                       PhaserTypeModBiPolar1="0" PhaserTypeDepthModRange2="0" PhaserTypeModAmount2="0"
+                       PhaserTypeModBiPolar2="0" PhaserTypeDepthModRange3="0" PhaserTypeModAmount3="0"
+                       PhaserTypeModBiPolar3="0" CenterFrequencyDepthModRange0="0" CenterFrequencyModAmount0="0"
+                       CenterFrequencyModBiPolar0="0" CenterFrequencyDepthModRange1="0"
+                       CenterFrequencyModAmount1="0" CenterFrequencyModBiPolar1="0"
+                       CenterFrequencyDepthModRange2="0" CenterFrequencyModAmount2="0"
+                       CenterFrequencyModBiPolar2="0" CenterFrequencyDepthModRange3="0"
+                       CenterFrequencyModAmount3="0" CenterFrequencyModBiPolar3="0"
+                       FeedbackDepthModRange0="0" FeedbackModAmount0="0" FeedbackModBiPolar0="0"
+                       FeedbackDepthModRange1="0" FeedbackModAmount1="0" FeedbackModBiPolar1="0"
+                       FeedbackDepthModRange2="0" FeedbackModAmount2="0" FeedbackModBiPolar2="0"
+                       FeedbackDepthModRange3="0" FeedbackModAmount3="0" FeedbackModBiPolar3="0"
+                       StagesDepthModRange0="0" StagesModAmount0="0" StagesModBiPolar0="0"
+                       StagesDepthModRange1="0" StagesModAmount1="0" StagesModBiPolar1="0"
+                       StagesDepthModRange2="0" StagesModAmount2="0" StagesModBiPolar2="0"
+                       StagesDepthModRange3="0" StagesModAmount3="0" StagesModBiPolar3="0"
+                       RateDepthModRange0="0" RateModAmount0="0" RateModBiPolar0="0"
+                       RateDepthModRange1="0" RateModAmount1="0" RateModBiPolar1="0"
+                       RateDepthModRange2="0" RateModAmount2="0" RateModBiPolar2="0"
+                       RateDepthModRange3="0" RateModAmount3="0" RateModBiPolar3="0"
+                       ModulationRangeDepthModRange0="0" ModulationRangeModAmount0="0"
+                       ModulationRangeModBiPolar0="0" ModulationRangeDepthModRange1="0"
+                       ModulationRangeModAmount1="0" ModulationRangeModBiPolar1="0"
+                       ModulationRangeDepthModRange2="0" ModulationRangeModAmount2="0"
+                       ModulationRangeModBiPolar2="0" ModulationRangeDepthModRange3="0"
+                       ModulationRangeModAmount3="0" ModulationRangeModBiPolar3="0"
+                       WetDryDepthModRange0="8.304344415664673e-1" WetDryModAmount0="0"
+                       WetDryModBiPolar0="0" WetDryDepthModRange1="1.566266864538193e-1"
+                       WetDryModAmount1="0" WetDryModBiPolar1="0" WetDryDepthModRange2="0"
+                       WetDryModAmount2="0" WetDryModBiPolar2="0" WetDryDepthModRange3="0"
+                       WetDryModAmount3="0" WetDryModBiPolar3="0"/>
+      <MKUReverb_Slot2 Bypassed="1" InputGainDepthModRange0="0" InputGainModAmount0="0"
+                       InputGainModBiPolar0="0" InputGainDepthModRange1="0" InputGainModAmount1="0"
+                       InputGainModBiPolar1="0" InputGainDepthModRange2="0" InputGainModAmount2="0"
+                       InputGainModBiPolar2="0" InputGainDepthModRange3="0" InputGainModAmount3="0"
+                       InputGainModBiPolar3="0" OutputGainDepthModRange0="0" OutputGainModAmount0="0"
+                       OutputGainModBiPolar0="0" OutputGainDepthModRange1="0" OutputGainModAmount1="0"
+                       OutputGainModBiPolar1="0" OutputGainDepthModRange2="0" OutputGainModAmount2="0"
+                       OutputGainModBiPolar2="0" OutputGainDepthModRange3="0" OutputGainModAmount3="0"
+                       OutputGainModBiPolar3="0" SizeDepthModRange0="0" SizeModAmount0="0"
+                       SizeModBiPolar0="0" SizeDepthModRange1="0" SizeModAmount1="0"
+                       SizeModBiPolar1="0" SizeDepthModRange2="0" SizeModAmount2="0"
+                       SizeModBiPolar2="0" SizeDepthModRange3="0" SizeModAmount3="0"
+                       SizeModBiPolar3="0" DampingDepthModRange0="0" DampingModAmount0="0"
+                       DampingModBiPolar0="0" DampingDepthModRange1="0" DampingModAmount1="0"
+                       DampingModBiPolar1="0" DampingDepthModRange2="0" DampingModAmount2="0"
+                       DampingModBiPolar2="0" DampingDepthModRange3="0" DampingModAmount3="0"
+                       DampingModBiPolar3="0" DryWetDepthModRange0="0" DryWetModAmount0="0"
+                       DryWetModBiPolar0="0" DryWetDepthModRange1="0" DryWetModAmount1="0"
+                       DryWetModBiPolar1="0" DryWetDepthModRange2="0" DryWetModAmount2="0"
+                       DryWetModBiPolar2="0" DryWetDepthModRange3="0" DryWetModAmount3="0"
+                       DryWetModBiPolar3="0" WidthDepthModRange0="0" WidthModAmount0="0"
+                       WidthModBiPolar0="0" WidthDepthModRange1="0" WidthModAmount1="0"
+                       WidthModBiPolar1="0" WidthDepthModRange2="0" WidthModAmount2="0"
+                       WidthModBiPolar2="0" WidthDepthModRange3="0" WidthModAmount3="0"
+                       WidthModBiPolar3="0" FreezeDepthModRange0="0" FreezeModAmount0="0"
+                       FreezeModBiPolar0="0" FreezeDepthModRange1="0" FreezeModAmount1="0"
+                       FreezeModBiPolar1="0" FreezeDepthModRange2="0" FreezeModAmount2="0"
+                       FreezeModBiPolar2="0" FreezeDepthModRange3="0" FreezeModAmount3="0"
+                       FreezeModBiPolar3="0"/>
+      <MKUStereoSend_Slot2_Output Bypassed="0"/>
+      <MKUCompressor_MasterCompressor Bypassed="0" OutputGainModAmount2="0" ThresholdModAmount3="0"
+                                      MakeupGainModAmount2="0" MakeupGainDepthModRange0="0" MakeupGainModAmount0="0"
+                                      MakeupGainModBiPolar0="0" MakeupGainDepthModRange1="0" MakeupGainModAmount1="0"
+                                      MakeupGainModBiPolar1="0" MakeupGainDepthModRange2="0" MakeupGainModBiPolar2="0"
+                                      MakeupGainDepthModRange3="0" MakeupGainModAmount3="0" MakeupGainModBiPolar3="0"
+                                      OutputGainModBiPolar2="0" ThresholdModBiPolar3="0"/>
+      <MKUOutputBus_MainOutput FiltersBypassed="0" Bypassed="0" Stage1_Active="1" Stage2_Active="0"
+                               Stage3_Active="1" Stage1_MultiBand="1" Stage1_Refilter="0" Stage2_MultiBand="1"
+                               Stage2_Refilter="0" Stage3_MultiBand="1" Stage3_Refilter="0"
+                               Stage2_Band1Cutoff="3e1" Stage2_Band2Cutoff="2.2e4" Stage1_Band1Cutoff="2.001613159179688e2"
+                               Stage1_Band2Cutoff="1.204954223632812e3" Stage3_Band1Cutoff="4.500000305175781e2"
+                               Stage3_Band2Cutoff="5.00000048828125e3"/>
+    </Node_Properties>
+    <Connections>
+      <Connection SourceNode="AudioInputNode" SourceChannel="0" DestinationNode="MKUInputBus_MainInput"
+                  DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="AudioInputNode" SourceChannel="1" DestinationNode="MKUInputBus_MainInput"
+                  DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MidiInputNode" SourceChannel="4096" DestinationNode="MidiOutputNode"
+                  DestinationChannel="4096"/>
+      <Connection SourceNode="MKUClickableEnvelope_Envelope1" SourceChannel="EnvelopeOut"
+                  DestinationNode="MKUThreeBandSplitterNode_Stage_1" DestinationChannel="Band1HzModIn0"/>
+      <Connection SourceNode="MKUClickableEnvelope_Envelope1" SourceChannel="EnvelopeOut"
+                  DestinationNode="MKUThreeBandSplitterNode_Stage_1" DestinationChannel="Band2HzModIn0"/>
+      <Connection SourceNode="MKUClickableEnvelope_Envelope1" SourceChannel="EnvelopeOut"
+                  DestinationNode="MKUDustDistoNode_Stage_1" DestinationChannel="Control1ModIn0"/>
+      <Connection SourceNode="MKUClickableEnvelope_Envelope1" SourceChannel="EnvelopeOut"
+                  DestinationNode="MKUDustDistoNode_Stage_1" DestinationChannel="TimeModIn0"/>
+      <Connection SourceNode="MKUClickableEnvelope_Envelope1" SourceChannel="EnvelopeOut"
+                  DestinationNode="MKUMidSideGainNode_Stage_1" DestinationChannel="SideGainModIn0"/>
+      <Connection SourceNode="MKUClickableEnvelope_Envelope1" SourceChannel="EnvelopeOut"
+                  DestinationNode="MKUMidSideGainNode_Stage_1" DestinationChannel="TimeSpreadAmountModIn0"/>
+      <Connection SourceNode="MKUClickableEnvelope_Envelope1" SourceChannel="EnvelopeOut"
+                  DestinationNode="MKUBitReducer_Slot1" DestinationChannel="WetDryModIn0"/>
+      <Connection SourceNode="MKUClickableEnvelope_Envelope1" SourceChannel="EnvelopeOut"
+                  DestinationNode="MKUPhaser_Slot2" DestinationChannel="WetDryModIn0"/>
+      <Connection SourceNode="MKUClickableEnvelope_Envelope2" SourceChannel="EnvelopeOut"
+                  DestinationNode="MKUDustDistoNode_Stage_3" DestinationChannel="Control3ModIn1"/>
+      <Connection SourceNode="MKUClickableEnvelope_Envelope2" SourceChannel="EnvelopeOut"
+                  DestinationNode="MKUPhaser_Slot2" DestinationChannel="WetDryModIn1"/>
+      <Connection SourceNode="MKUMacroNode_Macro1" SourceChannel="MacroOut" DestinationNode="MKUThreeBandSplitterNode_Stage_1"
+                  DestinationChannel="Band1HzModDepthIn0"/>
+      <Connection SourceNode="MKUMacroNode_Macro1" SourceChannel="MacroOut" DestinationNode="MKUThreeBandSplitterNode_Stage_1"
+                  DestinationChannel="Band2HzModDepthIn0"/>
+      <Connection SourceNode="MKUMacroNode_Macro1" SourceChannel="MacroOut" DestinationNode="MKUDustDistoNode_Stage_1"
+                  DestinationChannel="OutputGainModIn2"/>
+      <Connection SourceNode="MKUMacroNode_Macro1" SourceChannel="MacroOut" DestinationNode="MKUDustDistoNode_Stage_1"
+                  DestinationChannel="Control1ModDepthIn0"/>
+      <Connection SourceNode="MKUMacroNode_Macro1" SourceChannel="MacroOut" DestinationNode="MKUDustDistoNode_Stage_1"
+                  DestinationChannel="FeedbackModIn2"/>
+      <Connection SourceNode="MKUMacroNode_Macro1" SourceChannel="MacroOut" DestinationNode="MKUDustDistoNode_Stage_1"
+                  DestinationChannel="TimeModIn2"/>
+      <Connection SourceNode="MKUMacroNode_Macro1" SourceChannel="MacroOut" DestinationNode="MKUDustDistoNode_Stage_1"
+                  DestinationChannel="TimeModDepthIn0"/>
+      <Connection SourceNode="MKUMacroNode_Macro1" SourceChannel="MacroOut" DestinationNode="MKUStereoDelay_Stage_1"
+                  DestinationChannel="DryWetModIn2"/>
+      <Connection SourceNode="MKUMacroNode_Macro1" SourceChannel="MacroOut" DestinationNode="MKUMidSideGainNode_Stage_1"
+                  DestinationChannel="SideGainModDepthIn0"/>
+      <Connection SourceNode="MKUMacroNode_Macro1" SourceChannel="MacroOut" DestinationNode="MKUMidSideGainNode_Stage_1"
+                  DestinationChannel="TimeSpreadAmountModDepthIn0"/>
+      <Connection SourceNode="MKUMacroNode_Macro1" SourceChannel="MacroOut" DestinationNode="MKUDustDistoNode_Stage_3"
+                  DestinationChannel="OutputGainModIn2"/>
+      <Connection SourceNode="MKUMacroNode_Macro1" SourceChannel="MacroOut" DestinationNode="MKUDustDistoNode_Stage_3"
+                  DestinationChannel="Control1ModIn2"/>
+      <Connection SourceNode="MKUMacroNode_Macro1" SourceChannel="MacroOut" DestinationNode="MKUDustDistoNode_Stage_3"
+                  DestinationChannel="Control2ModIn2"/>
+      <Connection SourceNode="MKUMacroNode_Macro1" SourceChannel="MacroOut" DestinationNode="MKUToneControl_Stage_3"
+                  DestinationChannel="LowShelfModIn2"/>
+      <Connection SourceNode="MKUMacroNode_Macro1" SourceChannel="MacroOut" DestinationNode="MKUBitReducer_Slot1"
+                  DestinationChannel="BitsModIn2"/>
+      <Connection SourceNode="MKUMacroNode_Macro2" SourceChannel="MacroOut" DestinationNode="MKUBitReducer_Slot1"
+                  DestinationChannel="WetDryModDepthIn0"/>
+      <Connection SourceNode="MKUMacroNode_Macro2" SourceChannel="MacroOut" DestinationNode="MKUPhaser_Slot2"
+                  DestinationChannel="WetDryModDepthIn0"/>
+      <Connection SourceNode="MKUMacroNode_Macro2" SourceChannel="MacroOut" DestinationNode="MKUPhaser_Slot2"
+                  DestinationChannel="WetDryModDepthIn1"/>
+      <Connection SourceNode="MKUInputBus_MainInput" SourceChannel="AudioOut0"
+                  DestinationNode="MKUThreeBandSplitterNode_Stage_1" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUInputBus_MainInput" SourceChannel="AudioOut1"
+                  DestinationNode="MKUThreeBandSplitterNode_Stage_1" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUInputBus_MainInput" SourceChannel="AudioOut0"
+                  DestinationNode="MKUOutputBus_MainOutput" DestinationChannel="DryAudioIn0"/>
+      <Connection SourceNode="MKUInputBus_MainInput" SourceChannel="AudioOut1"
+                  DestinationNode="MKUOutputBus_MainOutput" DestinationChannel="DryAudioIn1"/>
+      <Connection SourceNode="MKUThreeBandSplitterNode_Stage_1" SourceChannel="MidsAudioOut0"
+                  DestinationNode="MKUDustDistoNode_Stage_1" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUThreeBandSplitterNode_Stage_1" SourceChannel="MidsAudioOut1"
+                  DestinationNode="MKUDustDistoNode_Stage_1" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUThreeBandSplitterNode_Stage_1" SourceChannel="LowsAudioOut0"
+                  DestinationNode="MKUThreeBandSummerNode_Stage_1" DestinationChannel="LowsAudioIn0"/>
+      <Connection SourceNode="MKUThreeBandSplitterNode_Stage_1" SourceChannel="LowsAudioOut1"
+                  DestinationNode="MKUThreeBandSummerNode_Stage_1" DestinationChannel="LowsAudioIn1"/>
+      <Connection SourceNode="MKUThreeBandSplitterNode_Stage_1" SourceChannel="HighsAudioOut0"
+                  DestinationNode="MKUThreeBandSummerNode_Stage_1" DestinationChannel="HighsAudioIn0"/>
+      <Connection SourceNode="MKUThreeBandSplitterNode_Stage_1" SourceChannel="HighsAudioOut1"
+                  DestinationNode="MKUThreeBandSummerNode_Stage_1" DestinationChannel="HighsAudioIn1"/>
+      <Connection SourceNode="MKUDustDistoNode_Stage_1" SourceChannel="AudioOut0"
+                  DestinationNode="MKUStereoSend_Stage_1_Effect_Input" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUDustDistoNode_Stage_1" SourceChannel="AudioOut1"
+                  DestinationNode="MKUStereoSend_Stage_1_Effect_Input" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUStereoSend_Stage_1_Effect_Input" SourceChannel="AudioOut0"
+                  DestinationNode="MKUStereoDelay_Stage_1" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUStereoSend_Stage_1_Effect_Input" SourceChannel="AudioOut1"
+                  DestinationNode="MKUStereoDelay_Stage_1" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUStereoDelay_Stage_1" SourceChannel="AudioOut0"
+                  DestinationNode="MKUStereoSend_Stage_1_Effect_Output" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUStereoDelay_Stage_1" SourceChannel="AudioOut1"
+                  DestinationNode="MKUStereoSend_Stage_1_Effect_Output" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUStereoSend_Stage_1_Effect_Output" SourceChannel="AudioOut0"
+                  DestinationNode="MKUMidSideGainNode_Stage_1" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUStereoSend_Stage_1_Effect_Output" SourceChannel="AudioOut1"
+                  DestinationNode="MKUMidSideGainNode_Stage_1" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUMidSideGainNode_Stage_1" SourceChannel="AudioOut0"
+                  DestinationNode="MKUGainBus_Stage_1" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUMidSideGainNode_Stage_1" SourceChannel="AudioOut1"
+                  DestinationNode="MKUGainBus_Stage_1" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUGainBus_Stage_1" SourceChannel="AudioOut0" DestinationNode="MKUThreeBandSummerNode_Stage_1"
+                  DestinationChannel="MidsAudioIn0"/>
+      <Connection SourceNode="MKUGainBus_Stage_1" SourceChannel="AudioOut1" DestinationNode="MKUThreeBandSummerNode_Stage_1"
+                  DestinationChannel="MidsAudioIn1"/>
+      <Connection SourceNode="MKUThreeBandSummerNode_Stage_1" SourceChannel="AudioOut0"
+                  DestinationNode="MKUToneControl_Stage_1" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUThreeBandSummerNode_Stage_1" SourceChannel="AudioOut1"
+                  DestinationNode="MKUToneControl_Stage_1" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUToneControl_Stage_1" SourceChannel="AudioOut0"
+                  DestinationNode="MKUThreeBandSplitterNode_Stage_2" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUToneControl_Stage_1" SourceChannel="AudioOut1"
+                  DestinationNode="MKUThreeBandSplitterNode_Stage_2" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUThreeBandSplitterNode_Stage_2" SourceChannel="MidsAudioOut0"
+                  DestinationNode="MKUDustDistoNode_Stage_2" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUThreeBandSplitterNode_Stage_2" SourceChannel="MidsAudioOut1"
+                  DestinationNode="MKUDustDistoNode_Stage_2" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUThreeBandSplitterNode_Stage_2" SourceChannel="LowsAudioOut0"
+                  DestinationNode="MKUThreeBandSummerNode_Stage_2" DestinationChannel="LowsAudioIn0"/>
+      <Connection SourceNode="MKUThreeBandSplitterNode_Stage_2" SourceChannel="LowsAudioOut1"
+                  DestinationNode="MKUThreeBandSummerNode_Stage_2" DestinationChannel="LowsAudioIn1"/>
+      <Connection SourceNode="MKUThreeBandSplitterNode_Stage_2" SourceChannel="HighsAudioOut0"
+                  DestinationNode="MKUThreeBandSummerNode_Stage_2" DestinationChannel="HighsAudioIn0"/>
+      <Connection SourceNode="MKUThreeBandSplitterNode_Stage_2" SourceChannel="HighsAudioOut1"
+                  DestinationNode="MKUThreeBandSummerNode_Stage_2" DestinationChannel="HighsAudioIn1"/>
+      <Connection SourceNode="MKUDustDistoNode_Stage_2" SourceChannel="AudioOut0"
+                  DestinationNode="MKUStereoSend_Stage_2_Effect_Input" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUDustDistoNode_Stage_2" SourceChannel="AudioOut1"
+                  DestinationNode="MKUStereoSend_Stage_2_Effect_Input" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUStereoSend_Stage_2_Effect_Input" SourceChannel="AudioOut0"
+                  DestinationNode="MKUStereoSend_Stage_2_Effect_Output" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUStereoSend_Stage_2_Effect_Input" SourceChannel="AudioOut1"
+                  DestinationNode="MKUStereoSend_Stage_2_Effect_Output" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUStereoSend_Stage_2_Effect_Output" SourceChannel="AudioOut0"
+                  DestinationNode="MKUMidSideGainNode_Stage_2" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUStereoSend_Stage_2_Effect_Output" SourceChannel="AudioOut1"
+                  DestinationNode="MKUMidSideGainNode_Stage_2" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUMidSideGainNode_Stage_2" SourceChannel="AudioOut0"
+                  DestinationNode="MKUGainBus_Stage_2" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUMidSideGainNode_Stage_2" SourceChannel="AudioOut1"
+                  DestinationNode="MKUGainBus_Stage_2" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUGainBus_Stage_2" SourceChannel="AudioOut0" DestinationNode="MKUThreeBandSummerNode_Stage_2"
+                  DestinationChannel="MidsAudioIn0"/>
+      <Connection SourceNode="MKUGainBus_Stage_2" SourceChannel="AudioOut1" DestinationNode="MKUThreeBandSummerNode_Stage_2"
+                  DestinationChannel="MidsAudioIn1"/>
+      <Connection SourceNode="MKUThreeBandSummerNode_Stage_2" SourceChannel="AudioOut0"
+                  DestinationNode="MKUToneControl_Stage_2" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUThreeBandSummerNode_Stage_2" SourceChannel="AudioOut1"
+                  DestinationNode="MKUToneControl_Stage_2" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUToneControl_Stage_2" SourceChannel="AudioOut0"
+                  DestinationNode="MKUThreeBandSplitterNode_Stage_3" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUToneControl_Stage_2" SourceChannel="AudioOut1"
+                  DestinationNode="MKUThreeBandSplitterNode_Stage_3" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUThreeBandSplitterNode_Stage_3" SourceChannel="MidsAudioOut0"
+                  DestinationNode="MKUDustDistoNode_Stage_3" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUThreeBandSplitterNode_Stage_3" SourceChannel="MidsAudioOut1"
+                  DestinationNode="MKUDustDistoNode_Stage_3" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUThreeBandSplitterNode_Stage_3" SourceChannel="LowsAudioOut0"
+                  DestinationNode="MKUThreeBandSummerNode_Stage_3" DestinationChannel="LowsAudioIn0"/>
+      <Connection SourceNode="MKUThreeBandSplitterNode_Stage_3" SourceChannel="LowsAudioOut1"
+                  DestinationNode="MKUThreeBandSummerNode_Stage_3" DestinationChannel="LowsAudioIn1"/>
+      <Connection SourceNode="MKUThreeBandSplitterNode_Stage_3" SourceChannel="HighsAudioOut0"
+                  DestinationNode="MKUThreeBandSummerNode_Stage_3" DestinationChannel="HighsAudioIn0"/>
+      <Connection SourceNode="MKUThreeBandSplitterNode_Stage_3" SourceChannel="HighsAudioOut1"
+                  DestinationNode="MKUThreeBandSummerNode_Stage_3" DestinationChannel="HighsAudioIn1"/>
+      <Connection SourceNode="MKUDustDistoNode_Stage_3" SourceChannel="AudioOut0"
+                  DestinationNode="MKUStereoSend_Stage_3_Effect_Input" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUDustDistoNode_Stage_3" SourceChannel="AudioOut1"
+                  DestinationNode="MKUStereoSend_Stage_3_Effect_Input" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUStereoSend_Stage_3_Effect_Input" SourceChannel="AudioOut0"
+                  DestinationNode="MKUStereoSend_Stage_3_Effect_Output" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUStereoSend_Stage_3_Effect_Input" SourceChannel="AudioOut1"
+                  DestinationNode="MKUStereoSend_Stage_3_Effect_Output" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUStereoSend_Stage_3_Effect_Output" SourceChannel="AudioOut0"
+                  DestinationNode="MKUMidSideGainNode_Stage_3" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUStereoSend_Stage_3_Effect_Output" SourceChannel="AudioOut1"
+                  DestinationNode="MKUMidSideGainNode_Stage_3" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUMidSideGainNode_Stage_3" SourceChannel="AudioOut0"
+                  DestinationNode="MKUGainBus_Stage_3" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUMidSideGainNode_Stage_3" SourceChannel="AudioOut1"
+                  DestinationNode="MKUGainBus_Stage_3" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUGainBus_Stage_3" SourceChannel="AudioOut0" DestinationNode="MKUThreeBandSummerNode_Stage_3"
+                  DestinationChannel="MidsAudioIn0"/>
+      <Connection SourceNode="MKUGainBus_Stage_3" SourceChannel="AudioOut1" DestinationNode="MKUThreeBandSummerNode_Stage_3"
+                  DestinationChannel="MidsAudioIn1"/>
+      <Connection SourceNode="MKUThreeBandSummerNode_Stage_3" SourceChannel="AudioOut0"
+                  DestinationNode="MKUToneControl_Stage_3" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUThreeBandSummerNode_Stage_3" SourceChannel="AudioOut1"
+                  DestinationNode="MKUToneControl_Stage_3" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUToneControl_Stage_3" SourceChannel="AudioOut0"
+                  DestinationNode="MKUStereoSend_Slot1_Input" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUToneControl_Stage_3" SourceChannel="AudioOut1"
+                  DestinationNode="MKUStereoSend_Slot1_Input" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUStereoSend_Slot1_Input" SourceChannel="AudioOut0"
+                  DestinationNode="MKUBitReducer_Slot1" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUStereoSend_Slot1_Input" SourceChannel="AudioOut1"
+                  DestinationNode="MKUBitReducer_Slot1" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUBitReducer_Slot1" SourceChannel="AudioOut0" DestinationNode="MKUStereoSend_Slot1_Output"
+                  DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUBitReducer_Slot1" SourceChannel="AudioOut1" DestinationNode="MKUStereoSend_Slot1_Output"
+                  DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUStereoSend_Slot1_Output" SourceChannel="AudioOut0"
+                  DestinationNode="MKUStereoSend_Slot2_Input" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUStereoSend_Slot1_Output" SourceChannel="AudioOut1"
+                  DestinationNode="MKUStereoSend_Slot2_Input" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUStereoSend_Slot2_Input" SourceChannel="AudioOut0"
+                  DestinationNode="MKUPhaser_Slot2" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUStereoSend_Slot2_Input" SourceChannel="AudioOut1"
+                  DestinationNode="MKUPhaser_Slot2" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUPhaser_Slot2" SourceChannel="AudioOut0" DestinationNode="MKUStereoSend_Slot2_Output"
+                  DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUPhaser_Slot2" SourceChannel="AudioOut1" DestinationNode="MKUStereoSend_Slot2_Output"
+                  DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUStereoSend_Slot2_Output" SourceChannel="AudioOut0"
+                  DestinationNode="MKUCompressor_MasterCompressor" DestinationChannel="AudioIn0"/>
+      <Connection SourceNode="MKUStereoSend_Slot2_Output" SourceChannel="AudioOut1"
+                  DestinationNode="MKUCompressor_MasterCompressor" DestinationChannel="AudioIn1"/>
+      <Connection SourceNode="MKUCompressor_MasterCompressor" SourceChannel="AudioOut0"
+                  DestinationNode="MKUOutputBus_MainOutput" DestinationChannel="WetAudioIn0"/>
+      <Connection SourceNode="MKUCompressor_MasterCompressor" SourceChannel="AudioOut1"
+                  DestinationNode="MKUOutputBus_MainOutput" DestinationChannel="WetAudioIn1"/>
+      <Connection SourceNode="MKUOutputBus_MainOutput" SourceChannel="AudioOut0"
+                  DestinationNode="AudioOutputNode" DestinationChannel="0"/>
+      <Connection SourceNode="MKUOutputBus_MainOutput" SourceChannel="AudioOut1"
+                  DestinationNode="AudioOutputNode" DestinationChannel="1"/>
+    </Connections>
+    <Processor_Group_States>
+      <Stage_1_Effects Bypassed="0" ActiveSlot="3"/>
+      <Stage_2_Effects Bypassed="1" ActiveSlot="0"/>
+      <Stage_3_Effects Bypassed="1" ActiveSlot="0"/>
+      <Slot1 Bypassed="0" ActiveSlot="0"/>
+      <Slot2 Bypassed="0" ActiveSlot="7"/>
+    </Processor_Group_States>
+  </App_State>
+</Thermal>

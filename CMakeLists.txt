@@ -55,11 +55,23 @@ if(DISTITTEN_BUILD_PLUGIN)
 
     # The fonts src/ui/Theme.cpp loads (BuildApp/PhaseFucker: IBM Plex; PsyBox:
     # Inter + JetBrains Mono). Keep the licence file next to them in resources/fonts.
+    # Thermal's factory presets and modulation shapes (presets/thermal), packed into one zip the plugin
+    # carries and unpacks into its own folder on first use (src/plugin/ThermalImport.cpp).
+    file(GLOB_RECURSE DISTITTEN_FACTORY_FILES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/presets/thermal/*.xml")
+    set(DISTITTEN_FACTORY_ZIP "${CMAKE_CURRENT_BINARY_DIR}/factory.zip")
+    add_custom_command(OUTPUT "${DISTITTEN_FACTORY_ZIP}"
+        COMMAND ${CMAKE_COMMAND} -E rm -f "${DISTITTEN_FACTORY_ZIP}"
+        COMMAND ${CMAKE_COMMAND} -E tar cf "${DISTITTEN_FACTORY_ZIP}" --format=zip Presets SubPresets
+        WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/presets/thermal"
+        DEPENDS ${DISTITTEN_FACTORY_FILES}
+        VERBATIM)
+
     juce_add_binary_data(distitten_assets SOURCES
         resources/fonts/IBMPlexSansCondensed-Medium.ttf
         resources/fonts/IBMPlexSansCondensed-SemiBold.ttf
         resources/fonts/IBMPlexMono-Regular.ttf
-        resources/fonts/IBMPlexMono-Medium.ttf)
+        resources/fonts/IBMPlexMono-Medium.ttf
+        "${DISTITTEN_FACTORY_ZIP}")
 
     juce_add_plugin(DisTitten
         COMPANY_NAME "Jonas Grunau"

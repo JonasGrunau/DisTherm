@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MKUClickableEnvelope NumPoints="12" PointX0="0" PointY0="0" ControlPointX0="-5.938242375850677e-2"
+                      ControlPointY0="-3.333333432674408e-1" PointX1="1.169451102614403e-1"
+                      PointY1="1" ControlPointX1="8.551068603992462e-2" ControlPointY1="6.833333373069763e-1"
+                      PointX2="1.217183768749237e-1" PointY2="2.068965584039688e-1"
+                      ControlPointX2="1.235154420137405e-1" ControlPointY2="2.5e-1"
+                      PointX3="3.675417602062225e-1" PointY3="1" ControlPointX3="3.491686582565308e-1"
+                      ControlPointY3="1.083333373069763" PointX4="3.723150491714478e-1"
+                      PointY4="3.448275923728943e-1" ControlPointX4="3.729216158390045e-1"
+                      ControlPointY4="4.333333373069763e-1" PointX5="4.892601370811462e-1"
+                      PointY5="1" ControlPointX5="4.228028357028961e-1" ControlPointY5="9.166666865348816e-1"
+                      PointX6="4.988066852092743e-1" PointY6="0" ControlPointX6="4.98812347650528e-1"
+                      ControlPointY6="4.000000059604645e-1" PointX7="6.873508095741272e-1"
+                      PointY7="1" ControlPointX7="6.603325605392456e-1" ControlPointY7="1.116666674613953"
+                      PointX8="8.687350749969482e-1" PointY8="1" ControlPointX8="8.099762201309204e-1"
+                      ControlPointY8="1" PointX9="8.758949637413025e-1" PointY9="1.379310339689255e-1"
+                      ControlPointX9="8.741092681884766e-1" ControlPointY9="2.166666686534882e-1"
+                      PointX10="9.928401112556458e-1" PointY10="1" ControlPointX10="9.453681707382202e-1"
+                      ControlPointY10="1.116666674613953" PointX11="1" PointY11="0"
+                      ControlPointX11="9.976246953010559e-1" ControlPointY11="6.666667014360428e-2"/>

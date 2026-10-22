@@ -12,11 +12,13 @@
 // same tapers); the switches Thermal keeps in node properties and processor-group state map to DisTitten's
 // switch parameters (see kParams[].thermalTag: "<node>.<attribute>", "!" = inverted).
 //
-// Thermal presets are never shipped with DisTitten: this reads the ones installed on the user's machine.
+// DisTitten carries Thermal's factory presets and modulation shapes (presets/thermal in the repo, one zip in
+// the binary). They are unpacked into DisTitten's own folder (application data / DisTitten / Factory) the first
+// time they are asked for, and again whenever the carried copy differs from what is there.
 namespace thermal
 {
-    // Where Thermal installs its factory presets.
-    inline juce::File presetFolder() { return juce::File ("/Library/Application Support/Output/Thermal/Presets"); }
+    juce::File presetFolder();             // .../Factory/Presets/<category>/<NNN name>.xml
+    juce::File modulationPresetFolder();   // .../Factory/SubPresets/Modulation Presets/<category>/<name>.xml
 
     struct Patch
     {

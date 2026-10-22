@@ -1,6 +1,6 @@
 # DisTitten
 
-A multistage distortion for psytrance, rebuilt from Output Thermal by measuring
+A multistage distortion, rebuilt from Output Thermal by measuring
 what Thermal does to sound. Three stages each heat one band of the signal
 (distortion, then one of nine effects, width, gain and tone), two more effects
 and a compressor follow, and two drawable envelopes and two macros move any of
@@ -30,7 +30,7 @@ the look is ours.
 
 | Control | What it does |
 |---------|--------------|
-| **Preset bar** | Name, menu (DisTitten presets in `~/Music/DisTitten/Presets`, and Thermal's factory presets read from your own Thermal installation), save, previous / next |
+| **Preset bar** | Name, menu (your presets in `~/Music/DisTitten/Presets`, and Thermal's 355 factory presets, which DisTitten carries), save, previous / next |
 | **MACRO 1 / MACRO 2** | 0–100 %. Each moves every parameter routed to it. Double-click the name to rename it. **+** assigns (see below) |
 | **Page buttons** | The XY page and the edit page |
 | **DRY / WET** | The whole plugin against its input, Thermal's v^(5/7) law each way. The lock keeps it when presets load |
@@ -196,11 +196,12 @@ src/ui             theme, controls, Thermal's layout (Layout.h) and the views
 tests/             Catch2 tests for the engine
 tools/             snapshot tool, demo host, distitten_render, the parameter generator
 docs/thermal-re/   how Thermal was measured, and what was found
+presets/thermal/   Thermal's factory presets and modulation shapes, built into the plugin
 packaging/         macOS pkg and Windows installer scripts
 ```
 
 ## License
 
 The plugin links JUCE 8 under the AGPLv3. IBM Plex fonts under the SIL Open
-Font License (`resources/fonts/IBMPlex-OFL.txt`). Thermal and Output are
-Output Inc.'s; DisTitten ships none of their presets or audio.
+Font License (`resources/fonts/IBMPlex-OFL.txt`). Thermal, its presets
+(`presets/thermal`) and Output are Output Inc.'s. This repository is private.

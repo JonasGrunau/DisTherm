@@ -1,5 +1,7 @@
 #include "ThermalImport.h"
 
+#include "BinaryData.h"   // factory.zip: presets/thermal, packed by CMakeLists.txt
+
 #include <cstring>
 #include <string>
 #include <unordered_map>
@@ -8,6 +10,34 @@ namespace thermal
 {
 namespace
 {
+    // Unpacks the carried presets once per process. The marker holds a hash (64-bit FNV-1a) of the zip it came
+    // from, so an update that changes the presets replaces them, and an unchanged folder is left alone.
+    juce::File factoryFolder()
+    {
+        static const juce::File folder = [] {
+            auto base = juce::File::getSpecialLocation (juce::File::userApplicationDataDirectory);
+           #if JUCE_MAC
+            base = base.getChildFile ("Application Support");
+           #endif
+            const auto dir = base.getChildFile ("DisTitten").getChildFile ("Factory");
+            const auto marker = dir.getChildFile (".unpacked");
+            juce::uint64 hash = 14695981039346656037ull;
+            for (int i = 0; i < BinaryData::factory_zipSize; ++i)
+                hash = (hash ^ (juce::uint8) BinaryData::factory_zip[i]) * 1099511628211ull;
+            const auto stamp = juce::String::toHexString ((juce::int64) hash);
+            if (! marker.existsAsFile() || marker.loadFileAsString() != stamp)
+            {
+                dir.deleteRecursively();
+                dir.createDirectory();
+                juce::MemoryInputStream in (BinaryData::factory_zip, (size_t) BinaryData::factory_zipSize, false);
+                juce::ZipFile zip (in);
+                if (zip.uncompressTo (dir).wasOk()) marker.replaceWithText (stamp);
+            }
+            return dir;
+        }();
+        return folder;
+    }
+
     const juce::XmlElement* child (const juce::XmlElement* e, const char* name)
     {
         return e != nullptr ? e->getChildByName (name) : nullptr;
@@ -195,4 +225,8 @@ bool read (const juce::File& file, Patch& out)
         return read (*xml, out);
     return false;
 }
+
+juce::File presetFolder() { return factoryFolder().getChildFile ("Presets"); }
+juce::File modulationPresetFolder() { return factoryFolder().getChildFile ("SubPresets").getChildFile ("Modulation Presets"); }
+
 } // namespace thermal

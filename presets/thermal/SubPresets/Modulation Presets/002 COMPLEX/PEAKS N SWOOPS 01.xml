@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MKUClickableEnvelope NumPoints="7" PointX0="0" PointY0="5.344827771186829e-1" ControlPointX0="8.978622555732727e-1"
+                      ControlPointY0="7.5e-1" PointX1="5.727923661470413e-2" PointY1="8.103448152542114e-1"
+                      ControlPointX1="5.938242375850677e-2" ControlPointY1="6.166666746139526e-1"
+                      PointX2="1.193317398428917e-1" PointY2="2.24137932062149e-1"
+                      ControlPointX2="1.21140144765377e-1" ControlPointY2="2.333333343267441e-1"
+                      PointX3="3.078759014606476e-1" PointY3="8.793103694915771e-1"
+                      ControlPointX3="3.064132928848267e-1" ControlPointY3="8.666666746139526e-1"
+                      PointX4="4.964200556278229e-1" PointY4="1.206896528601646e-1"
+                      ControlPointX4="4.964370429515839e-1" ControlPointY4="3.499999940395355e-1"
+                      PointX5="7.494033575057983e-1" PointY5="8.448275923728943e-1"
+                      ControlPointX5="7.030878663063049e-1" ControlPointY5="6.499999761581421e-1"
+                      PointX6="1" PointY6="5.862069129943848e-1" ControlPointX6="7.767220735549927e-1"
+                      ControlPointY6="-2.333333343267441e-1"/>
