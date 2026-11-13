@@ -17,7 +17,7 @@ namespace
     }
 } // namespace
 
-DisTittenEditor::DisTittenEditor (DisTittenProcessor& p)
+DisThermEditor::DisThermEditor (DisThermProcessor& p)
     : AudioProcessorEditor (p), proc (p), column (p), bigXY (p, true), bandStrip (p), lower (p)
 {
     namespace L = layout;
@@ -93,25 +93,25 @@ DisTittenEditor::DisTittenEditor (DisTittenProcessor& p)
     startTimerHz (30);
 }
 
-DisTittenEditor::~DisTittenEditor()
+DisThermEditor::~DisThermEditor()
 {
     stopTimer();
     setLookAndFeel (nullptr);
 }
 
-void DisTittenEditor::resized()
+void DisThermEditor::resized()
 {
     sheet.setBounds (0, 0, kWidth, kHeight);
     sheet.setTransform (juce::AffineTransform::scale ((float) getWidth() / kWidth));
 }
 
-void DisTittenEditor::Sheet::paint (juce::Graphics& g)
+void DisThermEditor::Sheet::paint (juce::Graphics& g)
 {
     g.fillAll (col::sheet);
     if (editor.page == 0) wordmark (g, { 130.f, 48.f, 240.f, 30.f }, 28.f);   // where Thermal shows its logo, clear of the pad grid
 }
 
-void DisTittenEditor::showPage (int p)
+void DisThermEditor::showPage (int p)
 {
     page = juce::jlimit (0, 1, p);
     const bool edit = page == 1;
@@ -128,7 +128,7 @@ void DisTittenEditor::showPage (int p)
     column.setPage (page);
 }
 
-void DisTittenEditor::selectStage (int s)
+void DisThermEditor::selectStage (int s)
 {
     stage = juce::jlimit (0, 2, s);
     for (int i = 0; i < 3; ++i)
@@ -139,7 +139,7 @@ void DisTittenEditor::selectStage (int s)
     bandStrip.setStage (stage);
 }
 
-void DisTittenEditor::setAssign (int source)
+void DisThermEditor::setAssign (int source)
 {
     assign = (source == assign) ? -1 : juce::jlimit (-1, 3, source);
     column.setAssignLit (assign);
@@ -150,12 +150,12 @@ void DisTittenEditor::setAssign (int source)
               assign >= 0);
 }
 
-void DisTittenEditor::showHelp (const juce::String& text, bool entering)
+void DisThermEditor::showHelp (const juce::String& text, bool entering)
 {
     column.showHelpText (entering ? text : juce::String());
 }
 
-void DisTittenEditor::collectDials (juce::Component& root)
+void DisThermEditor::collectDials (juce::Component& root)
 {
     forEachChild (root, [this] (juce::Component& c) {
         if (auto* d = dynamic_cast<Dial*> (&c); d != nullptr && std::find (dials.begin(), dials.end(), d) == dials.end())
@@ -168,7 +168,7 @@ void DisTittenEditor::collectDials (juce::Component& root)
 
 // While a source is being assigned, dragging a knob sets that source's amount on it (Thermal's ModAmount, -1..1
 // of the normalised range); back to 0 the connection goes away. The macros themselves take no modulation.
-void DisTittenEditor::wireModulation (Dial& d)
+void DisThermEditor::wireModulation (Dial& d)
 {
     const int id = d.getParameter().getParameterIndex();
     if (id < 0 || id >= dt::kNumParams || id == dt::pid::macro1 || id == dt::pid::macro2) return;
@@ -196,7 +196,7 @@ void DisTittenEditor::wireModulation (Dial& d)
     };
 }
 
-void DisTittenEditor::tick()
+void DisThermEditor::tick()
 {
     column.tick();
     if (page == 1)
@@ -235,7 +235,7 @@ void DisTittenEditor::tick()
     }
 }
 
-void DisTittenEditor::setUiState (const juce::StringPairArray& s)
+void DisThermEditor::setUiState (const juce::StringPairArray& s)
 {
     const auto get = [&s] (const char* key, int fallback) {
         return s.containsKey (key) ? s[key].getIntValue() : fallback;

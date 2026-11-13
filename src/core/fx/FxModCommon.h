@@ -1,5 +1,5 @@
 // Shared helpers for the fx-modulation module (Chorus / Flanger / Phaser).
-// Header-only, JUCE-free, C++20. Part of the DisTitten re-implementation of Output Thermal.
+// Header-only, JUCE-free, C++20. Part of the DisTherm re-implementation of Output Thermal.
 #pragma once
 #include <cmath>
 #include <cstdint>

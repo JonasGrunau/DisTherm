@@ -1,7 +1,7 @@
 # fx-modulation: Chorus, Flanger, Phaser (saved by lead from agent message, condensed)
 
 Files: Chorus.h, Flanger.h, Phaser.h, FxModCommon.h, render.cpp (`render_fxmod in.f32 out.f32 sr fx=chorus|flanger|phaser key=value ... block= lag= thermalstart= evN=key,sample,value`), verify.py, fxm.py, fxtrack.py, work/.
-Mix law (all): y = Out·(Wet·fx(In·x) + (1−Wet)·In·x); phaser fx already contains dry (MULTI fx = x + 0.5·v; BARBER fx = x + wet). Fresh instance: smoothers ramp from parameter defaults to loaded values at t=0 (startFrom(Params{})); DisTitten: first setParams snaps.
+Mix law (all): y = Out·(Wet·fx(In·x) + (1−Wet)·In·x); phaser fx already contains dry (MULTI fx = x + 0.5·v; BARBER fx = x + wet). Fresh instance: smoothers ramp from parameter defaults to loaded values at t=0 (startFrom(Params{})); DisTherm: first setParams snaps.
 
 ## Chorus (−73..−97 dB)
 One voice, Catmull-Rom 4-point, write before read. s = x + Fb·y[n−1]; D = (3 ms + 2 ms·Depth·sin(2π(p + c·Width)))·sr/1000, c=0 L / 1 R. LFO float32 cycles accumulator p += float(rate/sr). Buffer exactly ceil(5 ms·sr) with no guard samples (wrap quirk at Depth≈1, copied). Feedback positive, no filter/saturation, 0..0.9. Smoothing: Rate, Fb, WetDry, gains 5 ms; Depth, Width 50 ms.

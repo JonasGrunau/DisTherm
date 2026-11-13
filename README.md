@@ -1,4 +1,4 @@
-# DisTitten
+# DisTherm
 
 A multistage distortion, rebuilt from Output Thermal by measuring
 what Thermal does to sound. Three stages each heat one band of the signal
@@ -7,7 +7,7 @@ and a compressor follow, and two drawable envelopes and two macros move any of
 it. Thermal's presets load as they are: pick one from the preset menu, turn the
 macros or drag the XY pad, and draw your own movement on the edit page.
 
-![DisTitten, edit page: stage 1 working on 640 Hz to 1.97 kHz](docs/screenshot.png)
+![DisTherm, edit page: stage 1 working on 640 Hz to 1.97 kHz](docs/screenshot.png)
 
 ```
 in ─ input ─┬─ stage 1 ─ stage 2 ─ stage 3 ─ FX 1 ─ FX 2 ─ master comp ─ HP/LP ─┬─ wet ─┐
@@ -30,7 +30,7 @@ the look is ours.
 
 | Control | What it does |
 |---------|--------------|
-| **Preset bar** | Name, menu (your presets in `~/Music/DisTitten/Presets`, and Thermal's 355 factory presets, which DisTitten carries), save, previous / next |
+| **Preset bar** | Name, menu (your presets in `~/Music/DisTherm/Presets`, and Thermal's 355 factory presets, which DisTherm carries), save, previous / next |
 | **MACRO 1 / MACRO 2** | 0–100 %. Each moves every parameter routed to it. Double-click the name to rename it. **+** assigns (see below) |
 | **Page buttons** | The XY page and the edit page |
 | **DRY / WET** | The whole plugin against its input, Thermal's v^(5/7) law each way. The lock keeps it when presets load |
@@ -75,20 +75,20 @@ decompiled. The method and every finding are in `docs/thermal-re/`.
 
 - **Each mechanism alone** (gains, crossover, tone, width, the 34 distortion
   shapes, all nine effects, the compressor, filters, envelopes, macros,
-  modulation routing): DisTitten's output minus Thermal's nulls to −92 dB or
+  modulation routing): DisTherm's output minus Thermal's nulls to −92 dB or
   lower, most cases below −115 dB.
 - **Whole factory presets**: of the 315 presets that render the same twice in
   Thermal, the median spectral distance is 0.02 dB, 89 % are within 1 dB, the
   worst is 4.9 dB. The rest of the 355 use HUMANIZE, which is random by design
   (in Thermal too).
 - **Where it still differs**: presets with heavy feedback loops drift apart
-  over time (Thermal computes in floats, DisTitten in doubles in places, and
+  over time (Thermal computes in floats, DisTherm in doubles in places, and
   chaotic loops amplify the difference), and flanger and phaser LFOs can start
   at a different phase.
 
 **On purpose different from Thermal**
 
-- DisTitten reports its 93-sample delay to the host as latency. Thermal has
+- DisTherm reports its 93-sample delay to the host as latency. Thermal has
   the same delay but reports 0, so it plays late in a DAW.
 - Switching a stage, WIDTH, TONE, the master compressor or an effect type
   crossfades over a few milliseconds instead of clicking.
@@ -105,7 +105,7 @@ cmake --build build
 ```
 
 This installs the VST3 and AU into `~/Library/Audio/Plug-Ins`
-(`-DDISTITTEN_COPY_PLUGIN=OFF` to skip that). JUCE 8 is downloaded
+(`-DDISTHERM_COPY_PLUGIN=OFF` to skip that). JUCE 8 is downloaded
 automatically; pass `-DFETCHCONTENT_SOURCE_DIR_JUCE=/path/to/JUCE` to use a
 local checkout.
 
@@ -114,14 +114,14 @@ local checkout.
 The DSP doesn't depend on JUCE and builds in seconds:
 
 ```sh
-cmake -B build-core -G Ninja -DCMAKE_BUILD_TYPE=Release -DDISTITTEN_BUILD_PLUGIN=OFF
+cmake -B build-core -G Ninja -DCMAKE_BUILD_TYPE=Release -DDISTHERM_BUILD_PLUGIN=OFF
 cmake --build build-core
-./build-core/distitten_tests
+./build-core/distherm_tests
 ```
 
 ### UI snapshots
 
-`build/distitten_snapshot_artefacts/Release/distitten_snapshot <dir>` renders
+`build/distherm_snapshot_artefacts/Release/distherm_snapshot <dir>` renders
 the editor to PNGs (`main`, `edit`, `busy`, `stagefx`, `comp`, `stage3`,
 `assign`) with the built-in loop playing through it, no DAW needed.
 `SNAP_PRESET="System Destruct"` loads a preset first, `SNAP_UI="page=1,stage=2"`
@@ -130,7 +130,7 @@ of the built-in one. `... <dir> bench` times the paints instead.
 
 ### Rendering through the engine
 
-`distitten_render <thermal-preset.xml|-> in.f32 out.f32 [sr=] [block=] [bpm=]`
+`distherm_render <thermal-preset.xml|-> in.f32 out.f32 [sr=] [block=] [bpm=]`
 runs raw stereo float audio through the engine with a Thermal preset, the way
 the comparisons above were made.
 
@@ -194,7 +194,7 @@ src/core/engine    the whole chain (Engine.cpp) and an effect slot (EffectSlot.c
 src/plugin         JUCE processor, editor, Thermal preset import
 src/ui             theme, controls, Thermal's layout (Layout.h) and the views
 tests/             Catch2 tests for the engine
-tools/             snapshot tool, demo host, distitten_render, the parameter generator
+tools/             snapshot tool, demo host, distherm_render, the parameter generator
 docs/thermal-re/   how Thermal was measured, and what was found
 presets/thermal/   Thermal's factory presets and modulation shapes, built into the plugin
 packaging/         macOS pkg and Windows installer scripts

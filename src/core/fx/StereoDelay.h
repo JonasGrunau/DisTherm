@@ -94,7 +94,7 @@ public:
     static constexpr float  kInitialTime = 10.0f;   // s, synced-mode smoother start value after prepare()
     static constexpr float  kSmoothTime  = 0.15f;   // s, delay-time one-pole time constant
     // s, the read offset is clamped here. Thermal clamps at 48 s (1 Bar below 5 bpm), which costs 18 MB per
-    // instance at 48 kHz; DisTitten keeps 16 s (1 Bar down to 15 bpm), the only difference being at slower tempos.
+    // instance at 48 kHz; DisTherm keeps 16 s (1 Bar down to 15 bpm), the only difference being at slower tempos.
     static constexpr double kMaxDelay    = 16.0;
 
     void prepare (double sampleRate, int /*maxBlockSize*/)

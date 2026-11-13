@@ -9,7 +9,7 @@
 
 #include <memory>
 
-class DisTittenProcessor;
+class DisThermProcessor;
 
 // The band strip over the edit page, drawn like Thermal's: the frequency axis (four segments: 30-100-500-5k-22k Hz),
 // the selected stage as a column over its band (power, name, the puck that moves the band, a handle on each edge,
@@ -18,7 +18,7 @@ class DisTittenProcessor;
 class BandStrip : public juce::Component
 {
 public:
-    explicit BandStrip (DisTittenProcessor&);
+    explicit BandStrip (DisThermProcessor&);
 
     std::function<void (int)> onSelectStage;
     std::function<void (const juce::String&, bool)> onHelp;
@@ -41,7 +41,7 @@ private:
     int hit (juce::Point<float>) const;        // 0 LOW handle, 1 HIGH handle, 2 band, 10 + s another stage, -1 nothing
     void placePower();
 
-    DisTittenProcessor& proc;
+    DisThermProcessor& proc;
     std::unique_ptr<ParamToggle> power[3];
     int stage = 0, dragWhat = -1, hover = -1;
     float dragStartX = 0.f;
@@ -55,7 +55,7 @@ private:
 class ModPanel : public juce::Component
 {
 public:
-    ModPanel (DisTittenProcessor&, int envelope);
+    ModPanel (DisThermProcessor&, int envelope);
 
     std::function<void (int source)> onAssign;
     std::function<void (const juce::String&, bool)> onHelp;
@@ -80,7 +80,7 @@ private:
     void savePreset();
     void loadShapeFile (const juce::File&);
 
-    DisTittenProcessor& proc;
+    DisThermProcessor& proc;
     int env;
     std::unique_ptr<IconButton> plus, save, prev, next, rndm, clr;
     std::unique_ptr<ParamToggle> sync, power;
@@ -96,14 +96,14 @@ private:
 class MasterView : public juce::Component
 {
 public:
-    explicit MasterView (DisTittenProcessor&);
+    explicit MasterView (DisThermProcessor&);
     std::function<void (const juce::String&, bool)> onHelp;
     void tick();
     void paint (juce::Graphics&) override;
 
 private:
     juce::Rectangle<int> local (layout::R r) const { return r.i().translated (-419, -350); }
-    DisTittenProcessor& proc;
+    DisThermProcessor& proc;
     std::unique_ptr<Dial> hp, lp, thresh, ratio, attack, release, gain;
     std::unique_ptr<Fader> in, out, wet;
     std::unique_ptr<ParamToggle> power;
@@ -114,7 +114,7 @@ private:
 class LowerPanel : public juce::Component
 {
 public:
-    explicit LowerPanel (DisTittenProcessor&);
+    explicit LowerPanel (DisThermProcessor&);
     std::function<void (const juce::String&, bool)> onHelp;
     void showTab (int t);
     int tab() const noexcept { return current; }
@@ -124,7 +124,7 @@ public:
 
 private:
     juce::Rectangle<int> local (layout::R r) const { return r.i().translated (-419, -350); }
-    DisTittenProcessor& proc;
+    DisThermProcessor& proc;
     int current = 0;
     std::unique_ptr<TabKey> tabs[3];
     std::unique_ptr<XYPad> xy;

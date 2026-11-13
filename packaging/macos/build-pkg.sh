@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Builds the macOS installer from a finished plugin build.
 # Usage: packaging/macos/build-pkg.sh <artefacts-dir> <version> <out.pkg>
-#   e.g. packaging/macos/build-pkg.sh build/DisTitten_artefacts/Release 1.2.0 dist/DisTitten-1.2.0-macOS.pkg
+#   e.g. packaging/macos/build-pkg.sh build/DisTherm_artefacts/Release 1.2.0 dist/DisTherm-1.2.0-macOS.pkg
 #
 # One component package per format (VST3, AU), wrapped in a product archive
 # whose "Customize" page lets the user untick either. The bundles go in as
@@ -14,7 +14,7 @@ ARTEFACTS=$1
 VERSION=$2
 OUT=$3
 
-ID=de.grunau.distitten
+ID=de.grunau.distherm
 WORK=$(mktemp -d)
 trap 'rm -rf "$WORK"' EXIT
 
@@ -40,21 +40,21 @@ component()
 }
 
 mkdir -p "$WORK/pkgs"
-component vst3 "$ARTEFACTS/VST3/DisTitten.vst3"      /Library/Audio/Plug-Ins/VST3
-component au   "$ARTEFACTS/AU/DisTitten.component"   /Library/Audio/Plug-Ins/Components
+component vst3 "$ARTEFACTS/VST3/DisTherm.vst3"      /Library/Audio/Plug-Ins/VST3
+component au   "$ARTEFACTS/AU/DisTherm.component"   /Library/Audio/Plug-Ins/Components
 # STANDALONE (PsyBox): also ship the app, unticked by default (see the choice below).
-# component app  "$ARTEFACTS/Standalone/DisTitten.app"   /Applications
+# component app  "$ARTEFACTS/Standalone/DisTherm.app"   /Applications
 
 # STANDALONE (PsyBox) additions to the XML below:
 #   in <choices-outline>:  <line choice="app"/>
-#   after the au choice:   <choice id="app" title="Standalone app" description="/Applications/DisTitten.app" start_selected="false">
+#   after the au choice:   <choice id="app" title="Standalone app" description="/Applications/DisTherm.app" start_selected="false">
 #                              <pkg-ref id="$ID.app"/>
 #                          </choice>
 #   after the pkg-refs:    <pkg-ref id="$ID.app" version="$VERSION">app.pkg</pkg-ref>
 cat > "$WORK/distribution.xml" <<EOF
 <?xml version="1.0" encoding="utf-8"?>
 <installer-gui-script minSpecVersion="2">
-    <title>DisTitten $VERSION</title>
+    <title>DisTherm $VERSION</title>
     <options customize="allow" require-scripts="false" hostArchitectures="arm64,x86_64"/>
     <domains enable_localSystem="true"/>
     <allowed-os-versions><os-version min="11.0"/></allowed-os-versions>
@@ -62,10 +62,10 @@ cat > "$WORK/distribution.xml" <<EOF
         <line choice="vst3"/>
         <line choice="au"/>
     </choices-outline>
-    <choice id="vst3" title="VST3 plug-in" description="/Library/Audio/Plug-Ins/VST3/DisTitten.vst3">
+    <choice id="vst3" title="VST3 plug-in" description="/Library/Audio/Plug-Ins/VST3/DisTherm.vst3">
         <pkg-ref id="$ID.vst3"/>
     </choice>
-    <choice id="au" title="Audio Unit" description="/Library/Audio/Plug-Ins/Components/DisTitten.component">
+    <choice id="au" title="Audio Unit" description="/Library/Audio/Plug-Ins/Components/DisTherm.component">
         <pkg-ref id="$ID.au"/>
     </choice>
     <pkg-ref id="$ID.vst3" version="$VERSION">vst3.pkg</pkg-ref>

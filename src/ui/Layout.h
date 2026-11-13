@@ -2,7 +2,7 @@
 
 #include <juce_graphics/juce_graphics.h>
 
-// Where everything sits. DisTitten keeps Output Thermal's layout exactly (the user's brief: "aligned exactly as
+// Where everything sits. DisTherm keeps Output Thermal's layout exactly (the user's brief: "aligned exactly as
 // the original, just the style should look like ours"); every rectangle below was read from Thermal 1.2.1's own
 // editor through the macOS accessibility API (control frames) and full-resolution captures, in the editor's
 // logical pixels. The sheet is 1123 x 701 and scaled as a whole.

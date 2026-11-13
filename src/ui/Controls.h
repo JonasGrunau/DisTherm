@@ -64,7 +64,7 @@ public:
     void setRing (Ring r, bool restsAtEnd = false) { ring = r; restAtEnd = restsAtEnd; repaint(); }
     void setDimmed (bool d) { if (d != dimmed) { dimmed = d; repaint(); } }          // its section is switched off
     void setShowsValue (bool s) { if (s != showsValue) { showsValue = s; repaint(); } }   // value shown elsewhere (a big readout)
-    // Compact (DisTitten's Thermal layout): no value line; while the dial is hovered or dragged its value takes
+    // Compact (DisTherm's Thermal layout): no value line; while the dial is hovered or dragged its value takes
     // the name's place, and a double-click on it there types one.
     void setCompact (bool c) { if (c != compact) { compact = c; resized(); repaint(); } }
     void setShowsName (bool s) { if (s != showsName) { showsName = s; repaint(); } }

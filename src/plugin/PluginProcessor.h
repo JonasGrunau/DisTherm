@@ -10,16 +10,16 @@
 #include <atomic>
 #include <memory>
 
-// DisTitten: a recreation of Output Thermal's multistage distortion. Three band-split stages (distortion on
+// DisTherm: a recreation of Output Thermal's multistage distortion. Three band-split stages (distortion on
 // the mid band, one of nine effects, width, gain, tone), two master effect slots, a master compressor and an
 // output bus, driven by two drawable mod envelopes and two macros. Every parameter, range and taper is
 // Thermal's (src/core/model/Params.h, measured from the original); the switches Thermal keeps in its
 // node properties are parameters here too. The editor taps the input and output.
-class DisTittenProcessor : public juce::AudioProcessor, private juce::Timer
+class DisThermProcessor : public juce::AudioProcessor, private juce::Timer
 {
 public:
-    DisTittenProcessor();
-    ~DisTittenProcessor() override;
+    DisThermProcessor();
+    ~DisThermProcessor() override;
 
     // ---- AudioProcessor -------------------------------------------------------
     void prepareToPlay (double sampleRate, int samplesPerBlock) override;
@@ -60,7 +60,7 @@ public:
     bool loadThermalPreset (const juce::File& xmlFile);
     bool loadThermalState (const juce::XmlElement& thermalRoot);
 
-    // Presets: DisTitten's own (.dtpreset, its state XML) in the user folder, and Thermal's factory presets read
+    // Presets: DisTherm's own (.dtpreset, its state XML) in the user folder, and Thermal's factory presets read
     // from the user's Thermal installation. The dry/wet lock keeps the current dry/wet across preset loads.
     struct PresetEntry { juce::File file; juce::String name, folder; bool thermal; };
     static juce::File userPresetFolder();
@@ -102,5 +102,5 @@ private:
     std::atomic<double> currentRate { 48000.0 };
     std::atomic<float> inPeak { 0.f }, outPeak { 0.f };
 
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (DisTittenProcessor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (DisThermProcessor)
 };

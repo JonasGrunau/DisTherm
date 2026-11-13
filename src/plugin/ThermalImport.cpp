@@ -19,7 +19,7 @@ namespace
            #if JUCE_MAC
             base = base.getChildFile ("Application Support");
            #endif
-            const auto dir = base.getChildFile ("DisTitten").getChildFile ("Factory");
+            const auto dir = base.getChildFile ("DisTherm").getChildFile ("Factory");
             const auto marker = dir.getChildFile (".unpacked");
             juce::uint64 hash = 14695981039346656037ull;
             for (int i = 0; i < BinaryData::factory_zipSize; ++i)
@@ -178,7 +178,7 @@ bool read (const juce::XmlElement& root, Patch& out)
     for (int i = 0; i < dt::kNumParams; ++i)
         out.norm[(size_t) i] = dt::kParams[i].defaultNorm;
 
-    // Thermal's host parameters: the normalised value it stores is exactly DisTitten's normalised value.
+    // Thermal's host parameters: the normalised value it stores is exactly DisTherm's normalised value.
     for (int i = 0; i < dt::kNumThermalParams; ++i)
         if (auto* e = parameters->getChildByName (dt::kParams[i].thermalTag))
             out.norm[(size_t) i] = (float) juce::jlimit (0.0, 1.0, e->getDoubleAttribute ("unmapped_value", dt::kParams[i].defaultNorm));
@@ -194,7 +194,7 @@ bool read (const juce::XmlElement& root, Patch& out)
         const auto stage = "Stage_" + juce::String (s + 1);
         if (bypassed (*app, "MKUThreeBandSplitterNode_" + stage))
             out.norm[(size_t) (dt::pid::s1_on + s * (dt::pid::s2_on - dt::pid::s1_on))] = 0.f;
-        // Thermal can bypass a stage's gain node, which DisTitten has no switch for: unity gain is the same thing.
+        // Thermal can bypass a stage's gain node, which DisTherm has no switch for: unity gain is the same thing.
         if (bypassed (*app, "MKUGainBus_" + stage))
             out.norm[(size_t) (dt::pid::s1_gain + s * (dt::pid::s2_gain - dt::pid::s1_gain))]
                 = (float) dt::toNorm (dt::kParams[dt::pid::s1_gain], 0.0);

@@ -28,7 +28,7 @@ namespace
 
     int floorIndex (float plain, int count) { return dt::names::stepIndex (plain, count); }
 
-    std::unique_ptr<Dial> makeDial (DisTittenProcessor& p, int id, const juce::String& name, const juce::String& help,
+    std::unique_ptr<Dial> makeDial (DisThermProcessor& p, int id, const juce::String& name, const juce::String& help,
                                     Dial::Ring ring = Dial::Ring::position)
     {
         auto d = std::make_unique<Dial> (p.param (id), name, help);
@@ -40,7 +40,7 @@ namespace
 
 // ---- EffectView ----------------------------------------------------------------------------
 
-EffectView::EffectView (DisTittenProcessor& p, int s, EffectGeometry g, juce::Rectangle<int> area)
+EffectView::EffectView (DisThermProcessor& p, int s, EffectGeometry g, juce::Rectangle<int> area)
     : proc (p), slot (s), geo (g), origin (area.getPosition())
 {
     setBounds (area);
@@ -266,7 +266,7 @@ void EffectView::paint (juce::Graphics& g)
 
 // ---- ShapeView ----------------------------------------------------------------------------
 
-ShapeView::ShapeView (DisTittenProcessor& p, int s) : proc (p), stage (s)
+ShapeView::ShapeView (DisThermProcessor& p, int s) : proc (p), stage (s)
 {
     namespace pid = dt::pid;
     for (int id : { pid::s1_type, pid::s1_drive, pid::s1_out, pid::s1_shape, pid::s1_depth, pid::s1_freq, pid::s1_clip })
@@ -332,7 +332,7 @@ void ShapeView::paint (juce::Graphics& g)
 
 // ---- StageView ----------------------------------------------------------------------------
 
-StageView::StageView (DisTittenProcessor& p, int s) : proc (p), stage (s)
+StageView::StageView (DisThermProcessor& p, int s) : proc (p), stage (s)
 {
     namespace pid = dt::pid;
     namespace L = layout;

@@ -8,8 +8,8 @@
 #
 # Template notes ({{...}} are placeholders; ${{ ... }} with spaces are GitHub
 # expressions and stay as they are):
-# - INSTRUMENT / STANDALONE (PsyBox): add Standalone/DisTitten.app to BUNDLES,
-#   DisTitten_Standalone to both Build steps, and use `auval -v aumu ...`.
+# - INSTRUMENT / STANDALONE (PsyBox): add Standalone/DisTherm.app to BUNDLES,
+#   DisTherm_Standalone to both Build steps, and use `auval -v aumu ...`.
 name: Release
 
 on:
@@ -42,8 +42,8 @@ jobs:
     runs-on: macos-latest
     env:
       VERSION: ${{ needs.version.outputs.version }}
-      OUT: build/DisTitten_artefacts/Release
-      BUNDLES: VST3/DisTitten.vst3 AU/DisTitten.component
+      OUT: build/DisTherm_artefacts/Release
+      BUNDLES: VST3/DisTherm.vst3 AU/DisTherm.component
       # Signing and notarization run when the certificate secret is set (README > Releases).
       SIGN: ${{ secrets.MACOS_CERTIFICATES_P12 != '' }}
     steps:
@@ -53,29 +53,29 @@ jobs:
         run: >
           cmake -B build -DCMAKE_BUILD_TYPE=Release
           -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64"
-          -DDISTITTEN_VERSION=${{ needs.version.outputs.numeric }}
-          -DDISTITTEN_BUILD_TESTS=ON -DDISTITTEN_COPY_PLUGIN=OFF
+          -DDISTHERM_VERSION=${{ needs.version.outputs.numeric }}
+          -DDISTHERM_BUILD_TESTS=ON -DDISTHERM_COPY_PLUGIN=OFF
 
       - name: Build
-        run: cmake --build build --parallel --target DisTitten_VST3 DisTitten_AU distitten_tests
+        run: cmake --build build --parallel --target DisTherm_VST3 DisTherm_AU distherm_tests
 
       - name: Test
-        run: ./build/distitten_tests
+        run: ./build/distherm_tests
 
       - name: Validate (pluginval)
         run: |
           curl -fsSL -o pluginval.zip https://github.com/Tracktion/pluginval/releases/latest/download/pluginval_macOS.zip
           ditto -x -k pluginval.zip pluginval
           pluginval/pluginval.app/Contents/MacOS/pluginval --strictness-level 5 --validate-in-process --skip-gui-tests \
-            --validate "$OUT/VST3/DisTitten.vst3"
+            --validate "$OUT/VST3/DisTherm.vst3"
 
       # aufx = kAudioUnitType_Effect. An instrument (kAudioUnitType_MusicDevice) is aumu.
       - name: Validate (auval)
         run: |
           mkdir -p ~/Library/Audio/Plug-Ins/Components
-          ditto "$OUT/AU/DisTitten.component" ~/Library/Audio/Plug-Ins/Components/DisTitten.component
+          ditto "$OUT/AU/DisTherm.component" ~/Library/Audio/Plug-Ins/Components/DisTherm.component
           killall -9 AudioComponentRegistrar 2>/dev/null || true
-          auval -v aufx DsTt Jgru
+          auval -v aufx DsTh Jgru
 
       - name: Import Developer ID certificates
         if: env.SIGN == 'true'
@@ -113,7 +113,7 @@ jobs:
       - name: Package
         run: |
           [[ "$SIGN" == true ]] || echo "::warning::MACOS_CERTIFICATES_P12 is not set, so the macOS build is not signed"
-          packaging/macos/build-pkg.sh "$OUT" "$VERSION" "dist/DisTitten-$VERSION-macOS.pkg"
+          packaging/macos/build-pkg.sh "$OUT" "$VERSION" "dist/DisTherm-$VERSION-macOS.pkg"
 
       - name: Notarize
         if: env.SIGN == 'true'
@@ -121,7 +121,7 @@ jobs:
           NOTARY_APPLE_ID: ${{ secrets.NOTARY_APPLE_ID }}
           NOTARY_PASSWORD: ${{ secrets.NOTARY_PASSWORD }}
         run: |
-          pkg="dist/DisTitten-$VERSION-macOS.pkg"
+          pkg="dist/DisTherm-$VERSION-macOS.pkg"
           auth=(--apple-id "$NOTARY_APPLE_ID" --password "$NOTARY_PASSWORD" --team-id "$TEAM_ID")
           result=$(xcrun notarytool submit "$pkg" "${auth[@]}" --wait --timeout 1h --output-format json)
           echo "$result"
@@ -137,9 +137,9 @@ jobs:
       - name: Zip plug-ins
         run: |
           mkdir plugins
-          ditto "$OUT/VST3/DisTitten.vst3" plugins/DisTitten.vst3
-          ditto "$OUT/AU/DisTitten.component" plugins/DisTitten.component
-          ditto -c -k plugins "dist/DisTitten-$VERSION-macOS-VST3-AU.zip"
+          ditto "$OUT/VST3/DisTherm.vst3" plugins/DisTherm.vst3
+          ditto "$OUT/AU/DisTherm.component" plugins/DisTherm.component
+          ditto -c -k plugins "dist/DisTherm-$VERSION-macOS-VST3-AU.zip"
 
       - uses: actions/upload-artifact@v7
         with:
@@ -155,28 +155,28 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      # Quoted: PowerShell splits an unquoted -DDISTITTEN_VERSION=1.2.0 at the first dot.
+      # Quoted: PowerShell splits an unquoted -DDISTHERM_VERSION=1.2.0 at the first dot.
       - name: Configure
         run: >
           cmake -B build -A x64
-          "-DDISTITTEN_VERSION=${{ needs.version.outputs.numeric }}"
-          -DDISTITTEN_BUILD_TESTS=ON -DDISTITTEN_COPY_PLUGIN=OFF
+          "-DDISTHERM_VERSION=${{ needs.version.outputs.numeric }}"
+          -DDISTHERM_BUILD_TESTS=ON -DDISTHERM_COPY_PLUGIN=OFF
 
       - name: Build
-        run: cmake --build build --config Release --parallel --target DisTitten_VST3 distitten_tests
+        run: cmake --build build --config Release --parallel --target DisTherm_VST3 distherm_tests
 
       - name: Test
-        run: build\Release\distitten_tests.exe
+        run: build\Release\distherm_tests.exe
 
       - name: Install Inno Setup
         run: choco install innosetup -y --no-progress
 
       - name: Package
         run: |
-          $out = "$PWD\build\DisTitten_artefacts\Release"
-          & "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe" "/DAppVersion=$env:VERSION" "/DArtefacts=$out" "/O$PWD\dist" packaging\windows\DisTitten.iss
+          $out = "$PWD\build\DisTherm_artefacts\Release"
+          & "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe" "/DAppVersion=$env:VERSION" "/DArtefacts=$out" "/O$PWD\dist" packaging\windows\DisTherm.iss
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          Compress-Archive -Path "$out\VST3\DisTitten.vst3" -DestinationPath "dist\DisTitten-$env:VERSION-Windows-VST3.zip"
+          Compress-Archive -Path "$out\VST3\DisTherm.vst3" -DestinationPath "dist\DisTherm-$env:VERSION-Windows-VST3.zip"
 
       - uses: actions/upload-artifact@v7
         with:
@@ -202,4 +202,4 @@ jobs:
           flags=()
           [[ "$VERSION" == *-* ]] && flags+=(--prerelease)
           gh release create "$GITHUB_REF_NAME" dist/* --repo "$GITHUB_REPOSITORY" \
-            --verify-tag --title "DisTitten $VERSION" --generate-notes "${flags[@]}"
+            --verify-tag --title "DisTherm $VERSION" --generate-notes "${flags[@]}"

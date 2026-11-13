@@ -1,4 +1,4 @@
-// Structure.h - DisTitten reconstruction of Output Thermal's routing / utility nodes.
+// Structure.h - DisTherm reconstruction of Output Thermal's routing / utility nodes.
 // Header-only, JUCE-free, C++20. Measured black-box against Thermal v1.2.1 (see FINDINGS.md).
 //
 //   dt::InputBus      MKUInputBus_MainInput      InputGain -60..+6 dB (5 ms linear ramp, fades in from 0)
@@ -158,7 +158,7 @@ namespace detail
 // Thermal keeps the two crossover handles on an 855-pixel axis made of 4 segments of 213.75 px
 // (30-100, 100-500, 500-5000, 5000-22000 Hz). Inside a segment [fa, fb]: f = A + (fa - A)(1 + (sqrt10 - 1) t)^2,
 // A = (10 fa - fb) / 9, t in [0, 1]. The handles must stay >= 30 px apart; the processor snaps and pushes the
-// other band parameter and writes the result back into the parameters (a DisTitten processor must do the same).
+// other band parameter and writes the result back into the parameters (a DisTherm processor must do the same).
 namespace bandaxis
 {
     constexpr double kSegPx = 213.75;

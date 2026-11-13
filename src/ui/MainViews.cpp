@@ -6,7 +6,7 @@ using namespace theme;
 
 namespace
 {
-    // The preset name as a button: click for the menu of DisTitten and Thermal presets.
+    // The preset name as a button: click for the menu of DisTherm and Thermal presets.
     struct PresetButton : juce::Component
     {
         std::function<juce::String()> name;
@@ -35,12 +35,12 @@ void wordmark (juce::Graphics& g, juce::Rectangle<float> r, float height)
     g.setColour (col::accent);
     g.drawText ("/", r.withTrimmedLeft (w1), juce::Justification::centredLeft, false);
     g.setColour (col::ink);
-    g.drawText ("TITTEN", r.withTrimmedLeft (w1 + ws + 1.f), juce::Justification::centredLeft, false);
+    g.drawText ("THERM", r.withTrimmedLeft (w1 + ws + 1.f), juce::Justification::centredLeft, false);
 }
 
 // ---- XYPad ----------------------------------------------------------------------------
 
-XYPad::XYPad (DisTittenProcessor& p, bool l)
+XYPad::XYPad (DisThermProcessor& p, bool l)
     : proc (p), large (l), m1 (p.param (dt::pid::macro1)), m2 (p.param (dt::pid::macro2))
 {
     m1.addListener (this);
@@ -179,7 +179,7 @@ void XYPad::mouseDoubleClick (const juce::MouseEvent&)
 
 // ---- RightColumn ----------------------------------------------------------------------------
 
-RightColumn::RightColumn (DisTittenProcessor& p) : proc (p)
+RightColumn::RightColumn (DisThermProcessor& p) : proc (p)
 {
     namespace L = layout;
     setBounds (L::column.i());
@@ -193,7 +193,7 @@ RightColumn::RightColumn (DisTittenProcessor& p) : proc (p)
     presetButton = std::move (pb);
     place (*presetButton, L::presetName);
     save = std::make_unique<IconButton> (IconButton::Icon::save);
-    save->help = "Save the current state as a DisTitten preset.";
+    save->help = "Save the current state as a DisTherm preset.";
     save->onClick = [this] { savePresetAs(); };
     place (*save, L::presetSave);
     prev = std::make_unique<IconButton> (IconButton::Icon::prev);
@@ -386,7 +386,7 @@ void RightColumn::showPresetMenu()
         if (p.thermal) folders[p.folder].addItem ((int) i + 1, p.name, true, current);
         else menu.addItem ((int) i + 1, p.name, true, current);
     }
-    if (menu.getNumItems() == 0) menu.addItem (-1, "No DisTitten presets yet", false);
+    if (menu.getNumItems() == 0) menu.addItem (-1, "No DisTherm presets yet", false);
     for (auto& [name, sub] : folders) thermalMenu.addSubMenu (name, sub);
     if (! folders.empty()) menu.addSubMenu ("THERMAL FACTORY", thermalMenu);
     menu.addSeparator();
@@ -418,9 +418,9 @@ void RightColumn::stepPreset (int delta)
 
 void RightColumn::savePresetAs()
 {
-    auto folder = DisTittenProcessor::userPresetFolder();
+    auto folder = DisThermProcessor::userPresetFolder();
     folder.createDirectory();
-    chooser = std::make_unique<juce::FileChooser> ("Save DisTitten preset", folder.getChildFile (proc.getPresetName() + ".dtpreset"), "*.dtpreset");
+    chooser = std::make_unique<juce::FileChooser> ("Save DisTherm preset", folder.getChildFile (proc.getPresetName() + ".dtpreset"), "*.dtpreset");
     chooser->launchAsync (juce::FileBrowserComponent::saveMode | juce::FileBrowserComponent::warnAboutOverwriting,
                           [this] (const juce::FileChooser& c) {
                               auto f = c.getResult();

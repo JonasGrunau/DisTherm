@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "name": "DisTitten",
+  "name": "DisTherm",
   "category": "Multistage distortion",
   "description": "A multistage distortion, rebuilt from Output Thermal by measuring what Thermal does to sound. Three stages each heat one band of the signal, two more effects and a compressor follow, and two drawable envelopes and two macros move any of it. Thermal's presets load as they are.",
   "image": "docs/screenshot.png",
-  "bundles": ["DisTitten.vst3", "DisTitten.component"],
+  "bundles": ["DisTherm.vst3", "DisTherm.component"],
   "build": {
-    "cmake_args": ["-DDISTITTEN_BUILD_TESTS=OFF", "-DDISTITTEN_COPY_PLUGIN=OFF"],
-    "targets": ["DisTitten_VST3", "DisTitten_AU"],
-    "artefacts": "DisTitten_artefacts/Release"
+    "cmake_args": ["-DDISTHERM_BUILD_TESTS=OFF", "-DDISTHERM_COPY_PLUGIN=OFF"],
+    "targets": ["DisTherm_VST3", "DisTherm_AU"],
+    "artefacts": "DisTherm_artefacts/Release"
   }
 }

@@ -7,7 +7,7 @@
 #include <functional>
 
 // =============================================================================
-// DisTitten theme: the house style (CI) of the plugin family.
+// DisTherm theme: the house style (CI) of the plugin family.
 //
 // The family look is PhaseFucker ("lab paper") and BuildApp ("night sheet"):
 // a printed drawing sheet. Warm neutral paper or warm black, ink and
@@ -107,7 +107,7 @@ namespace theme
         return p;
     }
 
-    // DisTitten: night sheet, hot magenta (OKLCH L .74 C .19 H 350; 7.4:1 on the sheet).
+    // DisTherm: night sheet, hot magenta (OKLCH L .74 C .19 H 350; 7.4:1 on the sheet).
     // ACCENT MEANS: the heat, i.e. what the distortion adds: the transfer curve, active drive and
     //               shape rings, the bands a stage is working on. Nothing else on screen may use it.
     inline constexpr Palette palette = withAccent (night, 0xffff71bb, 0xff5c3045, 0x1fff71bb);

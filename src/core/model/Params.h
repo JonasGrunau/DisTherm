@@ -7,7 +7,7 @@
 //   plain = lo + (hi - lo) * exp (log (u) / skew)      (= u^(1/skew)), computed in float
 // which is exactly how Thermal maps it (skews 1, 0.5, 0.35, 0.3, 0.26, 0.25, 0.2), so normalised automation and
 // Thermal presets carry over 1:1, down to the float rounding that some of its DSP depends on.
-// Ids are DisTitten's save format: append only, never rename or reorder.
+// Ids are DisTherm's save format: append only, never rename or reorder.
 
 #include <cmath>
 
@@ -45,7 +45,7 @@ enum class ParamFormat
 
 struct ParamInfo
 {
-    const char* id;            // DisTitten parameter id (save format)
+    const char* id;            // DisTherm parameter id (save format)
     const char* name;          // host / UI name
     const char* thermalTag;    // Thermal's XML parameter tag (preset import)
     float lo, hi, skew;        // juce::NormalisableRange<float> (lo, hi, 0, skew)
@@ -512,7 +512,7 @@ inline constexpr int kNumThermalParams = pid::kThermalCount;
 inline constexpr int kNumParams = pid::kCount;
 
 // kParams[0 .. kNumThermalParams) are Thermal's host parameters; the rest are the switches Thermal keeps in
-// node properties (thermalTag then reads "<node>.<attribute>", with "!" when DisTitten's value is inverted).
+// node properties (thermalTag then reads "<node>.<attribute>", with "!" when DisTherm's value is inverted).
 extern const ParamInfo kParams[kNumParams];
 
 // juce::NormalisableRange<float>::convertFrom0to1 / convertTo0to1, in float like Thermal and the host parameters,

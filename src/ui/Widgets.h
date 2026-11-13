@@ -7,7 +7,7 @@
 #include <functional>
 #include <vector>
 
-// The small controls DisTitten's Thermal layout needs, in the house style (flat, hairlines, radius 2, Plex type,
+// The small controls DisTherm's Thermal layout needs, in the house style (flat, hairlines, radius 2, Plex type,
 // ink for state, the accent only for heat). Each value control is bound to one parameter through
 // juce::ParameterAttachment and writes host gestures; each reports hover for the help line.
 

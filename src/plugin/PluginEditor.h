@@ -19,13 +19,13 @@
 // any knob sets how far that source moves it. Every knob with modulation shows where its modulated value is now.
 //
 // Nothing repaints on the timer unless what it shows changed.
-class DisTittenEditor : public juce::AudioProcessorEditor, private juce::Timer
+class DisThermEditor : public juce::AudioProcessorEditor, private juce::Timer
 {
 public:
     static constexpr int kWidth = layout::kWidth, kHeight = layout::kHeight;
 
-    explicit DisTittenEditor (DisTittenProcessor&);
-    ~DisTittenEditor() override;
+    explicit DisThermEditor (DisThermProcessor&);
+    ~DisThermEditor() override;
 
     void resized() override;
     void paint (juce::Graphics&) override {}
@@ -38,9 +38,9 @@ public:
 private:
     struct Sheet : juce::Component
     {
-        explicit Sheet (DisTittenEditor& e) : editor (e) { setOpaque (true); }
+        explicit Sheet (DisThermEditor& e) : editor (e) { setOpaque (true); }
         void paint (juce::Graphics&) override;
-        DisTittenEditor& editor;
+        DisThermEditor& editor;
     };
 
     void timerCallback() override { tick(); }
@@ -51,7 +51,7 @@ private:
     void collectDials (juce::Component&);
     void wireModulation (Dial&);
 
-    DisTittenProcessor& proc;
+    DisThermProcessor& proc;
     SheetLookAndFeel lnf;
     Sheet sheet { *this };
 

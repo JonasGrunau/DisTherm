@@ -4,11 +4,11 @@
 #include "PluginEditor.h"
 #include "ThermalImport.h"
 
-DisTittenProcessor::DisTittenProcessor()
+DisThermProcessor::DisThermProcessor()
     : AudioProcessor (BusesProperties()
                           .withInput ("Input", juce::AudioChannelSet::stereo(), true)
                           .withOutput ("Output", juce::AudioChannelSet::stereo(), true)),
-      apvts (*this, nullptr, "DisTitten", createLayout())
+      apvts (*this, nullptr, "DisTherm", createLayout())
 {
     for (int i = 0; i < dt::kNumParams; ++i)
     {
@@ -22,20 +22,20 @@ DisTittenProcessor::DisTittenProcessor()
     startTimerHz (20);
 }
 
-DisTittenProcessor::~DisTittenProcessor()
+DisThermProcessor::~DisThermProcessor()
 {
     stopTimer();
 }
 
 // ---- Modulation, Thermal presets, LOW/HIGH coupling -----------------------------
 
-void DisTittenProcessor::setModState (const dt::ModState& m)
+void DisThermProcessor::setModState (const dt::ModState& m)
 {
     *modEdit = m;
     modChannel->publish (*modEdit);
 }
 
-bool DisTittenProcessor::loadThermalState (const juce::XmlElement& root)
+bool DisThermProcessor::loadThermalState (const juce::XmlElement& root)
 {
     thermal::Patch patch;
     if (! thermal::read (root, patch)) return false;
@@ -50,19 +50,19 @@ bool DisTittenProcessor::loadThermalState (const juce::XmlElement& root)
     return true;
 }
 
-bool DisTittenProcessor::loadThermalPreset (const juce::File& xmlFile)
+bool DisThermProcessor::loadThermalPreset (const juce::File& xmlFile)
 {
     if (auto xml = juce::parseXML (xmlFile))
         return loadThermalState (*xml);
     return false;
 }
 
-juce::File DisTittenProcessor::userPresetFolder()
+juce::File DisThermProcessor::userPresetFolder()
 {
-    return juce::File::getSpecialLocation (juce::File::userMusicDirectory).getChildFile ("DisTitten").getChildFile ("Presets");
+    return juce::File::getSpecialLocation (juce::File::userMusicDirectory).getChildFile ("DisTherm").getChildFile ("Presets");
 }
 
-std::vector<DisTittenProcessor::PresetEntry> DisTittenProcessor::listPresets() const
+std::vector<DisThermProcessor::PresetEntry> DisThermProcessor::listPresets() const
 {
     std::vector<PresetEntry> out;
     const auto add = [&] (const juce::File& root, const juce::String& pattern, bool thermal) {
@@ -77,7 +77,7 @@ std::vector<DisTittenProcessor::PresetEntry> DisTittenProcessor::listPresets() c
     return out;
 }
 
-bool DisTittenProcessor::loadPreset (const juce::File& file)
+bool DisThermProcessor::loadPreset (const juce::File& file)
 {
     auto xml = juce::parseXML (file);
     if (xml == nullptr) return false;
@@ -103,7 +103,7 @@ bool DisTittenProcessor::loadPreset (const juce::File& file)
     return true;
 }
 
-bool DisTittenProcessor::savePreset (const juce::File& file)
+bool DisThermProcessor::savePreset (const juce::File& file)
 {
     juce::MemoryBlock mb;
     getStateInformation (mb);
@@ -118,7 +118,7 @@ bool DisTittenProcessor::savePreset (const juce::File& file)
 
 // Thermal keeps LOW at least 30 pixels of its band display below HIGH and writes the result back into its own
 // parameters (measured); the engine computes the coupling, this mirrors it into the parameters.
-void DisTittenProcessor::timerCallback()
+void DisThermProcessor::timerCallback()
 {
     const auto& m = engine.meters();
     for (int s = 0; s < 3; ++s)
@@ -138,7 +138,7 @@ void DisTittenProcessor::timerCallback()
     }
 }
 
-std::unique_ptr<juce::XmlElement> DisTittenProcessor::modulationXml() const
+std::unique_ptr<juce::XmlElement> DisThermProcessor::modulationXml() const
 {
     auto xml = std::make_unique<juce::XmlElement> ("Modulation");
     for (int m = 0; m < 2; ++m)
@@ -177,7 +177,7 @@ std::unique_ptr<juce::XmlElement> DisTittenProcessor::modulationXml() const
     return xml;
 }
 
-void DisTittenProcessor::readModulationXml (const juce::XmlElement& xml)
+void DisThermProcessor::readModulationXml (const juce::XmlElement& xml)
 {
     auto m = std::make_unique<dt::ModState>();
     for (int i = 0; i < 2; ++i)
@@ -218,7 +218,7 @@ void DisTittenProcessor::readModulationXml (const juce::XmlElement& xml)
     setModState (*m);
 }
 
-juce::AudioProcessorValueTreeState::ParameterLayout DisTittenProcessor::createLayout()
+juce::AudioProcessorValueTreeState::ParameterLayout DisThermProcessor::createLayout()
 {
     using namespace juce;
     AudioProcessorValueTreeState::ParameterLayout layout;
@@ -255,14 +255,14 @@ juce::AudioProcessorValueTreeState::ParameterLayout DisTittenProcessor::createLa
     return layout;
 }
 
-void DisTittenProcessor::readParams() noexcept
+void DisThermProcessor::readParams() noexcept
 {
     for (int i = 0; i < dt::kNumParams; ++i)
         block.plain[(size_t) i] = rawParams[(size_t) i]->load (std::memory_order_relaxed);
     block.render = isNonRealtime();   // may change between blocks: read it every block
 }
 
-dt::Transport DisTittenProcessor::transport() const noexcept
+dt::Transport DisThermProcessor::transport() const noexcept
 {
     dt::Transport t;
     if (auto* ph = getPlayHead())
@@ -279,7 +279,7 @@ dt::Transport DisTittenProcessor::transport() const noexcept
 
 // ---- Audio --------------------------------------------------------------------
 
-bool DisTittenProcessor::isBusesLayoutSupported (const BusesLayout& layouts) const
+bool DisThermProcessor::isBusesLayoutSupported (const BusesLayout& layouts) const
 {
     const auto in = layouts.getMainInputChannelSet(), out = layouts.getMainOutputChannelSet();
     const auto ok = [] (const juce::AudioChannelSet& s) { return s == juce::AudioChannelSet::mono() || s == juce::AudioChannelSet::stereo(); };
@@ -287,7 +287,7 @@ bool DisTittenProcessor::isBusesLayoutSupported (const BusesLayout& layouts) con
     return ok (in) && ok (out) && in.size() <= out.size();
 }
 
-void DisTittenProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
+void DisThermProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
     currentRate.store (sampleRate, std::memory_order_relaxed);
     readParams();
@@ -297,7 +297,7 @@ void DisTittenProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
     setLatencySamples (engine.getLatencySamples());
 }
 
-void DisTittenProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::MidiBuffer&)
+void DisThermProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::MidiBuffer&)
 {
     juce::ScopedNoDenormals noDenormals;
     const int n = buffer.getNumSamples();
@@ -337,7 +337,7 @@ void DisTittenProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::M
 
 // ---- State --------------------------------------------------------------------
 
-void DisTittenProcessor::getStateInformation (juce::MemoryBlock& destData)
+void DisThermProcessor::getStateInformation (juce::MemoryBlock& destData)
 {
     if (auto xml = apvts.copyState().createXml())
     {
@@ -347,7 +347,7 @@ void DisTittenProcessor::getStateInformation (juce::MemoryBlock& destData)
     }
 }
 
-void DisTittenProcessor::setStateInformation (const void* data, int sizeInBytes)
+void DisThermProcessor::setStateInformation (const void* data, int sizeInBytes)
 {
     auto xml = getXmlFromBinary (data, sizeInBytes);
     if (xml == nullptr) return;
@@ -365,6 +365,6 @@ void DisTittenProcessor::setStateInformation (const void* data, int sizeInBytes)
     apvts.replaceState (juce::ValueTree::fromXml (*xml));
 }
 
-juce::AudioProcessorEditor* DisTittenProcessor::createEditor() { return new DisTittenEditor (*this); }
+juce::AudioProcessorEditor* DisThermProcessor::createEditor() { return new DisThermEditor (*this); }
 
-juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter() { return new DisTittenProcessor(); }
+juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter() { return new DisThermProcessor(); }

@@ -6,17 +6,17 @@
 
 #include <memory>
 
-class DisTittenProcessor;
+class DisThermProcessor;
 
-// DIS/TITTEN, the slash in the accent, left-aligned in r.
+// DIS/THERM, the slash in the accent, left-aligned in r.
 void wordmark (juce::Graphics&, juce::Rectangle<float> r, float height);
 
 // Thermal's XY pad: X moves MACRO 2, Y moves MACRO 1. The field glows in the accent around the puck: the macros
-// are what turns the heat up (DisTitten's accent means the heat the distortion adds).
+// are what turns the heat up (DisTherm's accent means the heat the distortion adds).
 class XYPad : public juce::Component, private juce::AudioProcessorParameter::Listener
 {
 public:
-    XYPad (DisTittenProcessor&, bool large);
+    XYPad (DisThermProcessor&, bool large);
     ~XYPad() override;
 
     void refreshNames();
@@ -32,7 +32,7 @@ private:
     juce::Rectangle<float> field() const;
     void setFrom (juce::Point<float>);
 
-    DisTittenProcessor& proc;
+    DisThermProcessor& proc;
     bool large;
     juce::RangedAudioParameter &m1, &m2;
     bool dragging = false;
@@ -44,7 +44,7 @@ private:
 class RightColumn : public juce::Component
 {
 public:
-    RightColumn (DisTittenProcessor&);
+    RightColumn (DisThermProcessor&);
 
     std::function<void (int page)> onPage;                      // 0 main, 1 edit
     std::function<void (int source)> onAssign;                  // a macro's "+": mod source 2 or 3
@@ -63,7 +63,7 @@ private:
     void stepPreset (int delta);
     void savePresetAs();
 
-    DisTittenProcessor& proc;
+    DisThermProcessor& proc;
     std::unique_ptr<Dial> macro[2];
     std::unique_ptr<juce::Label> macroName[2];
     std::unique_ptr<IconButton> plus[2], pageMain, pageEdit, lock, helpButton, save, prev, next;

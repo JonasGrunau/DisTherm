@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Builds and opens the demo host: DisTitten in a window with a loop playing
+# Builds and opens the demo host: DisTherm in a window with a loop playing
 # through it, out of your speakers. No DAW.
 #   ./start.sh              the built-in kick + bass loop (pick a scenario in the window)
 #   ./start.sh track.wav    your file, looped
@@ -41,9 +41,9 @@ fi
 if [[ ! -f build/build.ninja ]]; then
     cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release ${deps[@]+"${deps[@]}"} ${DT_CMAKE_ARGS:-}
 fi
-cmake --build build --target distitten_demo
+cmake --build build --target distherm_demo
 
-exec "build/distitten_demo_artefacts/Release/DisTitten Demo.app/Contents/MacOS/DisTitten Demo" ${files[@]+"${files[@]}"}
+exec "build/distherm_demo_artefacts/Release/DisTherm Demo.app/Contents/MacOS/DisTherm Demo" ${files[@]+"${files[@]}"}
 
 # ---------------------------------------------------------------------------
 # INSTRUMENT alternative (PsyBox): no demo host; build the Standalone format
@@ -53,12 +53,12 @@ exec "build/distitten_demo_artefacts/Release/DisTitten Demo.app/Contents/MacOS/D
 #
 #   cd "$(dirname "$0")"
 #   BUILD_DIR=build
-#   APP="$BUILD_DIR/DisTitten_artefacts/Release/Standalone/DisTitten.app"
+#   APP="$BUILD_DIR/DisTherm_artefacts/Release/Standalone/DisTherm.app"
 #   if [[ "${1:-}" != "--no-build" ]]; then
 #       if [[ ! -f "$BUILD_DIR/build.ninja" ]]; then
 #           cmake -B "$BUILD_DIR" -G Ninja -DCMAKE_BUILD_TYPE=Release
 #       fi
-#       cmake --build "$BUILD_DIR" --target DisTitten_Standalone
+#       cmake --build "$BUILD_DIR" --target DisTherm_Standalone
 #   fi
 #   if [[ ! -d "$APP" ]]; then
 #       echo "Standalone app not found at $APP. Run ./start.sh without --no-build." >&2

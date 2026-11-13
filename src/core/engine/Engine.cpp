@@ -21,7 +21,7 @@ namespace
     constexpr int kStages = 3;
     constexpr int kStageLatency = DistortionNode::kLatency;   // 31: the 2x oversampler of each stage's distortion
     constexpr int kChunk = 32;                                // Thermal re-reads modulation of the bus and master-comp gains every 32 samples
-    constexpr double kToggleSeconds = 0.01;                   // DisTitten's click-free switching (Thermal switches hard)
+    constexpr double kToggleSeconds = 0.01;                   // DisTherm's click-free switching (Thermal switches hard)
 
     // The stage blocks of kParams repeat with a fixed stride.
     constexpr int stageParam (int stage, int s1Pid) noexcept { return s1Pid + stage * (pid::s2_lo - pid::s1_lo); }
@@ -30,7 +30,7 @@ namespace
 
     bool on (float plain) noexcept { return plain >= 0.5f; }
 
-    // A node that Thermal switches in and out instantly (width, tone, master compressor, a whole stage): DisTitten
+    // A node that Thermal switches in and out instantly (width, tone, master compressor, a whole stage): DisTherm
     // crossfades between the node's output and its input instead.
     struct Toggle
     {

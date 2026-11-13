@@ -16,13 +16,13 @@ namespace
     int stageParam (int stage, int s1Pid) { return s1Pid + stage * kStageStride; }
     int stageSwitch (int stage, int s1Pid) { return s1Pid + stage * kSwitchStride; }
 
-    float plainOf (DisTittenProcessor& p, int id)
+    float plainOf (DisThermProcessor& p, int id)
     {
         auto& prm = p.param (id);
         return prm.convertFrom0to1 (prm.getValue());
     }
 
-    std::unique_ptr<Dial> compactDial (DisTittenProcessor& p, int id, const char* name, const char* help, Dial::Ring ring)
+    std::unique_ptr<Dial> compactDial (DisThermProcessor& p, int id, const char* name, const char* help, Dial::Ring ring)
     {
         auto d = std::make_unique<Dial> (p.param (id), name, help);
         d->setCompact (true);
@@ -33,7 +33,7 @@ namespace
 
 // ---- BandStrip ----------------------------------------------------------------------------
 
-BandStrip::BandStrip (DisTittenProcessor& p) : proc (p)
+BandStrip::BandStrip (DisThermProcessor& p) : proc (p)
 {
     setBounds (layout::bandStrip.i());
     setRepaintsOnMouseActivity (false);
@@ -276,7 +276,7 @@ void BandStrip::mouseExit (const juce::MouseEvent&)
 
 // ---- ModPanel ----------------------------------------------------------------------------
 
-ModPanel::ModPanel (DisTittenProcessor& p, int e) : proc (p), env (e)
+ModPanel::ModPanel (DisThermProcessor& p, int e) : proc (p), env (e)
 {
     namespace L = layout;
     setBounds (L::modPanel.moved (0.f, L::modStep * (float) env).i());
@@ -407,7 +407,7 @@ void ModPanel::loadShapeFile (const juce::File& f)
 void ModPanel::stepPreset (int delta)
 {
     juce::Array<juce::File> files;
-    for (auto root : { DisTittenProcessor::userPresetFolder().getSiblingFile ("Shapes"),
+    for (auto root : { DisThermProcessor::userPresetFolder().getSiblingFile ("Shapes"),
                        thermal::modulationPresetFolder() })
         if (root.isDirectory())
         {
@@ -423,7 +423,7 @@ void ModPanel::stepPreset (int delta)
 
 void ModPanel::savePreset()
 {
-    auto folder = DisTittenProcessor::userPresetFolder().getSiblingFile ("Shapes");
+    auto folder = DisThermProcessor::userPresetFolder().getSiblingFile ("Shapes");
     folder.createDirectory();
     chooser = std::make_unique<juce::FileChooser> ("Save shape", folder.getChildFile (proc.getEnvelopeName (env) + ".xml"), "*.xml");
     chooser->launchAsync (juce::FileBrowserComponent::saveMode | juce::FileBrowserComponent::warnAboutOverwriting, [this] (const juce::FileChooser& c) {
@@ -612,7 +612,7 @@ void ModPanel::mouseDoubleClick (const juce::MouseEvent& e)
 
 // ---- MasterView ----------------------------------------------------------------------------
 
-MasterView::MasterView (DisTittenProcessor& p) : proc (p)
+MasterView::MasterView (DisThermProcessor& p) : proc (p)
 {
     namespace L = layout;
     namespace pid = dt::pid;
@@ -693,7 +693,7 @@ void MasterView::paint (juce::Graphics& g)
 
 // ---- LowerPanel ----------------------------------------------------------------------------
 
-LowerPanel::LowerPanel (DisTittenProcessor& p) : proc (p)
+LowerPanel::LowerPanel (DisThermProcessor& p) : proc (p)
 {
     namespace L = layout;
     setBounds (L::lowerPanel.i());

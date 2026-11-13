@@ -1,8 +1,8 @@
-// DisTitten without a DAW: loops built-in material (or your file) through
+// DisTherm without a DAW: loops built-in material (or your file) through
 // the plugin and out of the speakers, with the plugin's editor below a small
 // transport bar.
-//   distitten_demo [file.wav]                  effect
-//   distitten_demo [reference.wav track.wav]   sidechain effect (kSidechain)
+//   distherm_demo [file.wav]                  effect
+//   distherm_demo [reference.wav track.wav]   sidechain effect (kSidechain)
 //
 // BYPASS plays the material untouched for comparison (sidechain: SUM plays
 // reference + processed track with the reference delayed by the plugin's
@@ -17,7 +17,7 @@
 // Template: merged from BuildApp's demo (one signal, BYPASS, open a file) and
 // PhaseFucker's (kit, transport, scenarios, sidechain monitor). The places a
 // product plugs in are marked PRODUCT HOOK. It needs from the product:
-//   DisTittenProcessor / DisTittenEditor (src/plugin), the editor's
+//   DisThermProcessor / DisThermEditor (src/plugin), the editor's
 //   static constexpr int kWidth, kHeight, and from src/ui/Theme.h (namespace
 //   theme): col::sheet, col::ink, col::inkSoft, col::hairline, col::accent,
 //   label(), mono(), caption(), kRadius.
@@ -66,7 +66,7 @@ namespace
     // PRODUCT HOOK: the built-in scenarios, picked in the bar. The first is
     // made in makeScenario() from the kick + bass loop. (PhaseFucker has four: the bass
     // changing notes under the kick, the same every beat, the kick's sub layer
-    // late and flipped, the loop through a phase-turning chain.) DisTitten adds
+    // late and flipped, the loop through a phase-turning chain.) DisTherm adds
     // the kit's `loop = ` lines (drums, a vocal, a lead, a guitar: what a
     // distortion gets fed), each played as it is.
     juce::StringArray scenarioNames()
@@ -168,7 +168,7 @@ class DemoAudio : public juce::AudioIODeviceCallback
 public:
     enum Monitor { sum, track, reference };
 
-    explicit DemoAudio (DisTittenProcessor& p) : proc (p) { proc.setPlayHead (&playHead); }
+    explicit DemoAudio (DisThermProcessor& p) : proc (p) { proc.setPlayHead (&playHead); }
 
     std::function<void (double)> onRate;   // message thread: the device runs at a new rate
     std::atomic<int> monitor { sum };      // sidechain only
@@ -289,7 +289,7 @@ public:
     }
 
 private:
-    DisTittenProcessor& proc;
+    DisThermProcessor& proc;
     TempoPlayHead playHead;
     juce::SpinLock lock;
     std::shared_ptr<Material> material;
@@ -354,7 +354,7 @@ public:
         if (filesExist (files)) current = kFiles;
         setLookAndFeel (&lnf);
         setOpaque (true);
-        editor.reset (dynamic_cast<DisTittenEditor*> (proc.createEditor()));
+        editor.reset (dynamic_cast<DisThermEditor*> (proc.createEditor()));
         addAndMakeVisible (*editor);
 
         // Space plays and stops from anywhere, so the controls don't take the focus.
@@ -403,7 +403,7 @@ public:
         devices.addAudioCallback (&audio);
 
         setWantsKeyboardFocus (true);
-        setSize (DisTittenEditor::kWidth, DisTittenEditor::kHeight + kBar);
+        setSize (DisThermEditor::kWidth, DisThermEditor::kHeight + kBar);
     }
 
     ~DemoComponent() override
@@ -435,7 +435,7 @@ public:
                 monitor[(size_t) i].setBounds (362 + i * 74, 20, i == 2 ? 86 : 70, 24);
         else
             bypass.setBounds (362, 20, 74, 24);
-        editor->setBounds (0, kBar, DisTittenEditor::kWidth, DisTittenEditor::kHeight);
+        editor->setBounds (0, kBar, DisThermEditor::kWidth, DisThermEditor::kHeight);
     }
 
     bool keyPressed (const juce::KeyPress& k) override
@@ -481,7 +481,7 @@ private:
         const juce::String types ("*.wav;*.aif;*.aiff;*.flac;*.mp3");
         if constexpr (! kSidechain)
         {
-            chooser = std::make_unique<juce::FileChooser> ("Audio to play through DisTitten", files[0], types);
+            chooser = std::make_unique<juce::FileChooser> ("Audio to play through DisTherm", files[0], types);
             chooser->launchAsync (flags, [this] (const juce::FileChooser& c) {
                 if (c.getResult().existsAsFile()) { files[0] = c.getResult(); current = kFiles; }
                 reload();
@@ -493,7 +493,7 @@ private:
         chooser->launchAsync (flags, [this, types] (const juce::FileChooser& a) {
             const auto ref = a.getResult();
             if (! ref.existsAsFile()) { source.setSelectedId (current, juce::dontSendNotification); return; }
-            chooser = std::make_unique<juce::FileChooser> ("Track (the one DisTitten processes)", ref.getParentDirectory(), types);
+            chooser = std::make_unique<juce::FileChooser> ("Track (the one DisTherm processes)", ref.getParentDirectory(), types);
             chooser->launchAsync (flags, [this, ref] (const juce::FileChooser& b) {
                 const auto trk = b.getResult();
                 if (trk.existsAsFile()) { files = { ref, trk }; current = kFiles; }
@@ -502,11 +502,11 @@ private:
         });
     }
 
-    DisTittenProcessor proc;
+    DisThermProcessor proc;
     DemoAudio audio;
     juce::AudioDeviceManager devices;
     BarLookAndFeel lnf;
-    std::unique_ptr<DisTittenEditor> editor;
+    std::unique_ptr<DisThermEditor> editor;
     juce::TextButton play, bypass;
     juce::ComboBox source;
     std::array<juce::TextButton, 3> monitor;
@@ -519,7 +519,7 @@ private:
 class DemoApp : public juce::JUCEApplication
 {
 public:
-    const juce::String getApplicationName() override { return "DisTitten Demo"; }
+    const juce::String getApplicationName() override { return "DisTherm Demo"; }
     const juce::String getApplicationVersion() override { return JucePlugin_VersionString; }
 
     void initialise (const juce::String& args) override
@@ -535,7 +535,7 @@ private:
     struct Window : juce::DocumentWindow
     {
         explicit Window (std::unique_ptr<DemoComponent> content)
-            : DocumentWindow ("DisTitten Demo", col::sheet, DocumentWindow::closeButton | DocumentWindow::minimiseButton)
+            : DocumentWindow ("DisTherm Demo", col::sheet, DocumentWindow::closeButton | DocumentWindow::minimiseButton)
         {
             setUsingNativeTitleBar (true);
             setContentOwned (content.release(), true);

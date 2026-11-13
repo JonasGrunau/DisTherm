@@ -1,7 +1,7 @@
 # Thermal black-box reverse engineering: shared brief
 
 We are recreating **Output Thermal v1.2.1** (multistage distortion plugin, JUCE-based, installed as
-`/Library/Audio/Plug-Ins/Components/Thermal.component`) as a new JUCE plugin called **DisTitten**.
+`/Library/Audio/Plug-Ins/Components/Thermal.component`) as a new JUCE plugin called **DisTherm**.
 The signal processing must behave the same as the original: same parameters, same ranges/tapers,
 same curves, same timing, same filter responses, same quirks. The method is **black-box measurement of
 Thermal's output** (the user asked for reverse engineering "by output"): render test signals through the

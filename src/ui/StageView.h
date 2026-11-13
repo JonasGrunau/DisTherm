@@ -8,7 +8,7 @@
 #include <memory>
 #include <vector>
 
-class DisTittenProcessor;
+class DisThermProcessor;
 
 // Where an effect slot's controls go (sheet coordinates): Thermal places them differently in a stage
 // (knobs 74 px apart) and in the master FX 1 / FX 2 slots (64 px).
@@ -23,7 +23,7 @@ struct EffectGeometry
 class EffectView : public juce::Component
 {
 public:
-    EffectView (DisTittenProcessor&, int slot, EffectGeometry, juce::Rectangle<int> sheetArea);
+    EffectView (DisThermProcessor&, int slot, EffectGeometry, juce::Rectangle<int> sheetArea);
 
     void showEffect (int effect);   // 0..8, names::Effect
     int shownEffect() const noexcept { return shown; }
@@ -41,7 +41,7 @@ private:
     juce::Rectangle<int> local (layout::R r) const;
     void build (int effect);
 
-    DisTittenProcessor& proc;
+    DisThermProcessor& proc;
     int slot, shown = -1;
     EffectGeometry geo;
     juce::Point<int> origin;
@@ -55,7 +55,7 @@ private:
 class ShapeView : public juce::Component, private juce::AudioProcessorParameter::Listener
 {
 public:
-    ShapeView (DisTittenProcessor&, int stage);
+    ShapeView (DisThermProcessor&, int stage);
     ~ShapeView() override;
     void paint (juce::Graphics&) override;
 
@@ -64,7 +64,7 @@ private:
     void parameterGestureChanged (int, bool) override {}
     void triggerRepaint();
 
-    DisTittenProcessor& proc;
+    DisThermProcessor& proc;
     int stage;
     std::vector<juce::AudioProcessorParameter*> watched;
 };
@@ -74,7 +74,7 @@ private:
 class StageView : public juce::Component
 {
 public:
-    StageView (DisTittenProcessor&, int stage);
+    StageView (DisThermProcessor&, int stage);
 
     void setHelpCallback (std::function<void (const juce::String&, bool)> cb);
     void tick();   // meters (the effect's gain reduction), dimming
@@ -87,7 +87,7 @@ private:
     juce::Rectangle<int> local (layout::R r) const { return r.i().translated (0, -155); }
     void updateDimming();
 
-    DisTittenProcessor& proc;
+    DisThermProcessor& proc;
     int stage;
     bool distortionInFront = true, toneInFront = false;
 

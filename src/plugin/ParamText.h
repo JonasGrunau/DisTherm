@@ -7,7 +7,7 @@
 #include <cmath>
 
 // Display text and typed-value parsing for every parameter, by its ParamFormat. The numbers mean what Thermal's
-// display shows (same units and rounding, measured from its texts); the typography is DisTitten's (fmt::).
+// display shows (same units and rounding, measured from its texts); the typography is DisTherm's (fmt::).
 namespace ptext
 {
     // "0.26 ms", "16.8 ms", "113 ms", "1.49 s": three significant digits.

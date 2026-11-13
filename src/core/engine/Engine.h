@@ -56,7 +56,7 @@ struct EngineParams
 // so process() takes the host block whole, as Thermal does.
 //
 // Latency: each stage carries 31 samples (its oversampler's delay, also when the stage is off), 93 in total.
-// Thermal doesn't report it; DisTitten does.
+// Thermal doesn't report it; DisTherm does.
 class Engine
 {
 public:

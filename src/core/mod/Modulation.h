@@ -1,4 +1,4 @@
-// Modulation.h - DisTitten re-creation of Output Thermal's modulation system (black-box measured).
+// Modulation.h - DisTherm re-creation of Output Thermal's modulation system (black-box measured).
 // Header-only, JUCE-free, C++20.  namespace dt.
 //
 // Contents

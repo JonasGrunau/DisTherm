@@ -20,7 +20,7 @@ namespace dt
 // One of Thermal's effect slots (a stage's effect, FX 1 or FX 2): nine effects, one of them active.
 // The slot's 65 parameters sit in kParams in the same order for every slot, starting at <slot>_bit_in.
 //
-// Thermal rewires its graph when the effect or its power button changes, with no crossfade. DisTitten
+// Thermal rewires its graph when the effect or its power button changes, with no crossfade. DisTherm
 // crossfades the old and the new path over kSwitchSeconds so a switch never clicks; nothing else differs.
 // Inactive effects keep their state (Thermal doesn't process a bypassed node either).
 class EffectSlot

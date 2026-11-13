@@ -8,12 +8,12 @@
 #include <array>
 
 // Reads an Output Thermal state or preset (the XML document Thermal saves: <Thermal><App_State>...) into
-// DisTitten's parameters. Thermal's 410 host parameters map 1:1 by their XML tag (same normalised values,
-// same tapers); the switches Thermal keeps in node properties and processor-group state map to DisTitten's
+// DisTherm's parameters. Thermal's 410 host parameters map 1:1 by their XML tag (same normalised values,
+// same tapers); the switches Thermal keeps in node properties and processor-group state map to DisTherm's
 // switch parameters (see kParams[].thermalTag: "<node>.<attribute>", "!" = inverted).
 //
-// DisTitten carries Thermal's factory presets and modulation shapes (presets/thermal in the repo, one zip in
-// the binary). They are unpacked into DisTitten's own folder (application data / DisTitten / Factory) the first
+// DisTherm carries Thermal's factory presets and modulation shapes (presets/thermal in the repo, one zip in
+// the binary). They are unpacked into DisTherm's own folder (application data / DisTherm / Factory) the first
 // time they are asked for, and again whenever the carried copy differs from what is there.
 namespace thermal
 {
@@ -22,7 +22,7 @@ namespace thermal
 
     struct Patch
     {
-        std::array<float, dt::kNumParams> norm {};   // normalised value of every DisTitten parameter
+        std::array<float, dt::kNumParams> norm {};   // normalised value of every DisTherm parameter
         juce::String macroNames[2], envelopeNames[2];
         std::unique_ptr<dt::ModState> mod = std::make_unique<dt::ModState>();   // mod slots + envelope shapes
     };

@@ -2,12 +2,12 @@
 // DAW, a window or screen-recording permission. Read the PNGs, critique,
 // fix, render again.
 //
-//   distitten_snapshot <out-dir> [state ...]
+//   distherm_snapshot <out-dir> [state ...]
 //
 // Each state is a fresh processor with some parameters set, the built-in
 // 145 BPM psytrance loop (testutil::psyLoop: kick, rolling bass, hats, arp)
 // played through it for a few seconds with a running transport, the editor ticked like its timer
-// would (~30 Hz), then a PNG at 2x: <out-dir>/distitten_<state>.png.
+// would (~30 Hz), then a PNG at 2x: <out-dir>/distherm_<state>.png.
 // States (default: all but bench): see kStates below.
 //   bench    instead of a PNG: times the whole editor paint and every
 //            component with a componentID (setComponentID ("spectrum")) on a
@@ -24,23 +24,23 @@
 //   SNAP_HOVER=<componentID>         send mouseEnter to that component before the
 //                                    shot (renders its hover state and the footer help line)
 //   SNAP_UI="page=1,stage=2"         the editor's page and tabs instead of the state's own
-//   SNAP_PRESET="<name>"             load a preset by name first (DisTitten's or a Thermal factory preset)
+//   SNAP_PRESET="<name>"             load a preset by name first (DisTherm's or a Thermal factory preset)
 //   SNAP_KIT=<n>                     play the demo kit (DT_DEMO_KIT) instead: 0 kick + bass, n its n-th loop
 // (PhaseFucker calls these PFSNAP_*, PsyBox PSYSNAP_*; keep one prefix per product.)
 //
 // Build: compile the plugin's UI sources directly, not the plugin target.
 // List them once and use them for the plugin, this tool and the demo host:
 //
-//   set(DISTITTEN_UI_SOURCES src/plugin/PluginProcessor.cpp src/plugin/PluginEditor.cpp
+//   set(DISTHERM_UI_SOURCES src/plugin/PluginProcessor.cpp src/plugin/PluginEditor.cpp
 //       src/ui/Theme.cpp src/ui/Controls.cpp ...)
-//   juce_add_console_app(distitten_snapshot PRODUCT_NAME "distitten_snapshot")
-//   target_sources(distitten_snapshot PRIVATE tools/Snapshot.cpp ${DISTITTEN_UI_SOURCES})
-//   target_include_directories(distitten_snapshot PRIVATE src tests)
-//   target_compile_definitions(distitten_snapshot PRIVATE
-//       JucePlugin_Name="DisTitten" JucePlugin_VersionString="${PROJECT_VERSION}"
+//   juce_add_console_app(distherm_snapshot PRODUCT_NAME "distherm_snapshot")
+//   target_sources(distherm_snapshot PRIVATE tools/Snapshot.cpp ${DISTHERM_UI_SOURCES})
+//   target_include_directories(distherm_snapshot PRIVATE src tests)
+//   target_compile_definitions(distherm_snapshot PRIVATE
+//       JucePlugin_Name="DisTherm" JucePlugin_VersionString="${PROJECT_VERSION}"
 //       JUCE_MODAL_LOOPS_PERMITTED=1 JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0 JUCE_DISPLAY_SPLASH_SCREEN=0)
-//   target_link_libraries(distitten_snapshot PRIVATE
-//       distitten_core distitten_assets juce::juce_audio_utils juce::juce_recommended_config_flags)
+//   target_link_libraries(distherm_snapshot PRIVATE
+//       distherm_core distherm_assets juce::juce_audio_utils juce::juce_recommended_config_flags)
 //
 // The editor has to offer: static kWidth/kHeight, a public tick() that does
 // what its timer does, and componentIDs on the displays worth timing.
@@ -64,11 +64,11 @@
 namespace
 {
     // ---- Product part: the states ---------------------------------------------
-    // DisTitten: one entry per state worth looking at. Cover the rest state,
+    // DisTherm: one entry per state worth looking at. Cover the rest state,
     // a typical busy state, the extremes, every mode a switch can put the UI
     // in, and every empty/warning state the footer can show. Values are plain
     // (the parameter's own units), set through the host path.
-    // `ui` sets the editor's page and tabs (DisTittenEditor::setUiState): page 0 XY / 1 edit, stage 0..2,
+    // `ui` sets the editor's page and tabs (DisThermEditor::setUiState): page 0 XY / 1 edit, stage 0..2,
     // lower 0 XY / 1 effects / 2 master, stagefx 0 distortion / 1 effect, tone 0 width / 1 tone, assign -1..3.
     struct State
     {
@@ -94,7 +94,7 @@ namespace
 
     const char* env (const char* name) { return std::getenv (name); }
 
-    void setPlain (DisTittenProcessor& p, const juce::String& id, float plain)
+    void setPlain (DisThermProcessor& p, const juce::String& id, float plain)
     {
         if (auto* prm = p.apvts.getParameter (id))
             prm->setValueNotifyingHost (prm->convertTo0to1 (plain));
@@ -105,7 +105,7 @@ namespace
     // Plays the loop through the processor in 512-sample blocks with the
     // transport running, ticking the editor about 30 times a second like its
     // timer. Extra input channels (a sidechain) get the loop too.
-    void play (DisTittenProcessor& p, DisTittenEditor& ed, TempoPlayHead& head, const testutil::Stereo& loop, double fs, double seconds, int note)
+    void play (DisThermProcessor& p, DisThermEditor& ed, TempoPlayHead& head, const testutil::Stereo& loop, double fs, double seconds, int note)
     {
         const int channels = std::max (2, std::max (p.getTotalNumInputChannels(), p.getTotalNumOutputChannels()));
         juce::AudioBuffer<float> buf (channels, 512);
@@ -135,7 +135,7 @@ namespace
     }
 
     // One block with the transport stopped (hosts keep processing).
-    void stopTransport (DisTittenProcessor& p, TempoPlayHead& head)
+    void stopTransport (DisThermProcessor& p, TempoPlayHead& head)
     {
         head.playing = false;
         juce::AudioBuffer<float> buf (std::max (2, p.getTotalNumInputChannels()), 512);
@@ -259,7 +259,7 @@ int main (int argc, char** argv)
         if (state == nullptr) { std::printf ("unknown state '%s'\n", name.toRawUTF8()); ++failures; continue; }
 
         // A fresh instance per state: nothing carries over between shots.
-        DisTittenProcessor proc;
+        DisThermProcessor proc;
         for (const auto& [id, plain] : state->params) setPlain (proc, id, plain);
         if (auto* list = env ("SNAP_PARAMS"))
             for (const auto& item : juce::StringArray::fromTokens (list, ",", ""))
@@ -272,7 +272,7 @@ int main (int argc, char** argv)
         proc.setPlayHead (&head);
         proc.setRateAndBufferSizeDetails (fs, 512);
         proc.prepareToPlay (fs, 512);
-        if (auto* preset = env ("SNAP_PRESET"))   // a preset by name (DisTitten's or a Thermal factory preset)
+        if (auto* preset = env ("SNAP_PRESET"))   // a preset by name (DisTherm's or a Thermal factory preset)
         {
             bool found = false;
             for (const auto& entry : proc.listPresets())
@@ -281,8 +281,8 @@ int main (int argc, char** argv)
                     found = proc.loadPreset (entry.file);
             if (! found) std::printf ("no preset '%s'\n", preset);
         }
-        std::unique_ptr<DisTittenEditor> editor (dynamic_cast<DisTittenEditor*> (proc.createEditor()));
-        if (editor == nullptr) { std::printf ("createEditor() did not return a DisTittenEditor\n"); return 1; }
+        std::unique_ptr<DisThermEditor> editor (dynamic_cast<DisThermEditor*> (proc.createEditor()));
+        if (editor == nullptr) { std::printf ("createEditor() did not return a DisThermEditor\n"); return 1; }
         {
             juce::StringPairArray ui;
             const juce::String spec = env ("SNAP_UI") != nullptr ? juce::String (env ("SNAP_UI")) : juce::String (state->ui);
@@ -319,7 +319,7 @@ int main (int argc, char** argv)
         }
 
         const auto img = editor->createComponentSnapshot (editor->getLocalBounds(), true, scale);
-        const auto file = outDir.getChildFile ("distitten_" + name + ".png");
+        const auto file = outDir.getChildFile ("distherm_" + name + ".png");
         file.deleteFile();
         juce::FileOutputStream os (file);
         juce::PNGImageFormat().writeImageToStream (img, os);

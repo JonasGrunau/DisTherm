@@ -1,9 +1,9 @@
-// distitten_render: renders audio through DisTitten with an Output Thermal preset or state loaded, for A/B
+// distherm_render: renders audio through DisTherm with an Output Thermal preset or state loaded, for A/B
 // comparison against Thermal itself (black-box verification of the recreation).
 //
-//   distitten_render <thermal.xml | -> in.f32 out.f32 [sr=48000] [block=512] [bpm=120] [pre=0.1]
+//   distherm_render <thermal.xml | -> in.f32 out.f32 [sr=48000] [block=512] [bpm=120] [pre=0.1]
 //
-// in/out are raw interleaved stereo float32. "-" keeps DisTitten's defaults (= Thermal's default state).
+// in/out are raw interleaved stereo float32. "-" keeps DisTherm's defaults (= Thermal's default state).
 // Like the Thermal measurement host, the processor is prepared first and the state loaded afterwards, so
 // parameter glides start from the defaults the way they do in Thermal; `pre` seconds of silence are rendered
 // first and dropped. The playhead plays from sample 0 of the pre-roll at a fixed tempo.
@@ -42,7 +42,7 @@ int main (int argc, char* argv[])
     juce::ScopedJuceInitialiser_GUI init;
     if (argc < 4)
     {
-        std::cerr << "usage: distitten_render <thermal.xml|-> in.f32 out.f32 [sr=] [block=] [bpm=] [pre=]\n";
+        std::cerr << "usage: distherm_render <thermal.xml|-> in.f32 out.f32 [sr=] [block=] [bpm=] [pre=]\n";
         return 1;
     }
     juce::StringPairArray opt;
@@ -60,7 +60,7 @@ int main (int argc, char* argv[])
     const int n = (int) (raw.getSize() / (2 * sizeof (float)));
     const auto* in = static_cast<const float*> (raw.getData());
 
-    DisTittenProcessor proc;
+    DisThermProcessor proc;
     Head head;
     head.bpm = opt["bpm"].getDoubleValue();
     head.sr = sr;
